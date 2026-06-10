@@ -1,0 +1,11 @@
+*.log
+*.sqlite
+*.sqlite-wal
+*.cache
+Crash Reports/
+storage/
+weave/
+synced-tabs/
+*.db
+*.tmp
+*.bak

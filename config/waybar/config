@@ -1,0 +1,98 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 5,
+  "margin": "8 8 0 8",
+
+  "modules-left": [
+    "custom/launcher", 
+    "custom/power",// Nova logo do Linux / Menu iniciar
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "battery",
+    "clock" // Movido para a extrema direita
+  ],
+
+  // Configuração do Menu Iniciar (Logo do Linux)
+  "custom/launcher": {
+    "format": "", // Ícone do Arch Linux (Requer Nerd Font). Mude para  para o pinguim genérico.
+    "on-click": "hyprlauncher", // Comando para abrir o launcher (ou wofi --show drun)
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "disable-click": true,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",    // Ponto preenchido para a tela ativa
+      "default": "",   // Ponto vazado para telas abertas com apps
+      "empty": ""       // Ponto vazado para telas vazias
+    },
+    "persistent-workspaces": {
+       "*": 10 // Mantém sempre 5 pontos visíveis fixos (opcional, estilo iOS/Android)
+    }
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-warning": "⚠ {capacity}%",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "clock": {
+      "format": "󰃭 {:%H:%M}",
+      "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
+      "on-click": "gsimplecal"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 Connected",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr}"
+  },
+
+  "tray": {
+    "spacing": 10
+  }
+}
+
