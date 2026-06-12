@@ -33,7 +33,7 @@ hl.config({
 
 -- Set programs that you use
 local terminal2    = "kitty"
-local terminal    = "st"
+local terminal    = "lxterminal"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
 local menu        = "rofi -show drun" -- "hyprlauncher" 
@@ -130,7 +130,7 @@ hl.config({
         blur = {
             enabled   = true,
             size      = 4,
-            passes    = 4,
+            passes    = 3,
             vibrancy  = 0.2,
         },
     },
