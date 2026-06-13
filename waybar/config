@@ -24,7 +24,7 @@
   // Configuração do Menu Iniciar (Logo do Linux)
   "custom/launcher": {
     "format": "", // Ícone do Arch Linux (Requer Nerd Font). Mude para  para o pinguim genérico.
-    "on-click": "hyprlauncher", // Comando para abrir o launcher (ou wofi --show drun)
+    "on-click": "rofi -show drun", // Comando para abrir o launcher (ou wofi --show drun)
     "tooltip": false
   },
 
