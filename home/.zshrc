@@ -277,3 +277,6 @@ export VISUAL=micro
 if [[ -z "$TMUX" ]] && [[ "$(tty)" =~ ^/dev/tty[0-9]+$ ]]; then
     exec tmux
 fi
+
+# opencode
+export PATH=/home/ryanv/.opencode/bin:$PATH
