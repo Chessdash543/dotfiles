@@ -89,6 +89,16 @@ window#waybar > box {
   color: #51afef;
 }
 
+#custom-system-block.critical {
+  background: rgba(255, 50, 50, 0.3);
+  color: #ff4444;
+  animation: blink-critical 1s ease-in-out infinite;
+}
+
+@keyframes blink-critical {
+  50% { background: rgba(255, 50, 50, 0.5); }
+}
+
 /* ---- TOOLTIP ---- */
 
 tooltip {

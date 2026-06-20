@@ -22,7 +22,7 @@ else
   else
     battery_icon=""
   fi
-  battery_text="$battery_icon $battery_pct%"
+  battery_text="$battery_icon"
 fi
 
 # Volume
@@ -42,7 +42,7 @@ else
   else
     vol_icon=""
   fi
-  volume_text="$vol_icon $vol_pct%"
+  volume_text="$vol_icon"
 fi
 
 # Network
@@ -50,7 +50,7 @@ active_conn=$(nmcli -t -f NAME,DEVICE conn show --active 2>/dev/null | grep -v "
 wifi_ssid=$(echo "$active_conn" | cut -d: -f1)
 
 if [ -n "$wifi_ssid" ]; then
-  network_text=" $wifi_ssid"
+  network_text=" "
 else
   wifi_on=$(nmcli radio wifi 2>/dev/null)
   if [ "$wifi_on" = "enabled" ]; then
@@ -72,4 +72,10 @@ for i in "${!parts[@]}"; do
   text+="${parts[$i]}"
 done
 
-echo "{\"text\": \"$text\", \"class\": \"system-block\"}"
+# Determine class
+class="system-block"
+if [ -n "$battery_pct" ] && [ "$battery_pct" -le 15 ] && [ "$battery_status" != "charging" ]; then
+  class="system-block critical"
+fi
+
+echo "{\"text\": \"$text\", \"class\": \"$class\"}"
