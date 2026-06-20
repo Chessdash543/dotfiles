@@ -1,0 +1,19 @@
+#3.6.2
+
+[Desktop Entry]
+frame_maininfo=
+Container=_MainDock_
+sep_display=
+Name=Sublime Text
+Icon=sublime-text
+Exec=/opt/sublime_text/sublime_text %F
+frame_extra=
+prevent inhibate=false
+StartupWMClass=sublime_text
+Terminal=false
+Path=
+ShowOnViewport=0
+Order=5
+Icon Type=0
+Type=Application
+Origin=sublime_text.desktop

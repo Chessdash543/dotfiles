@@ -19,3 +19,4 @@ stow swaync
 stow walker
 stow wlogout
 stow yazi
+stow cairo-dock

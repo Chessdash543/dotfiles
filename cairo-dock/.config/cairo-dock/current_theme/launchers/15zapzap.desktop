@@ -1,0 +1,19 @@
+#3.6.2
+
+[Desktop Entry]
+frame_maininfo=
+Container=_MainDock_
+sep_display=
+Name=ZapZap
+Icon=com.rtosta.zapzap
+Exec=zapzap %u
+frame_extra=
+prevent inhibate=false
+StartupWMClass=zapzap
+Terminal=false
+Path=
+ShowOnViewport=0
+Order=14
+Icon Type=0
+Type=Application
+Origin=com.rtosta.zapzap.desktop
