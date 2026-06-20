@@ -1,116 +1,102 @@
 * {
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 16px;
-}
-
-#custom-power {
-  padding: 0 7px;
+  font-family: JetBrainsMono Nerd Font, sans-serif;
+  font-size: 14px;
+  min-height: 0;
 }
 
 window#waybar {
-  background: rgba(20, 20, 20, 0.5);
-  border-radius: 10px;
-  margin: 8px;
-  border: 1px solid #355f70;
-  min-height: 40px;
-  padding: 0 10px;
-  
+  background: transparent;
 }
 
-/* --- LADO ESQUERDO --- */
+window#waybar > box {
+  background: rgba(18, 18, 22, 0.8);
+  border: 2px solid rgba(81, 175, 239, 0.25);
+  border-radius: 12px;
+  padding: 0 6px;
+}
 
-/* Novo: Estilo do Menu Iniciar (Logo do Linux) */
+/* ---- LEFT ---- */
+
 #custom-launcher {
-  color: #51afef; /* Azul bonito para destacar a logo, mude se preferir */
-  padding: 0 12px;
-  font-size: 18px; /* Ligeiramente maior para destacar */
+  color: #51afef;
+  padding: 0 12px 0 6px;
+  font-size: 18px;
+}
+
+#custom-launcher:hover {
+  color: #7ec8e3;
 }
 
 #workspaces {
-  padding: 7 18px;
+  padding: 0 4px;
 }
 
 #workspaces button {
-  padding: 0 4px;
-  margin: 0 2px;
-  color: rgba(255, 255, 255, 0.3); /* Pontos inativos ficam semi-transparentes */
-  font-size: 18px; /* Ajusta o tamanho do ponto */
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  padding: 0 3px;
+  margin: 0 1px;
   background: transparent;
-  border-radius: 0;
   border: none;
+  border-radius: 0;
   box-shadow: none;
+  transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  color: rgba(255, 255, 255, 0.7);
-  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 6px rgba(81, 175, 239, 0.3);
 }
 
 #workspaces button.active {
-  color: #51afef; /* Cor azul para destacar o ponto atual (ou mude para white) */
-  font-size: 16px; /* Dá um leve zoom no ponto ativo */
-  background: transparent; /* Remove aquele fundo cinza quadrado */
+  color: #51afef;
+  text-shadow: 0 0 8px rgba(81, 175, 239, 0.6);
 }
 
-#workspaces button.default {
-  color: #7d7d7d; /* Cor azul para destacar o ponto atual (ou mude para white) */
-  font-size: 16px; /* Dá um leve zoom no ponto ativo */
-  background: transparent; /* Remove aquele fundo cinza quadrado */
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.1);
 }
 
-#workspaces button.focused {
-  background: transparent;
+/* ---- CENTER ---- */
+
+#clock {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  padding: 0 8px;
 }
 
-/* --- CENTRO --- */
+#clock:hover {
+  color: #51afef;
+}
 
-/* Novo: Barra de tarefas centralizada (estilo Windows/XFCE) */
-#taskbar {
+/* ---- RIGHT ---- */
+
+#tray {
   padding: 0 4px;
 }
 
-#taskbar button {
-  padding: 0 8px;
-  margin: 3px 2px;
+#custom-system-block {
+  background: rgba(128, 128, 128, 0.25);
+  border-radius: 8px;
+  padding: 0 12px;
+  margin: 2px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+}
+
+#custom-system-block:hover {
+  background: rgba(128, 128, 128, 0.4);
+  color: #51afef;
+}
+
+/* ---- TOOLTIP ---- */
+
+tooltip {
+  background: rgba(18, 18, 22, 0.95);
+  border: 1px solid rgba(81, 175, 239, 0.3);
   border-radius: 8px;
 }
 
-#taskbar button.active {
-  background: rgba(255, 255, 255, 0.12);
-  border-bottom: 2px solid #51afef;
-}
-
-#window {
-  padding: 0 8px;
+tooltip label {
   color: white;
-  opacity: 0.9;
-}
-
-/* --- LADO DIREITO --- */
-
-#tray,
-#network,
-#pulseaudio,
-#battery,
-#clock {
-  padding: 0 12px;
-}
-
-#clock {
-  color: white;
-  padding: 0 10px;
-}
-
-.modules-right {
-  background: rgba(40, 40, 40, 0.2);
-  border-radius: 10px;
-  margin: 4px;
-  padding: 0 8px;
-}
-
-.modules-left {
-  background: rgba(40, 40, 40, 0.2);
-  border-radius: 10px;
-  margin: 3px;
-  padding: 0 4px;
 }
