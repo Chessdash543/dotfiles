@@ -22,7 +22,7 @@ else
   else
     battery_icon=""
   fi
-  battery_text="$battery_icon"
+  battery_text="$battery_pct% $battery_icon"
 fi
 
 # Volume
@@ -42,7 +42,7 @@ else
   else
     vol_icon=""
   fi
-  volume_text="$vol_icon"
+  volume_text="$vol_pct% $vol_icon"
 fi
 
 # Network

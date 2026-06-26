@@ -50,7 +50,6 @@ local window        = "rofi -show window"
 hl.on("hyprland.start", function () 
   hl.exec_cmd("waypaper --restore & waybar & nm-applet & rofi -show drun")
   hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
-  hl.exec_cmd("cairo-dock -o &")
 end)
 hl.on("hyprland.start", function ()
   hl.exec_cmd("ags &")
