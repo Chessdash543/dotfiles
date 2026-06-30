@@ -80,13 +80,13 @@ window#waybar > box {
   border-radius: 8px;
   padding: 0 12px;
   margin: 2px 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000000;
   font-size: 13px;
 }
 
 #custom-system-block:hover {
   background: rgba(128, 128, 128, 0.4);
-  color: #51afef;
+  color: #000000;
 }
 
 #custom-system-block.critical {

@@ -7,7 +7,8 @@
 
   "modules-left": [
     "custom/launcher",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "pulseaudio"
   ],
 
   "modules-center": [
@@ -16,6 +17,7 @@
 
   "modules-right": [
     "tray",
+    "custom/system-info",
     "custom/system-block"
   ],
 
@@ -23,6 +25,17 @@
     "format": "",
     "on-click": "rofi -show drun",
     "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "tooltip": false,
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
 
   "hyprland/workspaces": {
@@ -36,7 +49,7 @@
       "empty": "○"
     },
     "persistent-workspaces": {
-      "*": 6
+      "*": 10
     }
   },
 
@@ -52,6 +65,13 @@
 
   "tray": {
     "spacing": 8
+  },
+
+  "custom/system-info": {
+    "exec": "$HOME/.config/waybar/scripts/system-info.sh",
+    "return-type": "json",
+    "interval": 10,
+    "tooltip": false
   },
 
   "custom/system-block": {
