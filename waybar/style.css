@@ -9,7 +9,11 @@ window#waybar {
 }
 
 window#waybar > box {
-  background: linear-gradient(to right, #d400f0, #01a2fe);
+  background: linear-gradient(
+    to right,
+    rgba(212, 0, 240, 0.6),
+    rgba(1, 162, 254, 0.6)
+);
   border: 2px solid rgba(255, 255, 255, 0.7);
   border-radius: 12px;
   padding: 0 6px;
@@ -18,7 +22,7 @@ window#waybar > box {
 /* ---- LEFT ---- */
 
 #custom-launcher {
-  color: rgba(0, 0, 0, 1.0);
+  color: rgba(255, 255, 255, 0.9);
   padding: 0 12px 0 6px;
   font-size: 18px;
 }
@@ -59,6 +63,16 @@ window#waybar > box {
   color: rgba(255, 255, 255, 0.3);
 }
 
+#custom-hostname {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
 #pulseaudio {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -78,7 +92,7 @@ window#waybar > box {
 /* ---- CENTER ---- */
 
 #clock {
-  color: rgba(10, 10, 10, 0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
   padding: 0 8px;
 }

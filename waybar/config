@@ -8,6 +8,7 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
+    "custom/hostname",
     "pulseaudio"
   ],
 
@@ -24,6 +25,13 @@
   "custom/launcher": {
     "format": "",
     "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "custom/hostname": {
+    "format": " {}",
+    "exec": "hostname",
+    "interval": 86400,
     "tooltip": false
   },
 

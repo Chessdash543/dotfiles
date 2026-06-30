@@ -92,13 +92,13 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 15,
+        gaps_out = 10,
 
         border_size = 4,
 
         col = {
-            active_border   = { colors = {"rgba(0,166,255,1.000)", "rgba(212,0,240,1.000)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border   = { colors = {"rgba(0, 175, 255, 1)", "rgba(255,0,255,1.000)"}, angle = 45 },
+            inactive_border = { colors = {"rgba(23, 18, 29, 1)", "rgba(47, 49, 47, 1)"}, angle = 45 },
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -115,8 +115,8 @@ hl.config({
         rounding_power = 3,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 1.0,
-        inactive_opacity = 0.85,
+        active_opacity   = 0.9,
+        inactive_opacity = 0.7,
 
         shadow = {
             enabled      = true,
