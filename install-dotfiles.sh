@@ -2,21 +2,20 @@
 set -e
 
 DOTFILES="$HOME/dotfiles"
+CONFIG="$DOTFILES/dotfiles.conf"
+
+[ -f "$CONFIG" ] && source "$CONFIG"
 
 cd "$DOTFILES"
 
-stow nvim
-stow hypr
-stow kitty
-stow waybar
-stow btop
-stow fastfetch
-stow gtk-3.0
-stow gtk-4.0
-stow qt5ct
-stow qt6ct
-stow swaync
-stow walker
-stow wlogout
-stow yazi
-stow cairo-dock
+for app in "${CONFIG_APPS[@]}"; do
+  if [ -d "$app" ]; then
+    stow "$app"
+    echo "stow $app OK"
+  fi
+done
+
+if [ -d home ]; then
+  stow home
+  echo "stow home OK"
+fi

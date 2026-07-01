@@ -5,7 +5,7 @@ frame_maininfo=
 Container=_MainDock_
 sep_display=
 Name=
-Icon=/usr/share/icons/Qogir/scalable/places/folder.svg
+Icon=org.xfce.thunar
 
 Exec=thunar
 frame_extra=
