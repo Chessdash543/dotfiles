@@ -280,3 +280,5 @@ fi
 
 # opencode
 export PATH=/home/ryanv/.opencode/bin:$PATH
+alias apotris='$HOME/Downloads/Apotris/Apotris'
+alias apotris='cd "$HOME/Downloads/Apotris" && ./Apotris'
