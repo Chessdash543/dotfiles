@@ -31,10 +31,10 @@ hl.config({
 
 -- Set programs that you use
 local terminal2    = "kitty"
-local terminal    = "lxterminal"
+local terminal    = "foot"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
-local menu        = "rofi -show drun" -- "hyprlauncher" 
+local menu        = "fuzzel" -- "hyprlauncher" 
 local window        = "rofi -show window"
 
 
@@ -48,7 +48,7 @@ local window        = "rofi -show window"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("waypaper --restore & waybar & nm-applet & rofi -show drun")
+  hl.exec_cmd("awww-daemon & awww --restore & waybar & hyprlock & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
   hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
 end)
 hl.on("hyprland.start", function ()
@@ -91,7 +91,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 5,
+        gaps_in  = 3,
         gaps_out = 10,
 
         border_size = 4,
@@ -115,7 +115,7 @@ hl.config({
         rounding_power = 3,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 0.9,
+        active_opacity   = 0.8,
         inactive_opacity = 0.7,
 
         shadow = {
@@ -127,7 +127,7 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 4,
+            size      = 2,
             passes    = 3,
             vibrancy  = 0.2,
         },
@@ -297,6 +297,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal2))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(window))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))

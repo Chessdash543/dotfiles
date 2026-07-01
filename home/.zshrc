@@ -282,3 +282,50 @@ fi
 export PATH=/home/ryanv/.opencode/bin:$PATH
 alias apotris='$HOME/Downloads/Apotris/Apotris'
 alias apotris='cd "$HOME/Downloads/Apotris" && ./Apotris'
+case "$XDG_CURRENT_DESKTOP" in
+    Hyprland)
+        cat ~/.config/ascii/hyprland.txt
+        ;;
+    Wayfire)
+        cat ~/.config/ascii/wayfire.txt
+        ;;
+    GNOME)
+        cat ~/.config/ascii/gnome.txt
+        ;;
+    KDE|KDEPlasma|plasma)
+        cat ~/.config/ascii/plasma.txt
+        ;;
+    Openbox)
+        cat ~/.config/ascii/openbox.txt
+        ;;
+    *)
+        cat ~/.config/ascii/default.txt
+        ;;
+esac
+# ===== System Box =====
+echo
+margin="    " # 4 espaços
+
+box_width=40
+
+box_line() {
+    local text="$1"
+    printf "%s│ %-*.*s │\n" "$margin" "$box_width" "$box_width" "$text"
+}
+
+printf "%s╭" "$margin"
+printf '─%.0s' {1..42}
+printf "╮\n"
+
+box_line "User:    $USER"
+box_line "Host:    $(hostname)"
+box_line "Distro:  $(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')"
+box_line "Kernel:  $(uname -r)"
+box_line "Uptime:  $(uptime -p | sed 's/^up //')"
+box_line "Memory:  $(free -h | awk '/^Mem:/ {print $3 " / " $2}')"
+box_line "Pkgs:    $(pacman -Qq | wc -l)"
+
+printf "%s╰" "$margin"
+printf '─%.0s' {1..42}
+printf "╯\n"
+echo

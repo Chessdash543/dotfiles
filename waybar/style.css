@@ -157,6 +157,36 @@ window#waybar > box {
   50% { background: rgba(255, 50, 50, 0.5); }
 }
 
+#network {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#network:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+#custom-swaync {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-swaync:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
 /* ---- TOOLTIP ---- */
 
 tooltip {
