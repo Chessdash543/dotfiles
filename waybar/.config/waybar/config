@@ -18,8 +18,8 @@
 
   "modules-right": [
     "tray",
-    "custom/swaync",
     "custom/system-info",
+    "custom/swaync",
     "custom/system-block"
   ],
 
