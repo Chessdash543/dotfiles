@@ -21,7 +21,5 @@ yay -S --needed --noconfirm - < aur-pkglist.txt
 
 echo "[4] Ativando serviços essenciais"
 
-sudo systemctl enable NetworkManager || true
-sudo systemctl enable ly || true
 
 echo "[5] Concluído"

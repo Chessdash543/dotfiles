@@ -26,7 +26,8 @@
   "custom/launcher": {
     "format": "",
     "on-click": "fuzzel",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "eww open apps"
   },
 
   "custom/hostname": {
