@@ -34,7 +34,7 @@ local terminal2    = "kitty"
 local terminal    = "lxterminal"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
-local menu        = "rofi -show drun" -- "hyprlauncher" 
+local menu        = "fuzzel" -- "hyprlauncher" 
 local window        = "rofi -show window"
 
 
@@ -188,14 +188,14 @@ hl.animation({
 hl.animation({
     leaf = "workspacesIn",
     enabled = true,
-    speed = 3,
+    speed = 4,
     bezier = "easeOutQuint",
 })
 
 hl.animation({
     leaf = "workspacesOut",
     enabled = true,
-    speed = 3,
+    speed = 4,
     bezier = "easeOutQuint",
 })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
