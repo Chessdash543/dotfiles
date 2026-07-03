@@ -34,7 +34,7 @@ local terminal2    = "kitty"
 local terminal    = "lxterminal"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
-local menu        = "fuzzel" -- "hyprlauncher" 
+local menu        = "rofi -show drun" -- "hyprlauncher" 
 local window        = "rofi -show window"
 
 
