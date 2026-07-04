@@ -311,6 +311,8 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind("PRINT", hl.dsp.exec_cmd("grimblast save area"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("grimblast save screen"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("~/.config/eww/scripts/musicctl.sh"))
+hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("~/.config/eww/scripts/usrctl.sh"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
