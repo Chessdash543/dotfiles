@@ -331,12 +331,11 @@ menu {
 }
 
 .music-container{
-  box-shadow: 0 2px 3px 2px #06060b;
-  margin:5.5px;
+  background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
+  border: 3px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   min-width:385px;
-  background-color: rgba(24,24,37,0.92);
-  padding: 5px;
+  padding: 3px;
 }
 
 .main-container{
@@ -361,12 +360,12 @@ menu {
 
 .pfp{
   box-shadow: 0 2px 3px 2px rgba(6,6,11,0.9);
-  background-image: url('./Monasm.jpg');
-  background-size: 90px;
+  background-image: url('/home/ryanv/.config/hyprlock/wallpapers/me.png');
+  background-size: 120px;
   background-position: 50% 35%;
   background-repeat:no-repeat;
-  min-height: 90px;
-  min-width: 90px;
+  min-height: 120px;
+  min-width: 120px;
   border-radius: 100%;
   margin-right:20px;
 }
@@ -696,6 +695,17 @@ tooltip{
 .music-timer{
   color: rgb(205,212,246);
   margin:3px 20px;
+}
+
+.music-close{
+  font-size:16px;
+  margin-right:5px;
+  padding: 0 5px;
+  color: rgba(255,255,255,0.5);
+  transition:color 0.3s;
+  &:hover{
+    color: #e06c75;
+  }
 }
 
 .mico{

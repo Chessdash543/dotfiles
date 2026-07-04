@@ -8,8 +8,10 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
-    "custom/hostname"
+    "custom/hostname",
+    "custom/musicctl"
   ],
+
 
   "modules-center": [
     "clock"
@@ -86,6 +88,12 @@
   "custom/usrctl": {
     "format": "",
     "on-click": "~/.config/eww/scripts/usrctl.sh",
+    "tooltip": false
+  },
+
+  "custom/musicctl": {
+    "format": "",
+    "on-click": "~/.config/eww/scripts/musicctl.sh",
     "tooltip": false
   },
 

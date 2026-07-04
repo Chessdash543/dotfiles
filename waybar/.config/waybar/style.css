@@ -172,6 +172,21 @@ window#waybar > box {
   color: #ffffff;
 }
 
+#custom-musicctl {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-musicctl:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
 #custom-usrctl {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
