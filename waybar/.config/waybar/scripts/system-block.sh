@@ -24,29 +24,9 @@ else
   fi
   battery_text="$battery_pct% $battery_icon"
 fi
-
-# Volume
-vol_info=$(pactl get-sink-volume @DEFAULT_SINK@ 2>/dev/null | grep -oP '\d+(?=%)' | head -1)
-vol_mute=$(pactl get-sink-mute @DEFAULT_SINK@ 2>/dev/null | grep -oP '(?<=Mute: )(yes|no)')
-
-if [ -n "$vol_info" ]; then
-  if [ "$vol_mute" = "yes" ]; then
-    volume_text=""
-  elif [ "$vol_info" -ge 50 ]; then
-    volume_text=" $vol_info%"
-  elif [ "$vol_info" -gt 0 ]; then
-    volume_text=" $vol_info%"
-  else
-    volume_text=""
-  fi
-else
-  volume_text=""
-fi
-
 # Build output
 parts=()
 [ -n "$battery_text" ] && parts+=("$battery_text")
-[ -n "$volume_text" ] && parts+=("$volume_text")
 
 text=""
 for i in "${!parts[@]}"; do

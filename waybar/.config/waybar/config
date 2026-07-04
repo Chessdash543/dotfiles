@@ -20,6 +20,7 @@
   "modules-right": [
     "tray",
     "custom/swaync",
+    "pulseaudio",
     "custom/system-info",
     "custom/system-block",
     "custom/usrctl"
@@ -74,14 +75,31 @@
     "tooltip": false
   },
 
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "tooltip": true
+  },
+
   "custom/system-block": {
     "exec": "$HOME/.config/waybar/scripts/system-block.sh",
     "return-type": "json",
     "interval": 5,
     "on-click": "wlogout",
     "on-click-right": "kitty -e nmtui",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "tooltip": false
   },
 
