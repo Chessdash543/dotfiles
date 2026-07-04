@@ -402,4 +402,12 @@ hl.window_rule({
     float = true,
 })
 
+-- Prevent eww windows from stealing focus
+hl.window_rule({
+    name  = "eww-nofocus",
+    match = { class = "^(Eww)$" },
+    no_focus = true,
+    no_initial_focus = true,
+})
+
 
