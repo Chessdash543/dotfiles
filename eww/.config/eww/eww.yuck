@@ -506,6 +506,7 @@
 (defwidget usrctl-widget [uptime]
     (box :space-evenly false
          :valign "start"
+    (box :class "usrctl-container-outer"
     (eventbox :class "shadow-container"
          :onhoverlost "./scripts/usrctl.sh"
          (box :orientation "v"
@@ -702,10 +703,10 @@
                    )
               )
          )
-         (cpu-panel)
          (music-player) 
          )
-    ))
+    )
+    )
 )
 
 (deflisten batico "./scripts/batico.sh")
@@ -726,51 +727,7 @@
     "./scripts/getvol.sh"
 )
 
-(defwidget cpu-panel []
-    (box :class "cpu-container"
-         :orientation "v"
-         :space-evenly false
-         (box :orientation "h"
-              :class "cpu-header"
-              :space-evenly false
-              (label :text "Core Temperature" :style "color:#cdd6f4;font-size:20px;")
-         )
-         (box :class "graph-container"
-              :orientation "v"
-              :space-evenly false
-              (overlay
-              (graph :thickness 2
-                     :dynamic true
-                     :height "100"
-                     :width "350"
-                     :class "graph-display"
-                     :time-range "300s"
-                     :min 0
-                     :max 101
-                     :value {EWW_TEMPS.CORETEMP_PACKAGE_ID_0}
-              )
-              (box :class "main-temp"
-                   :halign "start"
-                   :valign "end"
-                   (label :class "main-temp-text" :text "${EWW_TEMPS.CORETEMP_PACKAGE_ID_0} °C")
-              )
-              )
-         )
-         (box :class "minicore-container"
-              :orientation "v"
-              :space-evenly false
-              (box :class "minicores"
-                   (label :class "C0" :text "Core 0: ${EWW_TEMPS.CORETEMP_CORE_0} °C")
-                   (label :class "C1" :text "Core 1: ${EWW_TEMPS.CORETEMP_CORE_1} °C")
-              )
-              (box :class "minicores"
-                   (label :class "C2" :text "Core 2: ${EWW_TEMPS.CORETEMP_CORE_2} °C")
-                   (label :class "C3" :text "Core 3: ${EWW_TEMPS.CORETEMP_CORE_3} °C")
-              )
-         )
 
-    )
-)
 
 (defwidget music-player []
     (revealer :transition "slidedown"

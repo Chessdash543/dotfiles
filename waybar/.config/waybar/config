@@ -19,7 +19,8 @@
     "tray",
     "custom/swaync",
     "custom/system-info",
-    "custom/system-block"
+    "custom/system-block",
+    "custom/usrctl"
   ],
 
   "custom/launcher": {
@@ -79,6 +80,12 @@
     "on-click-right": "kitty -e nmtui",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
+  },
+
+  "custom/usrctl": {
+    "format": "",
+    "on-click": "~/.config/eww/scripts/usrctl.sh",
     "tooltip": false
   },
 
