@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 0.1
+
 if [[ -z $(eww active-windows | grep 'musicctl') ]]; then
     /usr/bin/eww open musicctl && /usr/bin/eww update musicctlrev=true
 else

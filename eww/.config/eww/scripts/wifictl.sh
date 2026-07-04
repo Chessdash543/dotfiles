@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 0.1
+
 if [[ -z $(eww active-windows | grep 'wifictl') ]]; then
     /usr/bin/eww open wifictl && /usr/bin/eww update wifictlrev=true
 else

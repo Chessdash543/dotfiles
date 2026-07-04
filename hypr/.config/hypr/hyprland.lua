@@ -143,6 +143,7 @@ hl.layer_rule({
     blur = true,
 })
 
+
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
@@ -371,6 +372,12 @@ local suppressMaximizeRule = hl.window_rule({
 -- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
+    match = { class = "eww" },
+    no_focus = true,
+    no_blur = true,
+})
+
+hl.window_rule({
     -- Fix some dragging issues with XWayland
     name  = "fix-xwayland-drags",
     match = {
@@ -402,12 +409,6 @@ hl.window_rule({
     float = true,
 })
 
--- Prevent eww windows from stealing focus
-hl.window_rule({
-    name  = "eww-nofocus",
-    match = { class = "^(Eww)$" },
-    no_focus = true,
-    no_initial_focus = true,
-})
+
 
 
