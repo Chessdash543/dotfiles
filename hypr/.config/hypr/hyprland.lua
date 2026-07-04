@@ -48,7 +48,7 @@ local window        = "rofi -show window"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("hyprlock & awww-daemon & awww --restore & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
+  hl.exec_cmd("hyprlock & awww-daemon & awww --restore & waybar & eww daemon & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
   hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
 end)
 hl.on("hyprland.start", function ()
