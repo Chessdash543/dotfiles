@@ -21,3 +21,7 @@ pipewire
 wireplumber
 sddm
 cairo-dock
+eww
+hyprlock
+swaync
+fuzzel
