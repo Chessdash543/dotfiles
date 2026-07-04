@@ -8,8 +8,7 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
-    "custom/hostname",
-    "pulseaudio"
+    "custom/hostname"
   ],
 
   "modules-center": [
@@ -18,14 +17,14 @@
 
   "modules-right": [
     "tray",
-    "custom/system-info",
     "custom/swaync",
+    "custom/system-info",
     "custom/system-block"
   ],
 
   "custom/launcher": {
     "format": "",
-    "on-click": "fuzzel",
+    "on-click": "~/.config/eww/scripts/menuctl.sh",
     "tooltip": false
   },
 
@@ -34,18 +33,6 @@
     "exec": "hostname",
     "interval": 86400,
     "tooltip": false
-  },
-
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": " Muted",
-    "format-icons": {
-      "default": ["", "", ""]
-    },
-    "tooltip": false,
-    "on-click": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
 
   "hyprland/workspaces": {
@@ -66,7 +53,7 @@
   "clock": {
     "format": "{:%H:%M}",
     "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt>{calendar}</tt>",
-    "on-click": "gsimplecal",
+    "on-click": "~/.config/eww/scripts/calendar.sh",
     "calendar": {
       "mode": "month",
       "weeks-pos": "right"
@@ -89,18 +76,9 @@
     "return-type": "json",
     "interval": 5,
     "on-click": "wlogout",
+    "on-click-right": "kitty -e nmtui",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-    "tooltip": false
-  },
-
-  "network": {
-    "format-wifi": " ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-disconnected": "󰌙",
-    "interval": 1,
-    "on-click-right": "kitty -e nmtui",
-    "max-length": 30,
     "tooltip": false
   },
 

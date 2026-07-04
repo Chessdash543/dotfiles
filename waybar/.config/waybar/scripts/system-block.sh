@@ -25,25 +25,28 @@ else
   battery_text="$battery_pct% $battery_icon"
 fi
 
-# Network
-active_conn=$(nmcli -t -f NAME,DEVICE conn show --active 2>/dev/null | grep -v "^lo:" | head -1)
-wifi_ssid=$(echo "$active_conn" | cut -d: -f1)
+# Volume
+vol_info=$(pactl get-sink-volume @DEFAULT_SINK@ 2>/dev/null | grep -oP '\d+(?=%)' | head -1)
+vol_mute=$(pactl get-sink-mute @DEFAULT_SINK@ 2>/dev/null | grep -oP '(?<=Mute: )(yes|no)')
 
-if [ -n "$wifi_ssid" ]; then
-  network_text=" "
-else
-  wifi_on=$(nmcli radio wifi 2>/dev/null)
-  if [ "$wifi_on" = "enabled" ]; then
-    network_text="  "
+if [ -n "$vol_info" ]; then
+  if [ "$vol_mute" = "yes" ]; then
+    volume_text=""
+  elif [ "$vol_info" -ge 50 ]; then
+    volume_text=" $vol_info%"
+  elif [ "$vol_info" -gt 0 ]; then
+    volume_text=" $vol_info%"
   else
-    network_text=""
+    volume_text=""
   fi
+else
+  volume_text=""
 fi
 
 # Build output
 parts=()
 [ -n "$battery_text" ] && parts+=("$battery_text")
-[ -n "$network_text" ] && parts+=("$network_text")
+[ -n "$volume_text" ] && parts+=("$volume_text")
 
 text=""
 for i in "${!parts[@]}"; do
