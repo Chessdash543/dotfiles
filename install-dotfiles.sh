@@ -2,24 +2,16 @@
 set -e
 
 DOTFILES="$HOME/dotfiles"
-CONFIG="$DOTFILES/dotfiles.conf"
-
-[ -f "$CONFIG" ] && source "$CONFIG"
 
 cd "$DOTFILES"
 
-for app in "${CONFIG_APPS[@]}"; do
-  if [ -d "$app" ]; then
-    stow "$app"
-    echo "stow $app OK"
-  fi
-done
-
-if [ -d config ]; then
-  stow config
-  echo "stow config OK"
+# .config (--no-folding cria symlinks individuais, não uma pasta inteira)
+if [ -d .config ]; then
+  stow --no-folding .config
+  echo "stow .config OK"
 fi
 
+# $HOME files
 if [ -d home ]; then
   stow home
   echo "stow home OK"

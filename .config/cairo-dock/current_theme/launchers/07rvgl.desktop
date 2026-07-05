@@ -1,0 +1,19 @@
+#3.6.2
+
+[Desktop Entry]
+frame_maininfo=
+Container=_MainDock_
+sep_display=
+Name=RVGL
+Icon=rvgl
+Exec=/usr/local/bin/rvgl
+frame_extra=
+prevent inhibate=false
+StartupWMClass=rvgl
+Terminal=false
+Path=
+ShowOnViewport=0
+Order=6
+Icon Type=0
+Type=Application
+Origin=rvgl.desktop

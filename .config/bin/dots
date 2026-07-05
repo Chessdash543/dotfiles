@@ -1,0 +1,34 @@
+#!/bin/bash
+set -e
+
+DOTFILES="${DOTFILES:-$HOME/dotfiles}"
+
+cd "$DOTFILES"
+
+echo "=== Sincronizando dotfiles ==="
+
+# .config
+if [ -d .config ]; then
+  stow -R --no-folding .config 2>/dev/null \
+    && echo "  .config OK" \
+    || echo "  .config FAIL"
+fi
+
+# $HOME files
+if [ -d home ]; then
+  stow -R home 2>/dev/null \
+    && echo "  home OK" \
+    || echo "  home FAIL"
+fi
+
+# /etc files (precisa de sudo)
+if [ -d etc ]; then
+  for entry in etc/*; do
+    [ -f "$entry" ] || continue
+    dst="/${entry}"
+    sudo ln -sf "$DOTFILES/$entry" "$dst"
+    echo "  sudo $dst OK"
+  done
+fi
+
+echo "=== Pronto ==="

@@ -1,0 +1,133 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 8,
+  "margin": "8 8 0 8",
+  "height": 40,
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "custom/hostname",
+    "custom/musicctl"
+  ],
+
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/swaync",
+    "pulseaudio",
+    "custom/system-info",
+    "custom/system-block",
+    "custom/usrctl"
+  ],
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "~/.config/eww/scripts/menuctl.sh",
+    "tooltip": false
+  },
+
+  "custom/hostname": {
+    "format": " {}",
+    "exec": "hostname",
+    "interval": 86400,
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "disable-click": false,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "●",
+      "default": "●",
+      "empty": "○"
+    },
+    "persistent-workspaces": {
+      "*": 10
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt>{calendar}</tt>",
+    "on-click": "~/.config/eww/scripts/calendar.sh",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right"
+    }
+  },
+
+  "tray": {
+    "spacing": 8
+  },
+
+  "custom/system-info": {
+    "exec": "$HOME/.config/waybar/scripts/system-info.sh",
+    "return-type": "json",
+    "interval": 10,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "tooltip": true
+  },
+
+  "custom/system-block": {
+    "exec": "$HOME/.config/waybar/scripts/system-block.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "wlogout",
+    "on-click-right": "kitty -e nmtui",
+    "tooltip": false
+  },
+
+  "custom/usrctl": {
+    "format": "",
+    "on-click": "~/.config/eww/scripts/usrctl.sh",
+    "tooltip": false
+  },
+
+  "custom/musicctl": {
+    "format": "",
+    "on-click": "~/.config/eww/scripts/musicctl.sh",
+    "tooltip": false
+  },
+
+  "custom/swaync": {
+    "format" : "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "escape": true,
+    "tooltip": false
+  }
+}

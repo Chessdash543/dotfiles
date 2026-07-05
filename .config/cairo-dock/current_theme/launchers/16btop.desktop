@@ -1,0 +1,19 @@
+#3.6.2
+
+[Desktop Entry]
+frame_maininfo=
+Container=_MainDock_
+sep_display=
+Name=btop++
+Icon=btop
+Exec=btop
+frame_extra=
+prevent inhibate=false
+StartupWMClass=btop
+Terminal=true
+Path=
+ShowOnViewport=0
+Order=12
+Icon Type=0
+Type=Application
+Origin=btop.desktop

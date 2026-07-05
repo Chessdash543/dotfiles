@@ -1,0 +1,12 @@
+#3.6.2
+
+[Desktop Entry]
+Container=_MainDock_
+Name=osu!
+Icon=/home/ryanv/.local/share/icons/osu-wine.png
+Exec=/home/ryanv/.local/bin/osu-wine
+Terminal=false
+Order=5
+Icon Type=0
+Type=Application
+Origin=osu-wine.desktop
