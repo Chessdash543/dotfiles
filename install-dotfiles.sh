@@ -15,6 +15,11 @@ for app in "${CONFIG_APPS[@]}"; do
   fi
 done
 
+if [ -d config ]; then
+  stow config
+  echo "stow config OK"
+fi
+
 if [ -d home ]; then
   stow home
   echo "stow home OK"
