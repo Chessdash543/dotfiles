@@ -1,0 +1,65 @@
+#!/bin/bash
+set -e
+
+DOTFILES="$HOME/dotfiles"
+CONFIG="$DOTFILES/dotfiles.conf"
+
+[ -f "$CONFIG" ] && source "$CONFIG"
+
+log() { echo "$*"; }
+
+echo "
+ [1/4] Sync ~/.config
+"
+
+for app in "${CONFIG_APPS[@]}"; do
+  SRC="$HOME/.config/$app"
+  DEST="$DOTFILES/$app/.config/$app"
+
+  if [ -d "$SRC" ]; then
+    mkdir -p "$DEST"
+    rsync -a --delete "$SRC/" "$DEST/"
+    log "$app Synced"
+  fi
+done
+
+echo "
+ [2/4] Sync HOME dotfiles
+ "
+
+mkdir -p "$DOTFILES/home"
+
+for file in "${HOME_FILES[@]}"; do
+  if [ -f "$HOME/$file" ]; then
+    cp "$HOME/$file" "$DOTFILES/home/"
+    log "$file copied"
+  fi
+done
+
+echo "
+ [3/4] System configs
+ "
+
+for entry in "${ETC_FILES[@]}"; do
+  src="${entry%%=*}"
+  dest="$DOTFILES/${entry#*=}"
+  mkdir -p "$(dirname "$dest")"
+  [ -f "$src" ] && cp "$src" "$dest" && log "$src -> $dest"
+done
+
+echo " [4/4] Git stage
+"
+
+cd "$DOTFILES"
+git add -A
+
+if git diff --cached --quiet; then
+  echo "Nothing to Update"
+  exit 0
+fi
+log "Creating commit"
+git commit -m "sync: $(date '+%Y-%m-%d %H:%M:%S')"
+log "Pushing"
+git push
+
+log "Dotfiles synchronized"
