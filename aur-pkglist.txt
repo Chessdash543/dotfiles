@@ -20,3 +20,4 @@ sublime-text-4
 unimatrix-git
 waypaper
 wlogout
+walker
