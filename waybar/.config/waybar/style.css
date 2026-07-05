@@ -1,0 +1,230 @@
+* {
+  font-family: JetBrainsMono Nerd Font, sans-serif;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar > box {
+  background: linear-gradient(
+    to right,
+    rgba(212, 0, 240, 0.6),
+    rgba(1, 162, 254, 0.6)
+);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 0 6px;
+}
+
+/* ---- LEFT ---- */
+
+#custom-launcher {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 12px 0 6px;
+  font-size: 18px;
+}
+
+#custom-launcher:hover {
+  color: rgba(30, 30, 30, 1.0);
+}
+
+#workspaces {
+  padding: 0 4px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  margin: 2px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  padding: 0 3px;
+  margin: 0 1px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+#workspaces button.active {
+  color: rgba(255, 255, 255, 1.0);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#custom-hostname {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#pulseaudio {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  min-width: 40px;
+}
+
+#pulseaudio:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+/* ---- CENTER ---- */
+
+#clock {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  padding: 0 8px;
+}
+
+#clock:hover {
+  color: #51afef;
+}
+
+/* ---- RIGHT ---- */
+
+#tray {
+  padding: 0 4px;
+  color: rgba(10, 10, 10, 0.9);
+  background: rgba(0, 0, 0, 0.2);
+  margin: 2px;
+  padding-left: 4px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+#tray:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+#custom-system-info {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 12px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-system-info:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+#custom-system-block {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 12px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-system-block:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+#custom-system-block.critical {
+  background: rgba(255, 50, 50, 0.3);
+  color: #ff4444;
+  animation: blink-critical 1s ease-in-out infinite;
+}
+
+@keyframes blink-critical {
+  50% { background: rgba(255, 50, 50, 0.5); }
+}
+
+#network {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#network:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+#custom-musicctl {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-musicctl:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+#custom-usrctl {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-usrctl:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+#custom-swaync {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 0;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#custom-swaync:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+/* ---- TOOLTIP ---- */
+
+tooltip {
+  background: rgba(18, 18, 22, 0.95);
+  border: 1px solid rgba(81, 175, 239, 0.3);
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: white;
+}

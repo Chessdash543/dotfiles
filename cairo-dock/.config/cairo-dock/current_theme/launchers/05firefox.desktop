@@ -1,0 +1,19 @@
+#3.6.2
+
+[Desktop Entry]
+frame_maininfo=
+Container=_MainDock_
+sep_display=
+Name=
+Icon=
+Exec=firefox-esr
+frame_extra=
+prevent inhibate=false
+StartupWMClass=firefox ESR
+Terminal=false
+Path=
+ShowOnViewport=0
+Order=4
+Icon Type=0
+Type=Application
+Origin=firefox.desktop;iceweasel.desktop;chromium-browser.desktop;rekonq.desktop;konqueror.desktop;org.gnome.Epiphany.desktop;konqbrowser.desktop;opera.desktop
