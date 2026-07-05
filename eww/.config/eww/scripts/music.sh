@@ -22,6 +22,15 @@ playerctl metadata -F -f '{{playerName}}|{{title}}|{{artist}}|{{mpris:artUrl}}|{
             rm -f "$image_file"
             cp "${base_dir}scripts/cover.png" "$image_file"
         fi
+    elif [[ "$artUrl" =~ ^file:// ]]; then
+        local_path="${artUrl#file://}"
+        if cp "$local_path" "$image_file" 2>/dev/null; then
+            :
+        else
+            cp "${base_dir}scripts/cover.png" "$image_file"
+        fi
+    elif [[ -f "$artUrl" ]]; then
+        cp "$artUrl" "$image_file" 2>/dev/null || cp "${base_dir}scripts/cover.png" "$image_file"
     else
         cp "${base_dir}scripts/cover.png" "$image_file"
     fi
@@ -29,7 +38,7 @@ playerctl metadata -F -f '{{playerName}}|{{title}}|{{artist}}|{{mpris:artUrl}}|{
         --arg name "$name" \
         --arg title "$title" \
         --arg artist "$artist" \
-        --arg artUrl "$image_file" \
+        --arg artUrl "file://$image_file" \
         --arg status "$status" \
         --arg length "$len_sec" \
         --arg lengthStr "$lengthStr" \
