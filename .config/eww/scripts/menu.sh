@@ -11,6 +11,7 @@ names=(
   "Krita"
   "LibreOffice"
   "RVGL"
+  "qBittorrent"
 )
 
 execs=(
@@ -24,6 +25,7 @@ execs=(
   "krita"
   "libreoffice"
   "rvgl"
+  "qbittorrent"
 )
 
 icons=(
@@ -37,6 +39,7 @@ icons=(
   "/usr/share/icons/hicolor/256x256/apps/krita.png"
   "/usr/share/icons/hicolor/128x128/apps/libreoffice-writer.png"
   "/usr/share/icons/Papirus/64x64/apps/rvgl.svg"
+  "/usr/share/icons/hicolor/128x128/apps/qbittorrent.png"
 )
 
 terminal=(
@@ -44,6 +47,7 @@ terminal=(
   false
   false
   true
+  false
   false
   false
   false

@@ -9,12 +9,12 @@ CONFIG="$DOTFILES/dotfiles.conf"
 log() { echo "$*"; }
 
 echo "
- [1/4] Sync ~/.config
+ [1/3] Sync ~/.config
 "
 
 for app in "${CONFIG_APPS[@]}"; do
   SRC="$HOME/.config/$app"
-  DEST="$DOTFILES/$app/.config/$app"
+  DEST="$DOTFILES/.config/$app"
 
   if [ -d "$SRC" ]; then
     mkdir -p "$DEST"
@@ -24,7 +24,7 @@ for app in "${CONFIG_APPS[@]}"; do
 done
 
 echo "
- [2/4] Sync HOME dotfiles
+ [2/3] Sync HOME dotfiles
  "
 
 mkdir -p "$DOTFILES/home"
@@ -35,19 +35,7 @@ for file in "${HOME_FILES[@]}"; do
     log "$file copied"
   fi
 done
-
-echo "
- [3/4] System configs
- "
-
-for entry in "${ETC_FILES[@]}"; do
-  src="${entry%%=*}"
-  dest="$DOTFILES/${entry#*=}"
-  mkdir -p "$(dirname "$dest")"
-  [ -f "$src" ] && cp "$src" "$dest" && log "$src -> $dest"
-done
-
-echo " [4/4] Git stage
+echo " [3/3] Git stage
 "
 
 cd "$DOTFILES"
