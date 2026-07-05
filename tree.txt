@@ -1,0 +1,1852 @@
+.
+├── ascii
+│   └── .config
+│       └── ascii
+│           ├── default.txt
+│           ├── gnome.txt
+│           ├── hyprland.txt
+│           ├── openbox.txt
+│           └── wayfire.txt
+├── aur-pkglist.txt
+├── btop
+│   └── .config
+│       └── btop
+│           ├── btop.conf
+│           └── themes
+├── cairo-dock
+│   └── .config
+│       └── cairo-dock
+│           ├── .cairo-dock
+│           ├── .cairo-dock-need-save
+│           ├── current_theme
+│           │   ├── cairo-dock.conf
+│           │   ├── cairo-dock-simple.conf
+│           │   ├── extras
+│           │   │   ├── dustbin
+│           │   │   │   └── Humanity
+│           │   │   │       ├── trashcan_empty.svg
+│           │   │   │       └── trashcan_full.svg
+│           │   │   └── gauges
+│           │   │       └── Humanity
+│           │   │           ├── 0.svg
+│           │   │           ├── 100.svg
+│           │   │           ├── 10.svg
+│           │   │           ├── 15.svg
+│           │   │           ├── 20.svg
+│           │   │           ├── 25.svg
+│           │   │           ├── 30.svg
+│           │   │           ├── 35.svg
+│           │   │           ├── 40.svg
+│           │   │           ├── 45.svg
+│           │   │           ├── 50.svg
+│           │   │           ├── 55.svg
+│           │   │           ├── 5.svg
+│           │   │           ├── 60.svg
+│           │   │           ├── 65.svg
+│           │   │           ├── 70.svg
+│           │   │           ├── 75.svg
+│           │   │           ├── 80.svg
+│           │   │           ├── 85.svg
+│           │   │           ├── 90.svg
+│           │   │           ├── 95.svg
+│           │   │           ├── background2.svg
+│           │   │           ├── background.svg
+│           │   │           ├── foreground.svg
+│           │   │           ├── preview
+│           │   │           ├── readme
+│           │   │           ├── theme.xml
+│           │   │           └── version
+│           │   ├── icons
+│           │   │   ├── archlinux.svg
+│           │   │   ├── folder.svg
+│           │   │   └── rvgl.svg
+│           │   ├── images
+│           │   │   ├── active.png
+│           │   │   ├── bg.svg
+│           │   │   └── indicator.png
+│           │   ├── launchers
+│           │   │   ├── 03lxterminal.desktop
+│           │   │   ├── 04thunar.desktop
+│           │   │   ├── 05firefox.desktop
+│           │   │   ├── 06sublime_text.desktop
+│           │   │   ├── 07rvgl.desktop
+│           │   │   ├── 08github-desktop.desktop
+│           │   │   ├── 09vlc.desktop
+│           │   │   ├── 10krita.desktop
+│           │   │   ├── 11gimp.desktop
+│           │   │   ├── 12libreoffice.desktop
+│           │   │   ├── 13sober.desktop
+│           │   │   ├── 14dorion.desktop
+│           │   │   ├── 15zapzap.desktop
+│           │   │   ├── 16btop.desktop
+│           │   │   ├── 17osu.desktop
+│           │   │   └── 18dissent.desktop
+│           │   ├── plug-ins
+│           │   │   ├── AlsaMixer
+│           │   │   │   └── AlsaMixer.conf
+│           │   │   ├── Animated-icons
+│           │   │   │   └── Animated-icons.conf
+│           │   │   ├── Cairo-Penguin
+│           │   │   │   └── Cairo-Penguin.conf
+│           │   │   ├── Clipper
+│           │   │   │   └── Clipper.conf
+│           │   │   ├── clock
+│           │   │   │   └── clock.conf
+│           │   │   ├── Dbus
+│           │   │   │   └── Dbus.conf
+│           │   │   ├── dialog-rendering
+│           │   │   │   └── dialog-rendering.conf
+│           │   │   ├── dnd2share
+│           │   │   │   └── dnd2share.conf
+│           │   │   ├── drop_indicator
+│           │   │   │   └── drop_indicator.conf
+│           │   │   ├── dustbin
+│           │   │   │   └── dustbin.conf
+│           │   │   ├── GMenu
+│           │   │   │   └── GMenu.conf
+│           │   │   ├── help
+│           │   │   │   └── help.conf
+│           │   │   ├── Help
+│           │   │   │   └── Help.conf
+│           │   │   ├── icon-effect
+│           │   │   │   └── icon-effect.conf
+│           │   │   ├── illusion
+│           │   │   │   └── illusion.conf
+│           │   │   ├── Impulse
+│           │   │   │   └── Impulse.conf
+│           │   │   ├── Indicator-Generic
+│           │   │   │   └── Indicator-Generic.conf
+│           │   │   ├── logout
+│           │   │   │   ├── logout.conf
+│           │   │   │   └── .svn
+│           │   │   │       ├── all-wcprops
+│           │   │   │       ├── entries
+│           │   │   │       ├── format
+│           │   │   │       ├── prop-base
+│           │   │   │       │   ├── logout.conf.svn-base
+│           │   │   │       │   └── Makefile.am.svn-base
+│           │   │   │       ├── props
+│           │   │   │       ├── text-base
+│           │   │   │       │   ├── logout.conf.svn-base
+│           │   │   │       │   └── Makefile.am.svn-base
+│           │   │   │       └── tmp
+│           │   │   │           ├── prop-base
+│           │   │   │           ├── props
+│           │   │   │           └── text-base
+│           │   │   ├── musicPlayer
+│           │   │   │   └── musicPlayer.conf
+│           │   │   ├── quick-browser
+│           │   │   │   └── quick-browser.conf
+│           │   │   ├── Recent-Events
+│           │   │   │   └── Recent-Events.conf
+│           │   │   ├── Remote-Control
+│           │   │   │   └── Remote-Control.conf
+│           │   │   ├── rendering
+│           │   │   │   └── rendering.conf
+│           │   │   ├── Scooby-Do
+│           │   │   │   └── Scooby-Do.conf
+│           │   │   ├── shortcuts
+│           │   │   │   └── shortcuts.conf
+│           │   │   ├── showDesktop
+│           │   │   │   └── showDesktop.conf
+│           │   │   ├── show_mouse
+│           │   │   │   └── show_mouse.conf
+│           │   │   ├── Sound-Effects
+│           │   │   │   └── Sound-Effects.conf
+│           │   │   ├── stack
+│           │   │   │   └── stack.conf
+│           │   │   ├── switcher
+│           │   │   │   └── switcher.conf
+│           │   │   ├── System-Monitor
+│           │   │   │   └── System-Monitor.conf
+│           │   │   ├── terminal
+│           │   │   │   └── terminal.conf
+│           │   │   └── Toons
+│           │   │       └── Toons.conf
+│           │   ├── preview
+│           │   ├── readme
+│           │   └── Unity-Like-3.tar.gz
+│           ├── extras
+│           │   ├── dustbin
+│           │   │   └── Humanity
+│           │   │       ├── trashcan_empty.svg
+│           │   │       └── trashcan_full.svg
+│           │   └── gauges
+│           │       └── Humanity
+│           │           ├── 0.svg
+│           │           ├── 100.svg
+│           │           ├── 10.svg
+│           │           ├── 15.svg
+│           │           ├── 20.svg
+│           │           ├── 25.svg
+│           │           ├── 30.svg
+│           │           ├── 35.svg
+│           │           ├── 40.svg
+│           │           ├── 45.svg
+│           │           ├── 50.svg
+│           │           ├── 55.svg
+│           │           ├── 5.svg
+│           │           ├── 60.svg
+│           │           ├── 65.svg
+│           │           ├── 70.svg
+│           │           ├── 75.svg
+│           │           ├── 80.svg
+│           │           ├── 85.svg
+│           │           ├── 90.svg
+│           │           ├── 95.svg
+│           │           ├── background2.svg
+│           │           ├── background.svg
+│           │           ├── foreground.svg
+│           │           ├── preview
+│           │           ├── readme
+│           │           ├── theme.xml
+│           │           └── version
+│           ├── .help
+│           ├── stack
+│           ├── themes
+│           │   ├── Humanity-Dock
+│           │   │   ├── cairo-dock.conf
+│           │   │   ├── extras
+│           │   │   │   ├── dustbin
+│           │   │   │   │   └── Humanity
+│           │   │   │   │       ├── trashcan_empty.svg
+│           │   │   │   │       └── trashcan_full.svg
+│           │   │   │   └── gauges
+│           │   │   │       └── Humanity
+│           │   │   │           ├── 0.svg
+│           │   │   │           ├── 100.svg
+│           │   │   │           ├── 10.svg
+│           │   │   │           ├── 15.svg
+│           │   │   │           ├── 20.svg
+│           │   │   │           ├── 25.svg
+│           │   │   │           ├── 30.svg
+│           │   │   │           ├── 35.svg
+│           │   │   │           ├── 40.svg
+│           │   │   │           ├── 45.svg
+│           │   │   │           ├── 50.svg
+│           │   │   │           ├── 55.svg
+│           │   │   │           ├── 5.svg
+│           │   │   │           ├── 60.svg
+│           │   │   │           ├── 65.svg
+│           │   │   │           ├── 70.svg
+│           │   │   │           ├── 75.svg
+│           │   │   │           ├── 80.svg
+│           │   │   │           ├── 85.svg
+│           │   │   │           ├── 90.svg
+│           │   │   │           ├── 95.svg
+│           │   │   │           ├── background2.svg
+│           │   │   │           ├── background.svg
+│           │   │   │           ├── foreground.svg
+│           │   │   │           ├── preview
+│           │   │   │           ├── readme
+│           │   │   │           ├── theme.xml
+│           │   │   │           └── version
+│           │   │   ├── icons
+│           │   │   │   ├── audio-player-not-work.svg
+│           │   │   │   ├── audio-player-pause.svg
+│           │   │   │   ├── audio-player-stop.svg
+│           │   │   │   ├── audio-player.svg
+│           │   │   │   ├── document-open.svg
+│           │   │   │   ├── firefox.png
+│           │   │   │   ├── f-spot.svg
+│           │   │   │   ├── gimp.svg
+│           │   │   │   ├── inkscape.svg
+│           │   │   │   ├── links.svg
+│           │   │   │   ├── logout.png
+│           │   │   │   ├── pidgin.svg
+│           │   │   │   ├── start-here.svg
+│           │   │   │   ├── system-file-manager.svg
+│           │   │   │   ├── transmission.svg
+│           │   │   │   ├── user-desktop-active.svg
+│           │   │   │   ├── user-desktop.svg
+│           │   │   │   └── utilities-terminal.svg
+│           │   │   ├── images
+│           │   │   │   ├── bg.png
+│           │   │   │   ├── class-indicator.svg
+│           │   │   │   ├── dialog-apply.svg
+│           │   │   │   ├── gnome-fs-bookmark-missing.svg
+│           │   │   │   ├── go-down.svg
+│           │   │   │   ├── indicator.png
+│           │   │   │   ├── list-add.svg
+│           │   │   │   └── window-close.svg
+│           │   │   ├── last-modif
+│           │   │   ├── launchers
+│           │   │   │   ├── 01firefox.desktop
+│           │   │   │   ├── 01gcalctool.desktop
+│           │   │   │   ├── 01gimp.desktop
+│           │   │   │   ├── 01gnome-terminal.desktop
+│           │   │   │   ├── 01nautilus.desktop
+│           │   │   │   ├── 01ooo-writer.desktop
+│           │   │   │   ├── 01pidgin.desktop
+│           │   │   │   ├── 01separator.desktop
+│           │   │   │   ├── 01thunderbird.desktop
+│           │   │   │   ├── 01ubuntu-software-center.desktop
+│           │   │   │   ├── 02separator.desktop
+│           │   │   │   └── 03separator.desktop
+│           │   │   ├── _MainDock_-2.conf
+│           │   │   ├── plug-ins
+│           │   │   │   ├── AlsaMixer
+│           │   │   │   │   └── AlsaMixer.conf
+│           │   │   │   ├── Animated-icons
+│           │   │   │   │   └── Animated-icons.conf
+│           │   │   │   ├── Clipper
+│           │   │   │   │   └── Clipper.conf
+│           │   │   │   ├── clock
+│           │   │   │   │   └── clock.conf
+│           │   │   │   ├── Dbus
+│           │   │   │   │   └── Dbus.conf
+│           │   │   │   ├── dialog-rendering
+│           │   │   │   │   └── dialog-rendering.conf
+│           │   │   │   ├── drop_indicator
+│           │   │   │   │   └── drop_indicator.conf
+│           │   │   │   ├── dustbin
+│           │   │   │   │   └── dustbin.conf
+│           │   │   │   ├── GMenu
+│           │   │   │   │   └── GMenu.conf
+│           │   │   │   ├── icon-effect
+│           │   │   │   │   └── icon-effect.conf
+│           │   │   │   ├── illusion
+│           │   │   │   │   └── illusion.conf
+│           │   │   │   ├── logout
+│           │   │   │   │   └── logout.conf
+│           │   │   │   ├── musicPlayer
+│           │   │   │   │   └── musicPlayer.conf
+│           │   │   │   ├── quick-browser
+│           │   │   │   │   └── quick-browser.conf
+│           │   │   │   ├── Recent-Events
+│           │   │   │   │   └── Recent-Events.conf
+│           │   │   │   ├── Remote-Control
+│           │   │   │   │   └── Remote-Control.conf
+│           │   │   │   ├── rendering
+│           │   │   │   │   └── rendering.conf
+│           │   │   │   ├── shortcuts
+│           │   │   │   │   └── shortcuts.conf
+│           │   │   │   ├── showDesktop
+│           │   │   │   │   └── showDesktop.conf
+│           │   │   │   ├── stack
+│           │   │   │   │   └── stack.conf
+│           │   │   │   ├── switcher
+│           │   │   │   │   └── switcher.conf
+│           │   │   │   └── System-Monitor
+│           │   │   │       └── System-Monitor.conf
+│           │   │   ├── preview
+│           │   │   └── readme
+│           │   ├── MacOSX
+│           │   │   ├── AlsaMixer.conf.txt
+│           │   │   ├── cairo-dock.conf
+│           │   │   ├── icons
+│           │   │   │   ├── abiword.svg
+│           │   │   │   ├── adept.svg -> packages.svg
+│           │   │   │   ├── amarok.svg
+│           │   │   │   ├── amule.svg
+│           │   │   │   ├── ardour.svg
+│           │   │   │   ├── audacity.svg
+│           │   │   │   ├── avidemux.svg
+│           │   │   │   ├── baobab.svg
+│           │   │   │   ├── beryl.svg
+│           │   │   │   ├── blender.svg
+│           │   │   │   ├── bluetooth.svg
+│           │   │   │   ├── boot.svg
+│           │   │   │   ├── brasero.svg
+│           │   │   │   ├── ccsm.svg
+│           │   │   │   ├── compiz-fusion.svg
+│           │   │   │   ├── dolphin.svg -> file-browser.svg
+│           │   │   │   ├── eclipse.svg
+│           │   │   │   ├── ekiga.svg
+│           │   │   │   ├── elisa.svg
+│           │   │   │   ├── emacs.svg
+│           │   │   │   ├── emblem-special.svg
+│           │   │   │   ├── eog.svg -> image-reader.svg
+│           │   │   │   ├── epsxe.svg
+│           │   │   │   ├── etqw.svg
+│           │   │   │   ├── evolution.svg -> mail-reader.svg
+│           │   │   │   ├── file-browser.svg
+│           │   │   │   ├── file-roller.svg
+│           │   │   │   ├── firefox.svg
+│           │   │   │   ├── frontrow.svg
+│           │   │   │   ├── f-spot.svg -> image-reader.svg
+│           │   │   │   ├── gajim.svg
+│           │   │   │   ├── gcalctool.svg
+│           │   │   │   ├── gconf-editor.svg
+│           │   │   │   ├── geany.svg -> writer.svg
+│           │   │   │   ├── gedit.svg
+│           │   │   │   ├── ghostview.svg
+│           │   │   │   ├── gimp.svg
+│           │   │   │   ├── glchess.svg
+│           │   │   │   ├── gnomebaker.svg
+│           │   │   │   ├── gnome-dev-harddisk.svg
+│           │   │   │   ├── gnome-dev-ipod.svg
+│           │   │   │   ├── gnome-dev-media-sm.svg
+│           │   │   │   ├── gnome-dictionary.svg
+│           │   │   │   ├── gnome-fs-desktop.svg
+│           │   │   │   ├── gnome-fs-network.svg
+│           │   │   │   ├── gnome-fs-smb.svg
+│           │   │   │   ├── gnome-nettool.svg
+│           │   │   │   ├── gnome-terminal.svg -> terminal.svg
+│           │   │   │   ├── gparted.svg
+│           │   │   │   ├── gqview.svg -> image-reader.svg
+│           │   │   │   ├── gwenview.svg -> image-reader.svg
+│           │   │   │   ├── image-reader.svg
+│           │   │   │   ├── inkscape.svg
+│           │   │   │   ├── jack.svg
+│           │   │   │   ├── kaffeine.svg
+│           │   │   │   ├── kate.svg -> writer.svg
+│           │   │   │   ├── kmail.svg -> mail-reader.svg
+│           │   │   │   ├── konqueror.svg -> file-browser.svg
+│           │   │   │   ├── konsole.svg -> terminal.svg
+│           │   │   │   ├── ksysguard.svg -> system-monitor.svg
+│           │   │   │   ├── labyrinth.svg
+│           │   │   │   ├── logviewer.svg
+│           │   │   │   ├── mail-reader.svg
+│           │   │   │   ├── mandvd.svg
+│           │   │   │   ├── mozilla-thunderbird.svg -> mail-reader.svg
+│           │   │   │   ├── nautilus.svg -> file-browser.svg
+│           │   │   │   ├── netscape.svg
+│           │   │   │   ├── ooo-calc.svg
+│           │   │   │   ├── ooo-writer.svg -> writer.svg
+│           │   │   │   ├── opera.svg
+│           │   │   │   ├── packages.svg
+│           │   │   │   ├── pacman-g2.svg -> packages.svg
+│           │   │   │   ├── palm-pilot.svg
+│           │   │   │   ├── pan.svg
+│           │   │   │   ├── pcmanfm.svg -> file-browser.svg
+│           │   │   │   ├── pidgin.svg
+│           │   │   │   ├── quick.svg
+│           │   │   │   ├── rhythmbox.svg
+│           │   │   │   ├── scribus.svg
+│           │   │   │   ├── shortcuts.svg
+│           │   │   │   ├── showDesklets.svg
+│           │   │   │   ├── skype.svg
+│           │   │   │   ├── softwarecenter.svg -> packages.svg
+│           │   │   │   ├── synaptic.svg -> packages.svg
+│           │   │   │   ├── system-file-manager.svg -> file-browser.svg
+│           │   │   │   ├── system-monitor.svg
+│           │   │   │   ├── terminal.svg
+│           │   │   │   ├── thunar.svg -> file-browser.svg
+│           │   │   │   ├── thunderbird.svg -> mail-reader.svg
+│           │   │   │   ├── tomboy.svg
+│           │   │   │   ├── totem.svg
+│           │   │   │   ├── ubuntu.svg
+│           │   │   │   ├── utilities-system-monitor.svg -> system-monitor.svg
+│           │   │   │   ├── utilities-terminal.svg -> terminal.svg
+│           │   │   │   ├── writer.svg
+│           │   │   │   ├── xchat.svg
+│           │   │   │   ├── xfce4-terminal.svg -> terminal.svg
+│           │   │   │   ├── xmms.svg
+│           │   │   │   └── yast.svg -> packages.svg
+│           │   │   ├── images
+│           │   │   │   ├── indicator.png
+│           │   │   │   └── _x_.bg.png.png
+│           │   │   ├── last-modif
+│           │   │   ├── launchers
+│           │   │   │   ├── 01firefox.desktop
+│           │   │   │   ├── 01gcalctool.desktop
+│           │   │   │   ├── 01gimp.desktop
+│           │   │   │   ├── 01gnome-terminal.desktop
+│           │   │   │   ├── 01nautilus.desktop
+│           │   │   │   ├── 01ooo-writer.desktop
+│           │   │   │   ├── 01pidgin.desktop
+│           │   │   │   ├── 01separator.desktop
+│           │   │   │   ├── 01thunderbird.desktop
+│           │   │   │   ├── 01ubuntu-software-center.desktop
+│           │   │   │   ├── 02separator.desktop
+│           │   │   │   └── 03separator.desktop
+│           │   │   ├── plug-ins
+│           │   │   │   ├── Animated-icons
+│           │   │   │   │   └── Animated-icons.conf
+│           │   │   │   ├── clock
+│           │   │   │   │   └── clock.conf
+│           │   │   │   ├── Dbus
+│           │   │   │   │   └── Dbus.conf
+│           │   │   │   ├── dialog-rendering
+│           │   │   │   │   └── dialog-rendering.conf
+│           │   │   │   ├── drop_indicator
+│           │   │   │   │   └── drop_indicator.conf
+│           │   │   │   ├── dustbin
+│           │   │   │   │   └── dustbin.conf
+│           │   │   │   ├── GMenu
+│           │   │   │   │   └── GMenu.conf
+│           │   │   │   ├── help
+│           │   │   │   │   └── help.conf
+│           │   │   │   ├── icon-effect
+│           │   │   │   │   └── icon-effect.conf
+│           │   │   │   ├── illusion
+│           │   │   │   │   └── illusion.conf
+│           │   │   │   ├── logout
+│           │   │   │   │   ├── logout.conf
+│           │   │   │   │   └── .svn
+│           │   │   │   │       ├── all-wcprops
+│           │   │   │   │       ├── entries
+│           │   │   │   │       ├── format
+│           │   │   │   │       ├── prop-base
+│           │   │   │   │       │   ├── logout.conf.svn-base
+│           │   │   │   │       │   └── Makefile.am.svn-base
+│           │   │   │   │       ├── props
+│           │   │   │   │       ├── text-base
+│           │   │   │   │       │   ├── logout.conf.svn-base
+│           │   │   │   │       │   └── Makefile.am.svn-base
+│           │   │   │   │       └── tmp
+│           │   │   │   │           ├── prop-base
+│           │   │   │   │           ├── props
+│           │   │   │   │           └── text-base
+│           │   │   │   ├── musicPlayer
+│           │   │   │   │   └── musicPlayer.conf
+│           │   │   │   ├── rendering
+│           │   │   │   │   └── rendering.conf
+│           │   │   │   ├── Scooby-Do
+│           │   │   │   │   └── Scooby-Do.conf
+│           │   │   │   ├── shortcuts
+│           │   │   │   │   └── shortcuts.conf
+│           │   │   │   ├── switcher
+│           │   │   │   │   └── switcher.conf
+│           │   │   │   └── System-Monitor
+│           │   │   │       └── System-Monitor.conf
+│           │   │   ├── preview
+│           │   │   └── readme
+│           │   └── Unity-Like-3
+│           │       ├── last-modif
+│           │       ├── preview
+│           │       ├── readme
+│           │       └── Unity-Like-3.tar.gz
+│           └── third-party
+│               └── locale
+│                   └── last-modif
+├── .config
+│   ├── ascii
+│   │   ├── default.txt
+│   │   ├── gnome.txt
+│   │   ├── hyprland.txt
+│   │   ├── openbox.txt
+│   │   └── wayfire.txt
+│   ├── bin
+│   │   └── dots
+│   ├── btop
+│   │   └── btop.conf
+│   ├── cairo-dock
+│   │   ├── .cairo-dock
+│   │   ├── .cairo-dock-need-save
+│   │   ├── current_theme
+│   │   │   ├── cairo-dock.conf
+│   │   │   ├── cairo-dock-simple.conf
+│   │   │   ├── extras
+│   │   │   │   ├── dustbin
+│   │   │   │   │   └── Humanity
+│   │   │   │   │       ├── trashcan_empty.svg
+│   │   │   │   │       └── trashcan_full.svg
+│   │   │   │   └── gauges
+│   │   │   │       └── Humanity
+│   │   │   │           ├── 0.svg
+│   │   │   │           ├── 100.svg
+│   │   │   │           ├── 10.svg
+│   │   │   │           ├── 15.svg
+│   │   │   │           ├── 20.svg
+│   │   │   │           ├── 25.svg
+│   │   │   │           ├── 30.svg
+│   │   │   │           ├── 35.svg
+│   │   │   │           ├── 40.svg
+│   │   │   │           ├── 45.svg
+│   │   │   │           ├── 50.svg
+│   │   │   │           ├── 55.svg
+│   │   │   │           ├── 5.svg
+│   │   │   │           ├── 60.svg
+│   │   │   │           ├── 65.svg
+│   │   │   │           ├── 70.svg
+│   │   │   │           ├── 75.svg
+│   │   │   │           ├── 80.svg
+│   │   │   │           ├── 85.svg
+│   │   │   │           ├── 90.svg
+│   │   │   │           ├── 95.svg
+│   │   │   │           ├── background2.svg
+│   │   │   │           ├── background.svg
+│   │   │   │           ├── foreground.svg
+│   │   │   │           ├── preview
+│   │   │   │           ├── readme
+│   │   │   │           ├── theme.xml
+│   │   │   │           └── version
+│   │   │   ├── icons
+│   │   │   │   ├── archlinux.svg
+│   │   │   │   ├── folder.svg
+│   │   │   │   └── rvgl.svg
+│   │   │   ├── images
+│   │   │   │   ├── active.png
+│   │   │   │   ├── bg.svg
+│   │   │   │   └── indicator.png
+│   │   │   ├── launchers
+│   │   │   │   ├── 03lxterminal.desktop
+│   │   │   │   ├── 04thunar.desktop
+│   │   │   │   ├── 05firefox.desktop
+│   │   │   │   ├── 06sublime_text.desktop
+│   │   │   │   ├── 07rvgl.desktop
+│   │   │   │   ├── 08github-desktop.desktop
+│   │   │   │   ├── 09vlc.desktop
+│   │   │   │   ├── 10krita.desktop
+│   │   │   │   ├── 11gimp.desktop
+│   │   │   │   ├── 12libreoffice.desktop
+│   │   │   │   ├── 13sober.desktop
+│   │   │   │   ├── 14dorion.desktop
+│   │   │   │   ├── 15zapzap.desktop
+│   │   │   │   ├── 16btop.desktop
+│   │   │   │   ├── 17osu.desktop
+│   │   │   │   └── 18dissent.desktop
+│   │   │   ├── plug-ins
+│   │   │   │   ├── AlsaMixer
+│   │   │   │   │   └── AlsaMixer.conf
+│   │   │   │   ├── Animated-icons
+│   │   │   │   │   └── Animated-icons.conf
+│   │   │   │   ├── Cairo-Penguin
+│   │   │   │   │   └── Cairo-Penguin.conf
+│   │   │   │   ├── Clipper
+│   │   │   │   │   └── Clipper.conf
+│   │   │   │   ├── clock
+│   │   │   │   │   └── clock.conf
+│   │   │   │   ├── Dbus
+│   │   │   │   │   └── Dbus.conf
+│   │   │   │   ├── dialog-rendering
+│   │   │   │   │   └── dialog-rendering.conf
+│   │   │   │   ├── dnd2share
+│   │   │   │   │   └── dnd2share.conf
+│   │   │   │   ├── drop_indicator
+│   │   │   │   │   └── drop_indicator.conf
+│   │   │   │   ├── dustbin
+│   │   │   │   │   └── dustbin.conf
+│   │   │   │   ├── GMenu
+│   │   │   │   │   └── GMenu.conf
+│   │   │   │   ├── help
+│   │   │   │   │   └── help.conf
+│   │   │   │   ├── Help
+│   │   │   │   │   └── Help.conf
+│   │   │   │   ├── icon-effect
+│   │   │   │   │   └── icon-effect.conf
+│   │   │   │   ├── illusion
+│   │   │   │   │   └── illusion.conf
+│   │   │   │   ├── Impulse
+│   │   │   │   │   └── Impulse.conf
+│   │   │   │   ├── Indicator-Generic
+│   │   │   │   │   └── Indicator-Generic.conf
+│   │   │   │   ├── logout
+│   │   │   │   │   ├── logout.conf
+│   │   │   │   │   └── .svn
+│   │   │   │   │       ├── all-wcprops
+│   │   │   │   │       ├── entries
+│   │   │   │   │       ├── format
+│   │   │   │   │       ├── prop-base
+│   │   │   │   │       │   ├── logout.conf.svn-base
+│   │   │   │   │       │   └── Makefile.am.svn-base
+│   │   │   │   │       └── text-base
+│   │   │   │   │           ├── logout.conf.svn-base
+│   │   │   │   │           └── Makefile.am.svn-base
+│   │   │   │   ├── musicPlayer
+│   │   │   │   │   └── musicPlayer.conf
+│   │   │   │   ├── quick-browser
+│   │   │   │   │   └── quick-browser.conf
+│   │   │   │   ├── Recent-Events
+│   │   │   │   │   └── Recent-Events.conf
+│   │   │   │   ├── Remote-Control
+│   │   │   │   │   └── Remote-Control.conf
+│   │   │   │   ├── rendering
+│   │   │   │   │   └── rendering.conf
+│   │   │   │   ├── Scooby-Do
+│   │   │   │   │   └── Scooby-Do.conf
+│   │   │   │   ├── shortcuts
+│   │   │   │   │   └── shortcuts.conf
+│   │   │   │   ├── showDesktop
+│   │   │   │   │   └── showDesktop.conf
+│   │   │   │   ├── show_mouse
+│   │   │   │   │   └── show_mouse.conf
+│   │   │   │   ├── Sound-Effects
+│   │   │   │   │   └── Sound-Effects.conf
+│   │   │   │   ├── stack
+│   │   │   │   │   └── stack.conf
+│   │   │   │   ├── switcher
+│   │   │   │   │   └── switcher.conf
+│   │   │   │   ├── System-Monitor
+│   │   │   │   │   └── System-Monitor.conf
+│   │   │   │   ├── terminal
+│   │   │   │   │   └── terminal.conf
+│   │   │   │   └── Toons
+│   │   │   │       └── Toons.conf
+│   │   │   ├── preview
+│   │   │   ├── readme
+│   │   │   └── Unity-Like-3.tar.gz
+│   │   ├── extras
+│   │   │   ├── dustbin
+│   │   │   │   └── Humanity
+│   │   │   │       ├── trashcan_empty.svg
+│   │   │   │       └── trashcan_full.svg
+│   │   │   └── gauges
+│   │   │       └── Humanity
+│   │   │           ├── 0.svg
+│   │   │           ├── 100.svg
+│   │   │           ├── 10.svg
+│   │   │           ├── 15.svg
+│   │   │           ├── 20.svg
+│   │   │           ├── 25.svg
+│   │   │           ├── 30.svg
+│   │   │           ├── 35.svg
+│   │   │           ├── 40.svg
+│   │   │           ├── 45.svg
+│   │   │           ├── 50.svg
+│   │   │           ├── 55.svg
+│   │   │           ├── 5.svg
+│   │   │           ├── 60.svg
+│   │   │           ├── 65.svg
+│   │   │           ├── 70.svg
+│   │   │           ├── 75.svg
+│   │   │           ├── 80.svg
+│   │   │           ├── 85.svg
+│   │   │           ├── 90.svg
+│   │   │           ├── 95.svg
+│   │   │           ├── background2.svg
+│   │   │           ├── background.svg
+│   │   │           ├── foreground.svg
+│   │   │           ├── preview
+│   │   │           ├── readme
+│   │   │           ├── theme.xml
+│   │   │           └── version
+│   │   ├── .help
+│   │   ├── themes
+│   │   │   ├── Humanity-Dock
+│   │   │   │   ├── cairo-dock.conf
+│   │   │   │   ├── extras
+│   │   │   │   │   ├── dustbin
+│   │   │   │   │   │   └── Humanity
+│   │   │   │   │   │       ├── trashcan_empty.svg
+│   │   │   │   │   │       └── trashcan_full.svg
+│   │   │   │   │   └── gauges
+│   │   │   │   │       └── Humanity
+│   │   │   │   │           ├── 0.svg
+│   │   │   │   │           ├── 100.svg
+│   │   │   │   │           ├── 10.svg
+│   │   │   │   │           ├── 15.svg
+│   │   │   │   │           ├── 20.svg
+│   │   │   │   │           ├── 25.svg
+│   │   │   │   │           ├── 30.svg
+│   │   │   │   │           ├── 35.svg
+│   │   │   │   │           ├── 40.svg
+│   │   │   │   │           ├── 45.svg
+│   │   │   │   │           ├── 50.svg
+│   │   │   │   │           ├── 55.svg
+│   │   │   │   │           ├── 5.svg
+│   │   │   │   │           ├── 60.svg
+│   │   │   │   │           ├── 65.svg
+│   │   │   │   │           ├── 70.svg
+│   │   │   │   │           ├── 75.svg
+│   │   │   │   │           ├── 80.svg
+│   │   │   │   │           ├── 85.svg
+│   │   │   │   │           ├── 90.svg
+│   │   │   │   │           ├── 95.svg
+│   │   │   │   │           ├── background2.svg
+│   │   │   │   │           ├── background.svg
+│   │   │   │   │           ├── foreground.svg
+│   │   │   │   │           ├── preview
+│   │   │   │   │           ├── readme
+│   │   │   │   │           ├── theme.xml
+│   │   │   │   │           └── version
+│   │   │   │   ├── icons
+│   │   │   │   │   ├── audio-player-not-work.svg
+│   │   │   │   │   ├── audio-player-pause.svg
+│   │   │   │   │   ├── audio-player-stop.svg
+│   │   │   │   │   ├── audio-player.svg
+│   │   │   │   │   ├── document-open.svg
+│   │   │   │   │   ├── firefox.png
+│   │   │   │   │   ├── f-spot.svg
+│   │   │   │   │   ├── gimp.svg
+│   │   │   │   │   ├── inkscape.svg
+│   │   │   │   │   ├── links.svg
+│   │   │   │   │   ├── logout.png
+│   │   │   │   │   ├── pidgin.svg
+│   │   │   │   │   ├── start-here.svg
+│   │   │   │   │   ├── system-file-manager.svg
+│   │   │   │   │   ├── transmission.svg
+│   │   │   │   │   ├── user-desktop-active.svg
+│   │   │   │   │   ├── user-desktop.svg
+│   │   │   │   │   └── utilities-terminal.svg
+│   │   │   │   ├── images
+│   │   │   │   │   ├── bg.png
+│   │   │   │   │   ├── class-indicator.svg
+│   │   │   │   │   ├── dialog-apply.svg
+│   │   │   │   │   ├── gnome-fs-bookmark-missing.svg
+│   │   │   │   │   ├── go-down.svg
+│   │   │   │   │   ├── indicator.png
+│   │   │   │   │   ├── list-add.svg
+│   │   │   │   │   └── window-close.svg
+│   │   │   │   ├── last-modif
+│   │   │   │   ├── launchers
+│   │   │   │   │   ├── 01firefox.desktop
+│   │   │   │   │   ├── 01gcalctool.desktop
+│   │   │   │   │   ├── 01gimp.desktop
+│   │   │   │   │   ├── 01gnome-terminal.desktop
+│   │   │   │   │   ├── 01nautilus.desktop
+│   │   │   │   │   ├── 01ooo-writer.desktop
+│   │   │   │   │   ├── 01pidgin.desktop
+│   │   │   │   │   ├── 01separator.desktop
+│   │   │   │   │   ├── 01thunderbird.desktop
+│   │   │   │   │   ├── 01ubuntu-software-center.desktop
+│   │   │   │   │   ├── 02separator.desktop
+│   │   │   │   │   └── 03separator.desktop
+│   │   │   │   ├── _MainDock_-2.conf
+│   │   │   │   ├── plug-ins
+│   │   │   │   │   ├── AlsaMixer
+│   │   │   │   │   │   └── AlsaMixer.conf
+│   │   │   │   │   ├── Animated-icons
+│   │   │   │   │   │   └── Animated-icons.conf
+│   │   │   │   │   ├── Clipper
+│   │   │   │   │   │   └── Clipper.conf
+│   │   │   │   │   ├── clock
+│   │   │   │   │   │   └── clock.conf
+│   │   │   │   │   ├── Dbus
+│   │   │   │   │   │   └── Dbus.conf
+│   │   │   │   │   ├── dialog-rendering
+│   │   │   │   │   │   └── dialog-rendering.conf
+│   │   │   │   │   ├── drop_indicator
+│   │   │   │   │   │   └── drop_indicator.conf
+│   │   │   │   │   ├── dustbin
+│   │   │   │   │   │   └── dustbin.conf
+│   │   │   │   │   ├── GMenu
+│   │   │   │   │   │   └── GMenu.conf
+│   │   │   │   │   ├── icon-effect
+│   │   │   │   │   │   └── icon-effect.conf
+│   │   │   │   │   ├── illusion
+│   │   │   │   │   │   └── illusion.conf
+│   │   │   │   │   ├── logout
+│   │   │   │   │   │   └── logout.conf
+│   │   │   │   │   ├── musicPlayer
+│   │   │   │   │   │   └── musicPlayer.conf
+│   │   │   │   │   ├── quick-browser
+│   │   │   │   │   │   └── quick-browser.conf
+│   │   │   │   │   ├── Recent-Events
+│   │   │   │   │   │   └── Recent-Events.conf
+│   │   │   │   │   ├── Remote-Control
+│   │   │   │   │   │   └── Remote-Control.conf
+│   │   │   │   │   ├── rendering
+│   │   │   │   │   │   └── rendering.conf
+│   │   │   │   │   ├── shortcuts
+│   │   │   │   │   │   └── shortcuts.conf
+│   │   │   │   │   ├── showDesktop
+│   │   │   │   │   │   └── showDesktop.conf
+│   │   │   │   │   ├── stack
+│   │   │   │   │   │   └── stack.conf
+│   │   │   │   │   ├── switcher
+│   │   │   │   │   │   └── switcher.conf
+│   │   │   │   │   └── System-Monitor
+│   │   │   │   │       └── System-Monitor.conf
+│   │   │   │   ├── preview
+│   │   │   │   └── readme
+│   │   │   ├── MacOSX
+│   │   │   │   ├── AlsaMixer.conf.txt
+│   │   │   │   ├── cairo-dock.conf
+│   │   │   │   ├── icons
+│   │   │   │   │   ├── abiword.svg
+│   │   │   │   │   ├── adept.svg -> packages.svg
+│   │   │   │   │   ├── amarok.svg
+│   │   │   │   │   ├── amule.svg
+│   │   │   │   │   ├── ardour.svg
+│   │   │   │   │   ├── audacity.svg
+│   │   │   │   │   ├── avidemux.svg
+│   │   │   │   │   ├── baobab.svg
+│   │   │   │   │   ├── beryl.svg
+│   │   │   │   │   ├── blender.svg
+│   │   │   │   │   ├── bluetooth.svg
+│   │   │   │   │   ├── boot.svg
+│   │   │   │   │   ├── brasero.svg
+│   │   │   │   │   ├── ccsm.svg
+│   │   │   │   │   ├── compiz-fusion.svg
+│   │   │   │   │   ├── dolphin.svg -> file-browser.svg
+│   │   │   │   │   ├── eclipse.svg
+│   │   │   │   │   ├── ekiga.svg
+│   │   │   │   │   ├── elisa.svg
+│   │   │   │   │   ├── emacs.svg
+│   │   │   │   │   ├── emblem-special.svg
+│   │   │   │   │   ├── eog.svg -> image-reader.svg
+│   │   │   │   │   ├── epsxe.svg
+│   │   │   │   │   ├── etqw.svg
+│   │   │   │   │   ├── evolution.svg -> mail-reader.svg
+│   │   │   │   │   ├── file-browser.svg
+│   │   │   │   │   ├── file-roller.svg
+│   │   │   │   │   ├── firefox.svg
+│   │   │   │   │   ├── frontrow.svg
+│   │   │   │   │   ├── f-spot.svg -> image-reader.svg
+│   │   │   │   │   ├── gajim.svg
+│   │   │   │   │   ├── gcalctool.svg
+│   │   │   │   │   ├── gconf-editor.svg
+│   │   │   │   │   ├── geany.svg -> writer.svg
+│   │   │   │   │   ├── gedit.svg
+│   │   │   │   │   ├── ghostview.svg
+│   │   │   │   │   ├── gimp.svg
+│   │   │   │   │   ├── glchess.svg
+│   │   │   │   │   ├── gnomebaker.svg
+│   │   │   │   │   ├── gnome-dev-harddisk.svg
+│   │   │   │   │   ├── gnome-dev-ipod.svg
+│   │   │   │   │   ├── gnome-dev-media-sm.svg
+│   │   │   │   │   ├── gnome-dictionary.svg
+│   │   │   │   │   ├── gnome-fs-desktop.svg
+│   │   │   │   │   ├── gnome-fs-network.svg
+│   │   │   │   │   ├── gnome-fs-smb.svg
+│   │   │   │   │   ├── gnome-nettool.svg
+│   │   │   │   │   ├── gnome-terminal.svg -> terminal.svg
+│   │   │   │   │   ├── gparted.svg
+│   │   │   │   │   ├── gqview.svg -> image-reader.svg
+│   │   │   │   │   ├── gwenview.svg -> image-reader.svg
+│   │   │   │   │   ├── image-reader.svg
+│   │   │   │   │   ├── inkscape.svg
+│   │   │   │   │   ├── jack.svg
+│   │   │   │   │   ├── kaffeine.svg
+│   │   │   │   │   ├── kate.svg -> writer.svg
+│   │   │   │   │   ├── kmail.svg -> mail-reader.svg
+│   │   │   │   │   ├── konqueror.svg -> file-browser.svg
+│   │   │   │   │   ├── konsole.svg -> terminal.svg
+│   │   │   │   │   ├── ksysguard.svg -> system-monitor.svg
+│   │   │   │   │   ├── labyrinth.svg
+│   │   │   │   │   ├── logviewer.svg
+│   │   │   │   │   ├── mail-reader.svg
+│   │   │   │   │   ├── mandvd.svg
+│   │   │   │   │   ├── mozilla-thunderbird.svg -> mail-reader.svg
+│   │   │   │   │   ├── nautilus.svg -> file-browser.svg
+│   │   │   │   │   ├── netscape.svg
+│   │   │   │   │   ├── ooo-calc.svg
+│   │   │   │   │   ├── ooo-writer.svg -> writer.svg
+│   │   │   │   │   ├── opera.svg
+│   │   │   │   │   ├── packages.svg
+│   │   │   │   │   ├── pacman-g2.svg -> packages.svg
+│   │   │   │   │   ├── palm-pilot.svg
+│   │   │   │   │   ├── pan.svg
+│   │   │   │   │   ├── pcmanfm.svg -> file-browser.svg
+│   │   │   │   │   ├── pidgin.svg
+│   │   │   │   │   ├── quick.svg
+│   │   │   │   │   ├── rhythmbox.svg
+│   │   │   │   │   ├── scribus.svg
+│   │   │   │   │   ├── shortcuts.svg
+│   │   │   │   │   ├── showDesklets.svg
+│   │   │   │   │   ├── skype.svg
+│   │   │   │   │   ├── softwarecenter.svg -> packages.svg
+│   │   │   │   │   ├── synaptic.svg -> packages.svg
+│   │   │   │   │   ├── system-file-manager.svg -> file-browser.svg
+│   │   │   │   │   ├── system-monitor.svg
+│   │   │   │   │   ├── terminal.svg
+│   │   │   │   │   ├── thunar.svg -> file-browser.svg
+│   │   │   │   │   ├── thunderbird.svg -> mail-reader.svg
+│   │   │   │   │   ├── tomboy.svg
+│   │   │   │   │   ├── totem.svg
+│   │   │   │   │   ├── ubuntu.svg
+│   │   │   │   │   ├── utilities-system-monitor.svg -> system-monitor.svg
+│   │   │   │   │   ├── utilities-terminal.svg -> terminal.svg
+│   │   │   │   │   ├── writer.svg
+│   │   │   │   │   ├── xchat.svg
+│   │   │   │   │   ├── xfce4-terminal.svg -> terminal.svg
+│   │   │   │   │   ├── xmms.svg
+│   │   │   │   │   └── yast.svg -> packages.svg
+│   │   │   │   ├── images
+│   │   │   │   │   ├── indicator.png
+│   │   │   │   │   └── _x_.bg.png.png
+│   │   │   │   ├── last-modif
+│   │   │   │   ├── launchers
+│   │   │   │   │   ├── 01firefox.desktop
+│   │   │   │   │   ├── 01gcalctool.desktop
+│   │   │   │   │   ├── 01gimp.desktop
+│   │   │   │   │   ├── 01gnome-terminal.desktop
+│   │   │   │   │   ├── 01nautilus.desktop
+│   │   │   │   │   ├── 01ooo-writer.desktop
+│   │   │   │   │   ├── 01pidgin.desktop
+│   │   │   │   │   ├── 01separator.desktop
+│   │   │   │   │   ├── 01thunderbird.desktop
+│   │   │   │   │   ├── 01ubuntu-software-center.desktop
+│   │   │   │   │   ├── 02separator.desktop
+│   │   │   │   │   └── 03separator.desktop
+│   │   │   │   ├── plug-ins
+│   │   │   │   │   ├── Animated-icons
+│   │   │   │   │   │   └── Animated-icons.conf
+│   │   │   │   │   ├── clock
+│   │   │   │   │   │   └── clock.conf
+│   │   │   │   │   ├── Dbus
+│   │   │   │   │   │   └── Dbus.conf
+│   │   │   │   │   ├── dialog-rendering
+│   │   │   │   │   │   └── dialog-rendering.conf
+│   │   │   │   │   ├── drop_indicator
+│   │   │   │   │   │   └── drop_indicator.conf
+│   │   │   │   │   ├── dustbin
+│   │   │   │   │   │   └── dustbin.conf
+│   │   │   │   │   ├── GMenu
+│   │   │   │   │   │   └── GMenu.conf
+│   │   │   │   │   ├── help
+│   │   │   │   │   │   └── help.conf
+│   │   │   │   │   ├── icon-effect
+│   │   │   │   │   │   └── icon-effect.conf
+│   │   │   │   │   ├── illusion
+│   │   │   │   │   │   └── illusion.conf
+│   │   │   │   │   ├── logout
+│   │   │   │   │   │   ├── logout.conf
+│   │   │   │   │   │   └── .svn
+│   │   │   │   │   │       ├── all-wcprops
+│   │   │   │   │   │       ├── entries
+│   │   │   │   │   │       ├── format
+│   │   │   │   │   │       ├── prop-base
+│   │   │   │   │   │       │   ├── logout.conf.svn-base
+│   │   │   │   │   │       │   └── Makefile.am.svn-base
+│   │   │   │   │   │       └── text-base
+│   │   │   │   │   │           ├── logout.conf.svn-base
+│   │   │   │   │   │           └── Makefile.am.svn-base
+│   │   │   │   │   ├── musicPlayer
+│   │   │   │   │   │   └── musicPlayer.conf
+│   │   │   │   │   ├── rendering
+│   │   │   │   │   │   └── rendering.conf
+│   │   │   │   │   ├── Scooby-Do
+│   │   │   │   │   │   └── Scooby-Do.conf
+│   │   │   │   │   ├── shortcuts
+│   │   │   │   │   │   └── shortcuts.conf
+│   │   │   │   │   ├── switcher
+│   │   │   │   │   │   └── switcher.conf
+│   │   │   │   │   └── System-Monitor
+│   │   │   │   │       └── System-Monitor.conf
+│   │   │   │   ├── preview
+│   │   │   │   └── readme
+│   │   │   └── Unity-Like-3
+│   │   │       ├── last-modif
+│   │   │       ├── preview
+│   │   │       ├── readme
+│   │   │       └── Unity-Like-3.tar.gz
+│   │   └── third-party
+│   │       └── locale
+│   │           └── last-modif
+│   ├── eww
+│   │   ├── eww.scss
+│   │   ├── eww.yuck
+│   │   ├── image.jpg
+│   │   ├── Monasm.jpg
+│   │   └── scripts
+│   │       ├── batest.sh
+│   │       ├── batico.sh
+│   │       ├── battery.sh
+│   │       ├── calendar.sh
+│   │       ├── cover.png
+│   │       ├── current-wifi.sh
+│   │       ├── get_kb.sh
+│   │       ├── getnet.sh
+│   │       ├── getvol.sh
+│   │       ├── kb-delay.sh
+│   │       ├── lock.sh
+│   │       ├── menuctl.sh
+│   │       ├── menu.sh
+│   │       ├── musicctl.sh
+│   │       ├── music.sh
+│   │       ├── pmusic.sh
+│   │       ├── usrctl.sh
+│   │       ├── wifictl.sh
+│   │       ├── wifi-delay.sh
+│   │       └── workspace.sh
+│   ├── fastfetch
+│   │   ├── ascii
+│   │   │   ├── cat.txt
+│   │   │   └── ryan.txt
+│   │   ├── config.jsonc
+│   │   ├── config.jsonc.save
+│   │   ├── images
+│   │   │   ├── aisaka.icon
+│   │   │   ├── hypr.png
+│   │   │   ├── ryan.png
+│   │   │   └── ryuzaki.icon
+│   │   ├── presets
+│   │   │   ├── ascii-art.jsonc
+│   │   │   ├── hypr.jsonc
+│   │   │   ├── minimal.jsonc
+│   │   │   ├── nyarch.jsonc
+│   │   │   ├── os.jsonc
+│   │   │   ├── simple.jsonc
+│   │   │   └── small-box.jsonc
+│   │   └── ryan.txt
+│   ├── fuzzel
+│   │   └── fuzzel.ini
+│   ├── gtk-3.0
+│   │   ├── bookmarks
+│   │   ├── colors.css
+│   │   ├── gtk.css
+│   │   └── settings.ini
+│   ├── gtk-4.0
+│   │   ├── colors.css
+│   │   ├── gtk.css -> /usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css
+│   │   └── settings.ini
+│   ├── hypr
+│   │   ├── hypr
+│   │   │   ├── 16.jpeg
+│   │   │   ├── 18.jpeg
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.png
+│   │   │   ├── 3.jpg
+│   │   │   ├── 4.jpg
+│   │   │   ├── 5.png
+│   │   │   ├── 6.png
+│   │   │   ├── 7.jpeg
+│   │   │   ├── 8.png
+│   │   │   ├── 9.png
+│   │   │   ├── me.jpeg
+│   │   │   ├── me.jpg
+│   │   │   └── user.jpg
+│   │   ├── hypridle.conf
+│   │   ├── hyprland.conf
+│   │   ├── hyprland.conf.save
+│   │   ├── hyprland.lua
+│   │   ├── hyprlock
+│   │   │   ├── 16.jpeg
+│   │   │   ├── 18.jpeg
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.png
+│   │   │   ├── 3.jpg
+│   │   │   ├── 4.jpg
+│   │   │   ├── 5.png
+│   │   │   ├── 6.png
+│   │   │   ├── 7.jpeg
+│   │   │   ├── 8.png
+│   │   │   ├── 9.png
+│   │   │   ├── me.jpg
+│   │   │   └── user.jpg
+│   │   ├── hyprlock.conf
+│   │   └── hyprpaper.conf
+│   ├── hyprlock
+│   │   ├── colors.conf
+│   │   ├── layouts
+│   │   │   ├── colors.conf
+│   │   │   ├── hyprlock.conf
+│   │   │   ├── layout10.conf
+│   │   │   ├── layout11.conf
+│   │   │   ├── layout12.conf
+│   │   │   ├── layout13.conf
+│   │   │   ├── layout14.conf
+│   │   │   ├── layout15.conf
+│   │   │   ├── layout16.conf
+│   │   │   ├── layout17.conf
+│   │   │   ├── layout18.conf
+│   │   │   ├── layout1.conf
+│   │   │   ├── layout20.conf
+│   │   │   ├── layout2.conf
+│   │   │   ├── layout3.conf
+│   │   │   ├── layout4.conf
+│   │   │   ├── layout5.conf
+│   │   │   ├── layout6.conf
+│   │   │   ├── layout7.conf
+│   │   │   ├── layout8.conf
+│   │   │   └── layout9.conf
+│   │   ├── music.conf
+│   │   ├── scripts
+│   │   │   ├── battery.sh
+│   │   │   ├── cava.sh
+│   │   │   ├── hlock_mpris.sh
+│   │   │   ├── hyprlock_notify_widget.sh
+│   │   │   ├── hyprlock.sh
+│   │   │   ├── infonlock.sh
+│   │   │   ├── listner.sh
+│   │   │   ├── location.sh
+│   │   │   ├── music-progress.sh
+│   │   │   ├── music.sh
+│   │   │   ├── playerctlock.sh
+│   │   │   ├── playerlayout4.sh
+│   │   │   ├── stopwatch.sh
+│   │   │   └── weather.sh
+│   │   └── wallpapers
+│   │       ├── 16.jpeg
+│   │       ├── 18.jpeg
+│   │       ├── 1.jpg
+│   │       ├── 2.png
+│   │       ├── 3.jpg
+│   │       ├── 4.jpg
+│   │       ├── 5.png
+│   │       ├── 6.png
+│   │       ├── 7.jpeg
+│   │       ├── 8.png
+│   │       ├── 9.png
+│   │       ├── me.jpg
+│   │       ├── me.png
+│   │       └── user.jpg
+│   ├── kitty
+│   │   ├── colors-matugen.conf
+│   │   └── kitty.conf
+│   ├── nvim
+│   │   ├── init.lua
+│   │   ├── keymaps.md
+│   │   ├── lazy-lock.json
+│   │   ├── lua
+│   │   │   └── shell-ninja
+│   │   │       ├── core
+│   │   │       │   ├── init.lua
+│   │   │       │   ├── keymaps.lua
+│   │   │       │   └── options.lua
+│   │   │       ├── lazy.lua
+│   │   │       └── plugins
+│   │   │           ├── alpha.lua
+│   │   │           ├── autopairs.lua
+│   │   │           ├── auto-session.lua
+│   │   │           ├── bufferline.lua
+│   │   │           ├── color-hithlighter.lua
+│   │   │           ├── colorscheme.lua
+│   │   │           ├── comment.lua
+│   │   │           ├── dressing.lua
+│   │   │           ├── formatting.lua
+│   │   │           ├── gitsigns.lua
+│   │   │           ├── indent-blankline.lua
+│   │   │           ├── init.lua
+│   │   │           ├── lazygit.lua
+│   │   │           ├── linting.lua
+│   │   │           ├── lsp
+│   │   │           │   ├── lspconfig.lua
+│   │   │           │   └── mason.lua
+│   │   │           ├── lualine.lua
+│   │   │           ├── noice.lua
+│   │   │           ├── nvim-cmp.lua
+│   │   │           ├── nvim-notify.lua
+│   │   │           ├── nvim-tree.lua
+│   │   │           ├── nvim-treesitter-text-objects.lua
+│   │   │           ├── pywal-wal.lua
+│   │   │           ├── substitute.lua
+│   │   │           ├── surround.lua
+│   │   │           ├── telescope.lua
+│   │   │           ├── todo-comments.lua
+│   │   │           ├── toggleterminal.lua
+│   │   │           ├── treesitter.lua
+│   │   │           ├── trouble.lua
+│   │   │           ├── vim-maximizer.lua
+│   │   │           └── which-key.lua
+│   │   └── README.md
+│   ├── openbox
+│   │   ├── autostart -> ../../dotfile/openbox/.config/openbox/autostart
+│   │   ├── environment -> ../../dotfile/openbox/.config/openbox/environment
+│   │   ├── menu.xml -> ../../dotfile/openbox/.config/openbox/menu.xml
+│   │   └── rc.xml -> ../../dotfile/openbox/.config/openbox/rc.xml
+│   ├── qt5ct
+│   │   ├── colors
+│   │   │   └── Pywal.conf
+│   │   └── qt5ct.conf
+│   ├── qt6ct
+│   │   ├── colors
+│   │   │   └── Pywal.conf
+│   │   └── qt6ct.conf
+│   ├── rofi
+│   │   └── config.rasi
+│   ├── swaync
+│   │   ├── config.json
+│   │   └── style.css
+│   ├── walker
+│   │   ├── colors.css
+│   │   ├── config.toml
+│   │   ├── launch.sh
+│   │   └── themes
+│   │       ├── glass
+│   │       │   └── style.css
+│   │       ├── ml4w
+│   │       │   └── style.css
+│   │       └── modern
+│   │           └── style.css
+│   ├── waybar
+│   │   ├── assets
+│   │   │   ├── experimental.png
+│   │   │   ├── line.png
+│   │   │   ├── main.png
+│   │   │   └── zen.png
+│   │   ├── config
+│   │   ├── config.jsonc
+│   │   ├── modules
+│   │   │   ├── backlight.jsonc
+│   │   │   ├── battery.jsonc
+│   │   │   ├── bluetooth.jsonc
+│   │   │   ├── clock.jsonc
+│   │   │   ├── custom
+│   │   │   │   ├── github.jsonc
+│   │   │   │   ├── lock_screen.jsonc
+│   │   │   │   ├── media.jsonc
+│   │   │   │   ├── power_btn.jsonc
+│   │   │   │   ├── rofi.jsonc
+│   │   │   │   ├── swaync.jsonc
+│   │   │   │   ├── tailscale.jsonc
+│   │   │   │   ├── updates.jsonc
+│   │   │   │   ├── wl-gammarelay-temperature.jsonc
+│   │   │   │   └── wol.jsonc
+│   │   │   ├── extra
+│   │   │   │   ├── microphone.jsonc
+│   │   │   │   ├── pulseaudio.jsonc
+│   │   │   │   └── tray.jsonc
+│   │   │   ├── hyprland
+│   │   │   │   ├── window.jsonc
+│   │   │   │   └── workspaces.jsonc
+│   │   │   ├── network.jsonc
+│   │   │   ├── power-profiles-daemon.jsonc
+│   │   │   └── temperature.jsonc
+│   │   ├── modules.jsonc
+│   │   ├── scripts
+│   │   │   ├── addhost.sh
+│   │   │   ├── colorpicker.sh
+│   │   │   ├── connectssh.sh
+│   │   │   ├── cyclehost.sh
+│   │   │   ├── getupdates.sh
+│   │   │   ├── github.sh
+│   │   │   ├── installupdates.sh
+│   │   │   ├── launch.sh
+│   │   │   ├── listpackages.sh
+│   │   │   ├── mediaplayer.py
+│   │   │   ├── refresh.sh
+│   │   │   ├── select.sh
+│   │   │   ├── sysmaintenance.sh
+│   │   │   ├── system-block.sh
+│   │   │   ├── system-info.sh
+│   │   │   ├── system-menu.sh
+│   │   │   ├── tailscaleinfo.sh
+│   │   │   ├── wolinfo.sh
+│   │   │   └── wol.sh
+│   │   ├── style.css
+│   │   └── themes
+│   │       ├── config
+│   │       ├── config.jsonc
+│   │       ├── default
+│   │       │   ├── config-default
+│   │       │   └── style-default.css
+│   │       ├── experimental
+│   │       │   ├── config-experimental
+│   │       │   └── style-experimental.css
+│   │       ├── line
+│   │       │   ├── config-line
+│   │       │   └── style-line.css
+│   │       ├── style.css
+│   │       └── zen
+│   │           ├── config-zen
+│   │           └── style-zen.css
+│   ├── wlogout
+│   │   ├── icons
+│   │   │   ├── hibernate.png
+│   │   │   ├── lock.png
+│   │   │   ├── logout.png
+│   │   │   ├── poweroff.png
+│   │   │   ├── reboot.png
+│   │   │   └── sleep.png
+│   │   ├── layout_1
+│   │   ├── layout_2
+│   │   ├── style_1.css
+│   │   └── style_2.css
+│   └── yazi
+│       ├── keymap.toml
+│       ├── keymap.toml-1756023994490389
+│       ├── theme.toml
+│       ├── theme.toml-1756023994537480
+│       ├── yazi.toml
+│       └── yazi.toml-1756023994486190
+├── dotfiles.conf
+├── etc
+│   └── ly.conf
+├── eww
+│   └── .config
+│       └── eww
+│           ├── eww.scss
+│           ├── eww.yuck
+│           ├── image.jpg
+│           ├── Monasm.jpg
+│           └── scripts
+│               ├── batest.sh
+│               ├── batico.sh
+│               ├── battery.sh
+│               ├── calendar.sh
+│               ├── cover.png
+│               ├── current-wifi.sh
+│               ├── get_kb.sh
+│               ├── getnet.sh
+│               ├── getvol.sh
+│               ├── kb-delay.sh
+│               ├── lock.sh
+│               ├── menuctl.sh
+│               ├── menu.sh
+│               ├── musicctl.sh
+│               ├── music.sh
+│               ├── pmusic.sh
+│               ├── usrctl.sh
+│               ├── wifictl.sh
+│               ├── wifi-delay.sh
+│               └── workspace.sh
+├── fastfetch
+│   └── .config
+│       └── fastfetch
+│           ├── ascii
+│           │   ├── cat.txt
+│           │   └── ryan.txt
+│           ├── config.jsonc
+│           ├── config.jsonc.save
+│           ├── images
+│           │   ├── aisaka.icon
+│           │   ├── hypr.png
+│           │   ├── ryan.png
+│           │   └── ryuzaki.icon
+│           ├── presets
+│           │   ├── ascii-art.jsonc
+│           │   ├── hypr.jsonc
+│           │   ├── minimal.jsonc
+│           │   ├── nyarch.jsonc
+│           │   ├── os.jsonc
+│           │   ├── simple.jsonc
+│           │   └── small-box.jsonc
+│           └── ryan.txt
+├── fuzzel
+│   └── .config
+│       └── fuzzel
+│           └── fuzzel.ini
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               ├── HEAD
+│   │               └── main
+│   ├── objects
+│   │   ├── 00
+│   │   │   └── 82c2aabf0c493f2de08f1939a26687a1a92ed2
+│   │   ├── 11
+│   │   │   └── f7c5b64965fb4c07ace833f5a977040fbf9243
+│   │   ├── 12
+│   │   │   └── ddc7d46aa21d6532490ef879afafbd240cfa19
+│   │   ├── 15
+│   │   │   └── fdf6bdfda192e890aac55de8ff6b76cf4859d4
+│   │   ├── 1b
+│   │   │   └── 629aa8be0ec2f105591fa5fe9c4b6f3893abc6
+│   │   ├── 24
+│   │   │   └── 81ab15c45510b02825ad7702231334df3cff34
+│   │   ├── 2a
+│   │   │   ├── 15e171c06270fb370cd5b028833507c5cf33d5
+│   │   │   └── f76a93ac58880d2d1936d5f8761e74d5fd75c1
+│   │   ├── 2c
+│   │   │   └── 3df8153a6cf9e285d029f49d2017aac396fa25
+│   │   ├── 2d
+│   │   │   └── 137d469e1b8053ff531cc382f6a55445f0d46d
+│   │   ├── 2f
+│   │   │   └── 32a0d8d0ec37cdd908d86ab49dd2d69aeb3507
+│   │   ├── 30
+│   │   │   └── cf2afa4a6858b702fdf074517c3fd618cfac1a
+│   │   ├── 3a
+│   │   │   ├── 072825cc5458332396a371b6ad04c2746e89d5
+│   │   │   ├── cab8f284aa17b354cd2bb1836a672a0735f0c0
+│   │   │   └── e4845c7acc2bc1c703f9f2b8a2677d40623c29
+│   │   ├── 3f
+│   │   │   └── 3e4b90cf3c300629050dc4b995eb73891752f3
+│   │   ├── 46
+│   │   │   └── 275b247679f3c8ef85ddaffaf50d60534218eb
+│   │   ├── 52
+│   │   │   └── d9c1911390dadbac65f2343a23d498ffe84a53
+│   │   ├── 53
+│   │   │   └── 2b8fae60d83ed6820d9ed7f69abeeec06427ce
+│   │   ├── 55
+│   │   │   └── 51bb2d5e3e65ad7dc66f766e173b1ef89282bf
+│   │   ├── 56
+│   │   │   └── da621cf08c76ceb04a571720ce75b585316415
+│   │   ├── 59
+│   │   │   └── 7ca260e18fdbf3d025699f3720fdddcc833a0e
+│   │   ├── 61
+│   │   │   └── cbb4ef6fc13b9788203edd1a603675fd69f15e
+│   │   ├── 65
+│   │   │   └── 384e27cab5ffee793ea6362f4819653cde9728
+│   │   ├── 6b
+│   │   │   └── 6f303c220a3aaba427aef7da968894556a168d
+│   │   ├── 6c
+│   │   │   └── b5e2cc2a5a4268288a3a49e843c05c73b96eb8
+│   │   ├── 72
+│   │   │   └── 6fb66b654b23e778b8b7709a890b93f3ec44df
+│   │   ├── 79
+│   │   │   └── 7e39f34b5a282b9581442a1eb2b67adf136104
+│   │   ├── 7e
+│   │   │   └── 2eb7bb2fb3783f3ca529d655ea855da544f01d
+│   │   ├── 8b
+│   │   │   ├── 24b89dc26c63eee4f37a0c30d4964cf726747d
+│   │   │   └── 7344340ba8c284852b7fb2632b2fdfa1c315a2
+│   │   ├── 8f
+│   │   │   └── 27ce951386cea7d3cfef846dd80e8399f2e917
+│   │   ├── 97
+│   │   │   └── a6dcc93d5071ca6c452e7028ca9d04af8de8e5
+│   │   ├── a1
+│   │   │   └── e72d6f8a4e024901b52177594fb7fe63f1d8d7
+│   │   ├── a4
+│   │   │   ├── 30408ca8c3020bfd1f3ea2a6baebd954f5c165
+│   │   │   ├── 3f5d46526bd9677f6f4e77d5f8080b973fec4d
+│   │   │   └── 61f897a62595b7d79404a257f49627c4c550b8
+│   │   ├── a5
+│   │   │   └── 6b2ff83af464a44b24c9b516727d0bd4e115a5
+│   │   ├── a7
+│   │   │   └── c27d092fd92e031c900349e81a5704ea8ca927
+│   │   ├── ab
+│   │   │   └── 3dd580ca27fe8e201e1be153c33df8daf31538
+│   │   ├── b1
+│   │   │   ├── 0d4bbd98bbbf4e3647bd4cdd09078bb8987bbb
+│   │   │   └── 7e40adb37640f066781cca13350b34508ec09c
+│   │   ├── b4
+│   │   │   └── 273d4332fa50371ee8fe70bb1b53a73bc063a3
+│   │   ├── b5
+│   │   │   └── 99488a2f16419a9678e88e616edcc1aaaf33f6
+│   │   ├── b6
+│   │   │   └── a349cbf7efdc6a7d2aa954afc942b0528b740c
+│   │   ├── b9
+│   │   │   └── d2db0e7653630f8c72d8cdb1f538406424c496
+│   │   ├── be
+│   │   │   └── dd5338518710b7fd63546d51087babb4be7a98
+│   │   ├── bf
+│   │   │   └── d146fb79ca3427cd05011cebafe3a0aedc6e6a
+│   │   ├── c8
+│   │   │   └── 490f1aa9a72e0a6845714239a83225172f909b
+│   │   ├── da
+│   │   │   └── 54faf4f71912d1595dd908ca102da228da9a8e
+│   │   ├── f1
+│   │   │   └── f9639c0237813bae0b7f263dd3eda81bf3c53a
+│   │   ├── f2
+│   │   │   └── c842e35d118b7a0399bd55c6575e4a6061abca
+│   │   ├── f3
+│   │   │   ├── e878ec143c31aa17d25889307cccc392d6bf8e
+│   │   │   └── f9842e5e9583ffff6546cc33c8d2338dc9b17c
+│   │   ├── f7
+│   │   │   ├── a43bed84c2053c4754806d7d32e641bde6a3a4
+│   │   │   └── fd76d8d3a96f45fc1464a287d9b85632b8a1d7
+│   │   ├── f9
+│   │   │   └── b7b88c12b4a665526b4a019d1b7e0da59309d9
+│   │   ├── ff
+│   │   │   └── ed7e66126a4a933d56e03cb762ba749f7aac91
+│   │   ├── info
+│   │   └── pack
+│   │       ├── pack-29f674b05eb5eaf0da7e5736caace6b9c7210a76.idx
+│   │       ├── pack-29f674b05eb5eaf0da7e5736caace6b9c7210a76.pack
+│   │       └── pack-29f674b05eb5eaf0da7e5736caace6b9c7210a76.rev
+│   ├── opencode
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       ├── HEAD
+│       │       └── main
+│       └── tags
+├── .gitignore
+├── gtk-3.0
+│   └── .config
+│       └── gtk-3.0
+│           ├── bookmarks
+│           ├── colors.css
+│           ├── gtk.css
+│           └── settings.ini
+├── gtk-4.0
+│   └── .config
+│       └── gtk-4.0
+│           ├── colors.css
+│           ├── gtk.css -> /usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css
+│           └── settings.ini
+├── home
+│   ├── .bashrc
+│   ├── .profile
+│   ├── .tmux.conf
+│   └── .zshrc
+├── hypr
+│   └── .config
+│       └── hypr
+│           ├── hypr
+│           │   ├── 16.jpeg
+│           │   ├── 18.jpeg
+│           │   ├── 1.jpg
+│           │   ├── 2.png
+│           │   ├── 3.jpg
+│           │   ├── 4.jpg
+│           │   ├── 5.png
+│           │   ├── 6.png
+│           │   ├── 7.jpeg
+│           │   ├── 8.png
+│           │   ├── 9.png
+│           │   ├── me.jpeg
+│           │   ├── me.jpg
+│           │   └── user.jpg
+│           ├── hypridle.conf
+│           ├── hyprland.conf
+│           ├── hyprland.conf.bak
+│           ├── hyprland.conf.save
+│           ├── hyprland.lua
+│           ├── hyprlock
+│           │   ├── 16.jpeg
+│           │   ├── 18.jpeg
+│           │   ├── 1.jpg
+│           │   ├── 2.png
+│           │   ├── 3.jpg
+│           │   ├── 4.jpg
+│           │   ├── 5.png
+│           │   ├── 6.png
+│           │   ├── 7.jpeg
+│           │   ├── 8.png
+│           │   ├── 9.png
+│           │   ├── me.jpg
+│           │   └── user.jpg
+│           ├── hyprlock.conf
+│           └── hyprpaper.conf
+├── hyprlock
+│   └── .config
+│       └── hyprlock
+│           ├── colors.conf
+│           ├── layouts
+│           │   ├── colors.conf
+│           │   ├── hyprlock.conf
+│           │   ├── layout10.conf
+│           │   ├── layout11.conf
+│           │   ├── layout12.conf
+│           │   ├── layout13.conf
+│           │   ├── layout14.conf
+│           │   ├── layout15.conf
+│           │   ├── layout16.conf
+│           │   ├── layout17.conf
+│           │   ├── layout18.conf
+│           │   ├── layout1.conf
+│           │   ├── layout20.conf
+│           │   ├── layout2.conf
+│           │   ├── layout3.conf
+│           │   ├── layout4.conf
+│           │   ├── layout5.conf
+│           │   ├── layout6.conf
+│           │   ├── layout7.conf
+│           │   ├── layout8.conf
+│           │   └── layout9.conf
+│           ├── music.conf
+│           ├── scripts
+│           │   ├── battery.sh
+│           │   ├── cava.sh
+│           │   ├── hlock_mpris.sh
+│           │   ├── hyprlock_notify_widget.sh
+│           │   ├── hyprlock.sh
+│           │   ├── infonlock.sh
+│           │   ├── listner.sh
+│           │   ├── location.sh
+│           │   ├── music-progress.sh
+│           │   ├── music.sh
+│           │   ├── playerctlock.sh
+│           │   ├── playerlayout4.sh
+│           │   ├── stopwatch.sh
+│           │   └── weather.sh
+│           └── wallpapers
+│               ├── 16.jpeg
+│               ├── 18.jpeg
+│               ├── 1.jpg
+│               ├── 2.png
+│               ├── 3.jpg
+│               ├── 4.jpg
+│               ├── 5.png
+│               ├── 6.png
+│               ├── 7.jpeg
+│               ├── 8.png
+│               ├── 9.png
+│               ├── me.jpg
+│               ├── me.png
+│               └── user.jpg
+├── install-dotfiles.sh
+├── install-pkgs.sh
+├── install-services.sh
+├── install.sh
+├── kitty
+│   └── .config
+│       └── kitty
+│           ├── colors-matugen.conf
+│           └── kitty.conf
+├── nvim
+│   └── .config
+│       └── nvim
+│           ├── init.lua
+│           ├── keymaps.md
+│           ├── lazy-lock.json
+│           ├── lua
+│           │   └── shell-ninja
+│           │       ├── core
+│           │       │   ├── init.lua
+│           │       │   ├── keymaps.lua
+│           │       │   └── options.lua
+│           │       ├── lazy.lua
+│           │       └── plugins
+│           │           ├── alpha.lua
+│           │           ├── autopairs.lua
+│           │           ├── auto-session.lua
+│           │           ├── bufferline.lua
+│           │           ├── color-hithlighter.lua
+│           │           ├── colorscheme.lua
+│           │           ├── comment.lua
+│           │           ├── dressing.lua
+│           │           ├── formatting.lua
+│           │           ├── gitsigns.lua
+│           │           ├── indent-blankline.lua
+│           │           ├── init.lua
+│           │           ├── lazygit.lua
+│           │           ├── linting.lua
+│           │           ├── lsp
+│           │           │   ├── lspconfig.lua
+│           │           │   └── mason.lua
+│           │           ├── lualine.lua
+│           │           ├── noice.lua
+│           │           ├── nvim-cmp.lua
+│           │           ├── nvim-notify.lua
+│           │           ├── nvim-tree.lua
+│           │           ├── nvim-treesitter-text-objects.lua
+│           │           ├── pywal-wal.lua
+│           │           ├── substitute.lua
+│           │           ├── surround.lua
+│           │           ├── telescope.lua
+│           │           ├── todo-comments.lua
+│           │           ├── toggleterminal.lua
+│           │           ├── treesitter.lua
+│           │           ├── trouble.lua
+│           │           ├── vim-maximizer.lua
+│           │           └── which-key.lua
+│           └── README.md
+├── openbox
+│   └── .config
+│       └── openbox
+│           ├── autostart -> ../../dotfile/openbox/.config/openbox/autostart
+│           ├── environment -> ../../dotfile/openbox/.config/openbox/environment
+│           ├── menu.xml -> ../../dotfile/openbox/.config/openbox/menu.xml
+│           └── rc.xml -> ../../dotfile/openbox/.config/openbox/rc.xml
+├── packages.txt
+├── qt5ct
+│   └── .config
+│       └── qt5ct
+│           ├── colors
+│           │   └── Pywal.conf
+│           └── qt5ct.conf
+├── qt6ct
+│   └── .config
+│       └── qt6ct
+│           ├── colors
+│           │   └── Pywal.conf
+│           └── qt6ct.conf
+├── rofi
+│   └── .config
+│       └── rofi
+│           └── config.rasi
+├── swaync
+│   └── .config
+│       └── swaync
+│           ├── config.json
+│           └── style.css
+├── tree.txt
+├── walker
+│   └── .config
+│       └── walker
+│           ├── colors.css
+│           ├── config.toml
+│           ├── launch.sh
+│           └── themes
+│               ├── glass
+│               │   └── style.css
+│               ├── ml4w
+│               │   └── style.css
+│               └── modern
+│                   └── style.css
+├── waybar
+│   └── .config
+│       └── waybar
+│           ├── assets
+│           │   ├── experimental.png
+│           │   ├── line.png
+│           │   ├── main.png
+│           │   └── zen.png
+│           ├── config
+│           ├── config.jsonc
+│           ├── modules
+│           │   ├── backlight.jsonc
+│           │   ├── battery.jsonc
+│           │   ├── bluetooth.jsonc
+│           │   ├── clock.jsonc
+│           │   ├── custom
+│           │   │   ├── github.jsonc
+│           │   │   ├── lock_screen.jsonc
+│           │   │   ├── media.jsonc
+│           │   │   ├── power_btn.jsonc
+│           │   │   ├── rofi.jsonc
+│           │   │   ├── swaync.jsonc
+│           │   │   ├── tailscale.jsonc
+│           │   │   ├── updates.jsonc
+│           │   │   ├── wl-gammarelay-temperature.jsonc
+│           │   │   └── wol.jsonc
+│           │   ├── extra
+│           │   │   ├── microphone.jsonc
+│           │   │   ├── pulseaudio.jsonc
+│           │   │   └── tray.jsonc
+│           │   ├── hyprland
+│           │   │   ├── window.jsonc
+│           │   │   └── workspaces.jsonc
+│           │   ├── network.jsonc
+│           │   ├── power-profiles-daemon.jsonc
+│           │   └── temperature.jsonc
+│           ├── modules.jsonc
+│           ├── scripts
+│           │   ├── addhost.sh
+│           │   ├── colorpicker.sh
+│           │   ├── connectssh.sh
+│           │   ├── cyclehost.sh
+│           │   ├── getupdates.sh
+│           │   ├── github.sh
+│           │   ├── installupdates.sh
+│           │   ├── launch.sh
+│           │   ├── listpackages.sh
+│           │   ├── mediaplayer.py
+│           │   ├── refresh.sh
+│           │   ├── select.sh
+│           │   ├── sysmaintenance.sh
+│           │   ├── system-block.sh
+│           │   ├── system-info.sh
+│           │   ├── system-menu.sh
+│           │   ├── tailscaleinfo.sh
+│           │   ├── wolinfo.sh
+│           │   └── wol.sh
+│           ├── style.css
+│           └── themes
+│               ├── config
+│               ├── config.jsonc
+│               ├── default
+│               │   ├── config-default
+│               │   └── style-default.css
+│               ├── experimental
+│               │   ├── config-experimental
+│               │   └── style-experimental.css
+│               ├── line
+│               │   ├── config-line
+│               │   └── style-line.css
+│               ├── style.css
+│               └── zen
+│                   ├── config-zen
+│                   └── style-zen.css
+├── wlogout
+│   └── .config
+│       └── wlogout
+│           ├── icons
+│           │   ├── hibernate.png
+│           │   ├── lock.png
+│           │   ├── logout.png
+│           │   ├── poweroff.png
+│           │   ├── reboot.png
+│           │   └── sleep.png
+│           ├── layout_1
+│           ├── layout_2
+│           ├── style_1.css
+│           └── style_2.css
+└── yazi
+    └── .config
+        └── yazi
+            ├── keymap.toml
+            ├── keymap.toml-1756023994490389
+            ├── theme.toml
+            ├── theme.toml-1756023994537480
+            ├── yazi.toml
+            └── yazi.toml-1756023994486190
+
+454 directories, 1396 files
