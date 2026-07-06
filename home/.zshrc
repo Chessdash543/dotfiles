@@ -322,7 +322,7 @@ box_line "Host:    $(hostname)"
 box_line "Distro:  $(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')"
 box_line "Kernel:  $(uname -r)"
 box_line "Uptime:  $(uptime -p | sed 's/^up //')"
-box_line "Memory:  $(free -h | awk '/^Mem:/ {print $3 " / " $2}')"
+box_line "Memory:  $(free -h | awk '/^Mem.:/ {print $3 " / " $2}')"
 box_line "Pkgs:    $(pacman -Qq | wc -l)"
 
 printf "%s╰" "$margin"

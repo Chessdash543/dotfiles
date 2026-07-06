@@ -3,16 +3,28 @@ set -e
 
 DOTFILES="$HOME/dotfiles"
 
-cd "$DOTFILES"
-
-# .config (--no-folding cria symlinks individuais, não uma pasta inteira)
-if [ -d .config ]; then
-  stow --no-folding .config
-  echo "stow .config OK"
+# .config/ -> ~/.config/
+if [ -d "$DOTFILES/.config" ]; then
+  for item in "$DOTFILES"/.config/*; do
+    name=$(basename "$item")
+    target="$HOME/.config/$name"
+    if [ -e "$target" ] || [ -L "$target" ]; then
+      rm -rf "$target"
+    fi
+    cp -r "$item" "$target"
+    echo "copy ~/.config/$name OK"
+  done
 fi
 
-# $HOME files
-if [ -d home ]; then
-  stow home
-  echo "stow home OK"
+# home/ -> $HOME/
+if [ -d "$DOTFILES/home" ]; then
+  for item in "$DOTFILES"/home/*; do
+    name=$(basename "$item")
+    target="$HOME/$name"
+    if [ -e "$target" ] || [ -L "$target" ]; then
+      rm -rf "$target"
+    fi
+    cp -r "$item" "$target"
+    echo "copy ~/$name OK"
+  done
 fi

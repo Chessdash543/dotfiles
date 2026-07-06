@@ -14,10 +14,15 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
+    output   = "LVDS-1",
+    disabled = true,
+})
+
+hl.monitor({
+    output   = "HDMI-A-1",
     mode     = "preferred",
     position = "auto",
-    scale    = "auto",
+    scale    = 1,
 })
 hl.config({
     misc = {
@@ -31,7 +36,7 @@ hl.config({
 
 -- Set programs that you use
 local terminal2   = "kitty"
-local terminal    = "lxterminal"
+local terminal    = "alacritty"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
 local menu        = "fuzzel" -- "yprlauncher"
@@ -51,6 +56,10 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(
     "hyprlock & awww-daemon & awww --restore & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
+    hl.exec_cmd("~/.config/hypr/scripts/monitor_hotplug.sh")
+end)
+hl.on("hyprland.start", function()
+    hl.exec_cmd("hyprctl setcursor aosp-cursors 24")
 end)
 hl.on("hyprland.start", function()
     hl.exec_cmd("ags &")
@@ -64,6 +73,8 @@ end)
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XCURSOR_THEME", "aosp-cursors")
+hl.env("HYPRCURSOR_THEME", "aosp-cursors")
 
 
 -----------------------
@@ -162,15 +173,21 @@ hl.curve("easy", {
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "easeOutQuint" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 6, spring = "easy" })
+hl.animation({ leaf = "windows", enabled = true, speed = 8, bezier = "easeOutQuint", })
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 6,
-    style = "popin 85%",
-    spring = "easy",
+    speed = 10,
+    style = "popin 0%",
+    bezier = "easeOutQuint",
 })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 6, bezier = "linear", style = "popin 87%" })
+hl.animation({
+    leaf = "windowsOut",
+    enabled = true,
+    speed = 10,
+    style = "popin 0%",
+    bezier = "easeOutQuint",
+})
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
@@ -182,7 +199,7 @@ hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "a
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 3,
+    speed = 6,
     bezier = "easeOutQuint",
     style = "slide",
 })
@@ -190,14 +207,14 @@ hl.animation({
 hl.animation({
     leaf = "workspacesIn",
     enabled = true,
-    speed = 4,
+    speed = 9,
     bezier = "easeOutQuint",
 })
 
 hl.animation({
     leaf = "workspacesOut",
     enabled = true,
-    speed = 4,
+    speed = 9,
     bezier = "easeOutQuint",
 })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })

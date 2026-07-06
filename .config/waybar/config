@@ -21,7 +21,6 @@
     "tray",
     "custom/swaync",
     "pulseaudio",
-    "custom/system-info",
     "custom/system-block",
     "custom/usrctl"
   ],
