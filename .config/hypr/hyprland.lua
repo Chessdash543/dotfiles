@@ -173,7 +173,7 @@ hl.curve("easy", {
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "easeOutQuint" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 8, bezier = "easeOutQuint", })
+hl.animation({ leaf = "windows", enabled = true, speed = 9, bezier = "easeOutQuint", })
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
