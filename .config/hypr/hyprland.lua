@@ -35,7 +35,7 @@ hl.config({
 ---------------------
 
 -- Set programs that you use
-local terminal2   = "kitty"
+local terminal2   = "alacritty"
 local terminal    = "alacritty"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
@@ -177,7 +177,7 @@ hl.animation({ leaf = "windows", enabled = true, speed = 9, bezier = "easeOutQui
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 10,
+    speed = 15,
     style = "popin 0%",
     bezier = "easeOutQuint",
 })

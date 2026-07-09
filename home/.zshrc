@@ -284,22 +284,22 @@ alias apotris='$HOME/Downloads/Apotris/Apotris'
 alias apotris='cd "$HOME/Downloads/Apotris" && ./Apotris'
 case "$XDG_CURRENT_DESKTOP" in
     Hyprland)
-        cat ~/.config/ascii/hyprland.txt
+        cat /home/ryanv/.config/ascii/hyprland.txt
         ;;
     Wayfire)
-        cat ~/.config/ascii/wayfire.txt
+        cat /home/ryanv/.config/ascii/wayfire.txt
         ;;
     GNOME)
-        cat ~/.config/ascii/gnome.txt
+        cat /home/ryanv/.config/ascii/gnome.txt
         ;;
     KDE|KDEPlasma|plasma)
-        cat ~/.config/ascii/plasma.txt
+        cat /home/ryanv/.config/ascii/plasma.txt
         ;;
     Openbox)
-        cat ~/.config/ascii/openbox.txt
+        cat /home/ryanv/.config/ascii/openbox.txt
         ;;
     *)
-        cat ~/.config/ascii/default.txt
+        cat /home/ryanv/.config/ascii/default.txt
         ;;
 esac
 # ===== System Box =====
@@ -323,7 +323,6 @@ box_line "Distro:  $(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2 | tr -d 
 box_line "Kernel:  $(uname -r)"
 box_line "Uptime:  $(uptime -p | sed 's/^up //')"
 box_line "Memory:  $(free -h | awk '/^Mem.:/ {print $3 " / " $2}')"
-box_line "Pkgs:    $(pacman -Qq | wc -l)"
 
 printf "%s╰" "$margin"
 printf '─%.0s' {1..42}

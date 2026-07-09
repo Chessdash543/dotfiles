@@ -334,7 +334,6 @@
 
 (defwidget menu_event []
     (eventbox :class "shadow-container"
-              :onhoverlost "./scripts/menuctl.sh"
                (box :orientation "v"
                     :space-evenly false
                     (box :class "menuctl-container-outer"
@@ -426,7 +425,7 @@
 (defvar calrev false)
 
 (defwidget calendar_event []
-    (eventbox :onhoverlost "./scripts/calendar.sh"
+    (eventbox
          (calendar_widget :time get_time
                           :date get_date
          )
@@ -507,7 +506,6 @@
          :valign "start"
     (box :class "usrctl-container-outer"
     (eventbox :class "shadow-container"
-         :onhoverlost "./scripts/usrctl.sh"
           (box :orientation "v"
                :space-evenly false
                (box :class "profile-container"
