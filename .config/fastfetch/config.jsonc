@@ -3,7 +3,6 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 	"logo": {
     	"type": "auto",
-    	"width": 10,
     	"color": {
     		"1": "cyan",
     		"2": "cyan"
@@ -33,6 +32,12 @@
             "type": "cpu",
             "showPeCoreCount": true,
             "keyColor": "33"
+        },
+        {
+            "key": "CPU Temp",
+            "type": "cpu",
+            "temp": true,
+            "keyColor": "91"
         },
         {
             "key": "GPU",
@@ -129,6 +134,31 @@
             "key": "Shell",
             "type": "shell",
             "keyColor": "34"
+        },
+        {
+            "key": "Host",
+            "type": "host",
+            "keyColor": "33"
+        },
+        {
+            "key": "Board",
+            "type": "board",
+            "keyColor": "94"
+        },
+        {
+            "key": "BIOS",
+            "type": "bios",
+            "keyColor": "35"
+        },
+        {
+            "key": "Uptime",
+            "type": "uptime",
+            "keyColor": "32"
+        },
+        {
+            "key": "Packages",
+            "type": "packages",
+            "keyColor": "36"
         },
         {
             "type": "custom", // InformationEnd
