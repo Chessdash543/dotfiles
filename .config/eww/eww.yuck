@@ -668,30 +668,30 @@
                         (box :class "sliderctl"
                              :orientation "v"
                              :spacing 15
-                             (box :class "volume-slider"
-                                  :space-evenly false
-                                  :halign "center"
-                                  (label :text "${volico}")
-                                  (scale :class "vol"
-                                         :value get_vol
-                                         :max 101 
-                                         :min 0
-                                         :round-digits 0
-                                         :onchange "pamixer --set-volume {}"
-                                  )
-                             )
-                             (box :class "light-slider"
-                                  :space-evenly false
-                                  :halign "center"
-                                  (label :text "")
-                                  (scale :value get_light
-                                         :class "lig"
-                                         :max 101 
-                                         :min 1
-                                         :round-digits 0
-                                         :onchange "brightnessctl set {}%"
-                                  )
-                             )
+                              (box :class "volume-slider"
+                                   :space-evenly false
+                                   :halign "center"
+                                   (label :text "${volico}")
+                                   (scale :class "vol"
+                                          :value get_vol
+                                          :max 101 
+                                          :min 0
+                                          :round-digits 0
+                                          :onchange "pamixer --set-volume {} && /usr/bin/eww update get_vol={}"
+                                   )
+                              )
+                              (box :class "light-slider"
+                                   :space-evenly false
+                                   :halign "center"
+                                   (label :text "")
+                                   (scale :value get_light
+                                          :class "lig"
+                                          :max 101 
+                                          :min 1
+                                          :round-digits 0
+                                          :onchange "brightnessctl set {}% && /usr/bin/eww update get_light={}"
+                                   )
+                              )
                         )
                    )
                )

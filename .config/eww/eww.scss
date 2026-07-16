@@ -593,6 +593,15 @@ tooltip{
   border-radius: 10px;
 }
 
+.vol slider {
+  all: unset;
+  background-color: rgb(144, 104, 190);
+  border-radius: 100%;
+  min-height: 1.2em;
+  min-width: 1.2em;
+  margin: -5px;
+}
+
 .volume-slider,.volume-short{
   color:rgb(144, 104, 190);
 }
@@ -611,6 +620,15 @@ tooltip{
   all: unset;
   background-color:rgb(219,193,117);
   border-radius: 10px;
+}
+
+.lig slider {
+  all: unset;
+  background-color: rgb(219, 193, 117);
+  border-radius: 100%;
+  min-height: 1.2em;
+  min-width: 1.2em;
+  margin: -5px;
 }
 
 .light-slider{
@@ -690,6 +708,15 @@ tooltip{
   all: unset;
   background-color:rgb(48,100,170);
   border-radius: 10px;
+}
+
+.music-slider slider {
+  all: unset;
+  background-color: rgb(48, 100, 170);
+  border-radius: 100%;
+  min-height: 1.2em;
+  min-width: 1.2em;
+  margin: -5px;
 }
 
 .music-timer{
