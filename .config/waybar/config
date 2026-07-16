@@ -55,12 +55,7 @@
 
   "clock": {
     "format": "{:%H:%M}",
-    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt>{calendar}</tt>",
     "on-click": "~/.config/eww/scripts/calendar.sh",
-    "calendar": {
-      "mode": "month",
-      "weeks-pos": "right"
-    }
   },
 
   "tray": {
