@@ -128,7 +128,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 0.9,
-        inactive_opacity = 0.7,
+        inactive_opacity = 0.6,
 
         shadow           = {
             enabled      = true,
@@ -139,8 +139,8 @@ hl.config({
 
         blur             = {
             enabled  = true,
-            size     = 2,
-            passes   = 3,
+            size     = 1,
+            passes   = 4,
             vibrancy = 0.2,
         },
     },
