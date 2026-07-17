@@ -54,7 +54,7 @@ local window      = "rofi -show window"
 --
 hl.on("hyprland.start", function()
     hl.exec_cmd(
-    "hyprlock & awww-daemon & awww --restore & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
+    "hyprlock & awww-daemon & awww img /home/ryanv/.config/hyprlock/wallpapers/16.jpeg & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
     hl.exec_cmd("~/.config/hypr/scripts/monitor_hotplug.sh")
 end)

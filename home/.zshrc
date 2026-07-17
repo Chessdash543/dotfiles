@@ -280,28 +280,7 @@ fi
 
 # opencode
 export PATH=/home/ryanv/.opencode/bin:$PATH
-alias apotris='$HOME/Downloads/Apotris/Apotris'
 alias apotris='cd "$HOME/Downloads/Apotris" && ./Apotris'
-case "$XDG_CURRENT_DESKTOP" in
-    Hyprland)
-        cat /home/ryanv/.config/ascii/hyprland.txt
-        ;;
-    Wayfire)
-        cat /home/ryanv/.config/ascii/wayfire.txt
-        ;;
-    GNOME)
-        cat /home/ryanv/.config/ascii/gnome.txt
-        ;;
-    KDE|KDEPlasma|plasma)
-        cat /home/ryanv/.config/ascii/plasma.txt
-        ;;
-    Openbox)
-        cat /home/ryanv/.config/ascii/openbox.txt
-        ;;
-    *)
-        cat /home/ryanv/.config/ascii/default.txt
-        ;;
-esac
 # ===== System Box =====
 echo
 margin="    " # 4 espaços
