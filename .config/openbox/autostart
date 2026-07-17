@@ -22,6 +22,5 @@ xrandr --output HDMI-A-1 --auto --primary
 
 # Fundo de tela
 feh --bg-fill ~/Imagens/aero.png &
-tint2 &
 killall nm-applet wireplumber &
 

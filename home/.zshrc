@@ -328,3 +328,7 @@ printf "%s╰" "$margin"
 printf '─%.0s' {1..42}
 printf "╯\n"
 echo
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/ryanv/.local/bin:$PATH"
