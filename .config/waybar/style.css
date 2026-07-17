@@ -11,8 +11,8 @@ window#waybar {
 window#waybar > box {
   background: linear-gradient(
     to right,
-    rgba(212, 0, 240, 0.6),
-    rgba(1, 162, 254, 0.6)
+    rgba(212, 0, 240, 0.5),
+    rgba(1, 162, 254, 0.5)
 );
   border: 2px solid rgba(255, 255, 255, 0.7);
   border-radius: 12px;
