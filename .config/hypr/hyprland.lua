@@ -35,8 +35,8 @@ hl.config({
 ---------------------
 
 -- Set programs that you use
-local terminal   = "kitty"
-local terminal2    = "alacritty"
+local terminal    = "kitty"
+local terminal2   = "alacritty"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
 local menu        = "fuzzel" -- "yprlauncher"
@@ -139,8 +139,8 @@ hl.config({
 
         blur             = {
             enabled  = true,
-            size     = 1,
-            passes   = 4,
+            size     = 3,
+            passes   = 3,
             vibrancy = 0.2,
         },
     },
