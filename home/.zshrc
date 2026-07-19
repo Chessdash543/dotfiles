@@ -316,10 +316,3 @@ echo
 export PATH="/home/ryanv/.local/bin:$PATH"
 alias fastfetch='fastfetch | lolcat'
 alias neofetch='neofetch | lolcat'
-pacman() {
-    command pacman "$@" | lolcat
-}
-
-yay() {
-    command yay "$@" | lolcat
-}

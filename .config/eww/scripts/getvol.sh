@@ -1,24 +1,31 @@
 #!/bin/bash
 
-vol=$(pamixer --get-volume)
-mute=$(pamixer --get-mute)
-if [ "$mute" = true ]; then
-    /usr/bin/eww update volico="󰖁"
-    vol="0";
-else
-    /usr/bin/eww update volico="󰕾"
-fi
-/usr/bin/eww update get_vol="$vol"
+PAMIXER="/usr/bin/pamixer"
+EWW="/usr/bin/eww"
 
+vol=$($PAMIXER --get-volume)
+mute=$($PAMIXER --get-mute)
+
+if [ "$mute" = true ]; then
+    $EWW update volico="󰖁"
+    $EWW update get_vol="0"
+    echo "0"
+else
+    $EWW update volico="󰕾"
+    $EWW update get_vol="$vol"
+    echo "$vol"
+fi
 
 pactl subscribe | stdbuf -oL grep --line-buffered "Event 'change' on sink" | while read -r _; do
-    vol=$(pamixer --get-volume)
-    mute=$(pamixer --get-mute)
+    vol=$($PAMIXER --get-volume)
+    mute=$($PAMIXER --get-mute)
     if [ "$mute" = true ]; then
-        /usr/bin/eww update volico="󰖁"
-        vol="0";
+        $EWW update volico="󰖁"
+        $EWW update get_vol="0"
+        echo "0"
     else
-        /usr/bin/eww update volico="󰕾"
+        $EWW update volico="󰕾"
+        $EWW update get_vol="$vol"
+        echo "$vol"
     fi
-    /usr/bin/eww update get_vol="$vol"
 done

@@ -20,7 +20,6 @@ networkmanager
 pipewire
 wireplumber
 sddm
-eww
 hyprlock
 swaync
 fuzzel

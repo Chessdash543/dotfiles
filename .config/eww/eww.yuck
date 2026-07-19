@@ -714,7 +714,7 @@
   "brightnessctl -m | awk -F, '{gsub(/%/, \"\", \$4); print \$4}'"
 )
 
-(defvar get_vol "")
+(defvar get_vol "0")
 (deflisten get_volume
     "./scripts/getvol.sh"
 )

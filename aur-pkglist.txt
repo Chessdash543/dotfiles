@@ -21,3 +21,4 @@ unimatrix-git
 waypaper
 wlogout
 walker
+eww
