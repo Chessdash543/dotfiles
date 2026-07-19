@@ -1,14 +1,25 @@
 #!/bin/bash
 set -e
 
-echo -e "This dotfiles will overwrite your dotfiles.\nDo you want to continue? (y/n)"
-read answer
+#!/usr/bin/env bash
 
-if [[ "$answer" == "y" ]]; then
-    echo "Continuing..."
-else
-    echo "Aborted."
-fi
+printf "This dotfiles will overwrite your dotfiles.\nDo you want to continue? (y/n): "
+read -r answer
+
+case "$answer" in
+    [Yy])
+        echo "Continuing..."
+        ;;
+    [Nn])
+        echo "Aborted."
+        exit 1
+        ;;
+    *)
+        echo "Invalid option."
+        exit 1
+        ;;
+esac
+
 ./install-pkgs.sh
 ./install-services.sh
 ./install-dotfiles.sh
