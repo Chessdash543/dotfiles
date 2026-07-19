@@ -291,6 +291,10 @@ box_line() {
     printf "%s│ %-*.*s │\n" "$margin" "$box_width" "$box_width" "$text"
 }
 
+function lsl() {
+    command ls --color=always "$@" | lolcat
+}
+
 printf "%s╭" "$margin"
 printf '─%.0s' {1..42}
 printf "╮\n"
@@ -310,3 +314,12 @@ echo
 
 # Added by Antigravity CLI installer
 export PATH="/home/ryanv/.local/bin:$PATH"
+alias fastfetch='fastfetch | lolcat'
+alias neofetch='neofetch | lolcat'
+pacman() {
+    command pacman "$@" | lolcat
+}
+
+yay() {
+    command yay "$@" | lolcat
+}
