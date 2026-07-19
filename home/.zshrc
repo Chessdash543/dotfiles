@@ -1,6 +1,5 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
-
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 
