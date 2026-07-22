@@ -35,8 +35,8 @@ hl.config({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
-local terminal2   = "alacritty"
+local terminal2    = "kitty"
+local terminal   = "alacritty"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
 local menu        = "fuzzel" -- "yprlauncher"
@@ -328,8 +328,8 @@ hl.bind(mainMod .. " + U", hl.dsp.exec_cmd(menu2))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind("PRINT", hl.dsp.exec_cmd("grimblast save area"))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("grimblast save screen"))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("grimblast save area"))
+hl.bind("PRINT", hl.dsp.exec_cmd("grimblast save screen"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("~/.config/eww/scripts/musicctl.sh"))
 hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("~/.config/eww/scripts/usrctl.sh"))
 hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("~/.config/eww/scripts/menuctl.sh"))
