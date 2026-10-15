@@ -10,9 +10,6 @@ yazi
 btop
 cava
 git
-github-cli
-firefox
-discord
 vlc
 mpv
 thunar

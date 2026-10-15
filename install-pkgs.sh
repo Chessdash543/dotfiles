@@ -2,7 +2,6 @@
 set -e
 
 echo "[1/4] Updating System"
-sudo pacman -Syu --noconfirm
 
 echo "[2/4] Installing pkgs from pacman"
 
