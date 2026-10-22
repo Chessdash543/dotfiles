@@ -35,7 +35,7 @@ hl.config({
 ---------------------
 
 -- Set programs that you use
-local terminal2    = "foot"
+local terminal2    = "kitty"
 local terminal   = "foot"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
