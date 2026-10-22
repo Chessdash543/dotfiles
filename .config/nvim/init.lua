@@ -32,20 +32,49 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.completion" },
-  { src = "https://github.com/nvim-mini/mini.pairs" },
+ { src = "https://github.com/nvim-mini/mini.pairs" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
-  { src = "https://github.com/lewis6991/gitsigns.nvim" },
-  { src = "https://github.com/nvim-mini/mini.nvim" },
+})
+vim.pack.add({
+    "https://github.com/saghen/blink.lib",
+    "https://github.com/saghen/blink.cmp",
+})
+local blink = require("blink.cmp")
+
+blink.setup({
+    keymap = {
+        preset = "super-tab",
+    },
+
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+    },
+
+    fuzzy = {
+        implementation = "lua",
+    },
 })
 vim.pack.add({
     { src = "https://github.com/folke/tokyonight.nvim" },
 })
+vim.lsp.config("clangd", {
+    cmd = { "clangd" },
+    filetypes = { "c", "cpp" },
+    root_markers = {
+        "compile_commands.json",
+        "compile_flags.txt",
+        ".git",
+    },
+})
+
+vim.lsp.enable("clangd")
 vim.cmd.colorscheme("tokyonight")
 require("nvim-treesitter").install({
     "cpp",
     "c",
     "lua",
     "python",
+    "javascript"
 })
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "cpp", "c", "lua", "python" },
@@ -54,6 +83,3 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 require("mini.pairs").setup()
-require("gitsigns").setup()
-require("mini.statusline").setup()
-require("mini.completion").setup()

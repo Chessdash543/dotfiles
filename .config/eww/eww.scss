@@ -7,7 +7,7 @@
 .bar{
   box-shadow: 0 2px 3px 1px rgba(6,6,11,0.9);
   border-radius: 10px;
-  background-color: rgba(24,24,37,0.94);
+  background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
   padding: 5px;
   margin:6.5px;
 }
@@ -127,7 +127,6 @@ menu {
   border-radius:15px;
   padding: 10px;
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border: 3px solid rgba(255, 255, 255, 0.7);
   color:#cdd6f4;
   menuitem {
     border-radius: 10px;
@@ -159,7 +158,6 @@ menu {
 
 .wifictl-container-outer, .menuctl-container-outer, .usrctl-container-outer {
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border: 3px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   padding: 3px;
   margin: 5.5px;
@@ -198,8 +196,8 @@ menu {
   margin:7px;
   margin-top:17px;
   border-radius:15px;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
 }
 
 .app-container{
@@ -212,7 +210,7 @@ menu {
   border-radius:15px;
   padding:10px;
   background-color: rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 .wifi-ssid{
@@ -264,7 +262,6 @@ menu {
 
 .calendar-container-outer {
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border: 3px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   margin: 5.5px;
   margin-bottom: 10px;
@@ -278,13 +275,13 @@ menu {
 }
 
 .time-box{
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
   border-radius:15px;
   margin-top:8px;
   padding-left:25px;
   padding-right:25px;
   padding-bottom:20px;
-  background-color:rgba(0,0,0,0.28);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .time-inner{
@@ -301,13 +298,13 @@ menu {
 }
 
 .calendar-box{
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
   border-radius:15px;
   padding-top:10px;
   padding-left:10px;
   padding-right:10px;
   margin-bottom:9px;
-  background-color:rgba(0,0,0,0.28); 
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .cal{
@@ -332,7 +329,7 @@ menu {
 
 .music-container{
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border: 3px solid rgba(255, 255, 255, 0.7);
+  border: none;
   border-radius: 20px;
   min-width:385px;
   padding: 3px;
@@ -343,7 +340,7 @@ menu {
   border-radius: 20px;
   min-width:385px;
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
   padding: 5px;
 }
 
@@ -353,8 +350,8 @@ menu {
   margin-top:5px;
   padding:10px;
   border-radius:15px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background-color:rgba(0,0,0,0.28);
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -392,9 +389,9 @@ menu {
   margin-top:10px;
   border-radius:20px;
   padding:5px;
-  background-color:rgba(65,72,86,0.3);
+  background: rgba(0, 0, 0, 0.3);
   font-family: "JetBrainsMono Nerd Font";
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 .shutdown{
@@ -455,8 +452,8 @@ tooltip{
   margin:0px 7px;
   margin-top:17px;
   padding:10px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background-color:rgba(0,0,0,0.28);
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
   min-width:370px;
   border-radius:15px;
 }
@@ -519,8 +516,8 @@ tooltip{
 .cpu-box, .ram-box, .disk-box{
   margin:0px 10px;
   border-radius:15px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background-color:rgba(45,52,66,0.3);
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .cpu, .ram, .disk{
@@ -561,8 +558,8 @@ tooltip{
 
 .sliderctl{
   border-radius:15px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background-color:rgba(45,52,66,0.3);
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
   margin-left:20px;
   margin-right:20px;
   margin-top:20px;

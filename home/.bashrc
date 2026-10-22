@@ -7,8 +7,5 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-
-
-# Added by Antigravity CLI installer
-export PATH="/home/ryanv/.local/bin:$PATH"
+PS1='[\[\033[35m\]\u\[\033[0m\]@\[\033[34m\]\h\[\033[0m\] \W]\$ '
+alias cairo-dock='LD_PRELOAD=/usr/lib/libicalss.so cairo-dock -d .config/cairo-dock-panel'

@@ -35,11 +35,11 @@ hl.config({
 ---------------------
 
 -- Set programs that you use
-local terminal2    = "kitty"
-local terminal   = "alacritty"
+local terminal2    = "foot"
+local terminal   = "foot"
 local fileManager = "thunar"
 local menu2       = "hyprlauncher"
-local menu        = "fuzzel" -- "yprlauncher"
+local menu        = "fuzzel" -- "hyprlauncher"
 local window      = "rofi -show window"
 
 
@@ -106,7 +106,7 @@ hl.config({
         gaps_in          = 3,
         gaps_out         = 10,
 
-        border_size      = 4,
+        border_size      = 2,
 
         col              = {
             active_border   = { colors = { "rgba(255,0,255,1.000)", "rgba(0, 175, 255, 1)" }, angle = 0 },
@@ -123,12 +123,12 @@ hl.config({
     },
 
     decoration = {
-        rounding         = 10,
+        rounding         = 7,
         rounding_power   = 3,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 0.9,
-        inactive_opacity = 0.7,
+        inactive_opacity = 0.8,
 
         shadow           = {
             enabled      = true,
@@ -177,7 +177,7 @@ hl.animation({ leaf = "windows", enabled = true, speed = 9, bezier = "easeOutQui
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 15,
+    speed = 10,
     style = "popin 0%",
     bezier = "easeOutQuint",
 })
