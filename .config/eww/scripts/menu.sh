@@ -3,7 +3,6 @@
 names=(
   "Firefox ESR"
   "Sublime Text"
-  "Alacritty"
   "Btop++"
   "VLC"
   "GitHub Desktop"
@@ -14,7 +13,6 @@ names=(
 execs=(
   "firefox-esr"
   "subl"
-  "alacritty"
   "btop"
   "vlc"
   "github-desktop"
@@ -25,7 +23,6 @@ execs=(
 icons=(
   "/usr/share/icons/hicolor/128x128/apps/firefox.png"
   "/usr/share/icons/hicolor/128x128/apps/sublime-text.png"
-  "/usr/share/icons/breeze/apps/48/utilities-terminal.svg"
   "/usr/share/icons/hicolor/scalable/apps/btop.svg"
   "/usr/share/icons/hicolor/256x256/apps/vlc.png"
   "/usr/share/icons/hicolor/256x256/apps/github-desktop.png"
