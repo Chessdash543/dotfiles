@@ -4,7 +4,6 @@ grimblast-git
 lvsk-calendar
 neofetch
 pipes-rs
-plasma6-wallpapers-smart-video-wallpaper-reborn
 python-pywalfox
 python-screeninfo
 st
