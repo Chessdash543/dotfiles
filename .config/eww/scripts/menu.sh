@@ -1,7 +1,6 @@
 #!/bin/bash
 
 names=(
-  "CachyOS Software Installer"
   "Firefox ESR"
   "Sublime Text"
   "Alacritty"
@@ -14,7 +13,6 @@ names=(
 )
 
 execs=(
-  "cachyos-pi"
   "firefox-esr"
   "subl"
   "alacritty"
@@ -27,7 +25,6 @@ execs=(
 )
 
 icons=(
-  "/usr/share/icons/hicolor/scalable/apps/cachyos-pi.png"
   "/usr/share/icons/hicolor/128x128/apps/firefox.png"
   "/usr/share/icons/hicolor/128x128/apps/sublime-text.png"
   "/usr/share/icons/breeze/apps/48/utilities-terminal.svg"
