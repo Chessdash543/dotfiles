@@ -1,8 +1,8 @@
 My Arch Linux dotfiles featuring a purple and blue theme, based on monasm's dotfiles but recolored
 # Preview
-<img width="1366" height="768" alt="20260719_090304" src="https://github.com/user-attachments/assets/d0030591-8147-4c6e-ba05-88380f42a0dd" />
-<img width="1366" height="768" alt="20260719_090332" src="https://github.com/user-attachments/assets/4bbc097c-8d39-4f18-ab88-b27941a2cde2" />
-
+<img width="1366" height="768" alt="20261021_205157" src="https://github.com/user-attachments/assets/6973626d-962a-4acb-9880-1b4faf8debc5" />
+<img width="1366" height="768" alt="20261021_205300" src="https://github.com/user-attachments/assets/345703c4-4ed8-4785-8c00-293bda4f4ed0" />
+<img width="1366" height="768" alt="20261021_205316" src="https://github.com/user-attachments/assets/20cb82d7-1a4b-4716-a763-773cee78e3a7" />
 # Installation
 You just need to clone the repository and run the install.sh script.
 copy and paste this comands:
