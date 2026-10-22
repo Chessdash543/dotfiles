@@ -6,10 +6,12 @@ My Arch Linux dotfiles featuring a purple and blue theme, based on monasm's dotf
 # Installation
 You just need to clone the repository and run the install.sh script.
 copy and paste this comands:
+
 ```bash
 git clone https://github.com/Chessdash543/dotfiles.git
 cd dotfiles
 ./install.sh
 ```
+
 # Additional Information
 The repository is open to pull requests; if you encounter any issues with the dotfiles or the script, feel free to open an issue.
