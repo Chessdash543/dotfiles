@@ -7,7 +7,6 @@ names=(
   "Btop++"
   "VLC"
   "GitHub Desktop"
-  "Krita"
   "LibreOffice"
   "qBittorrent"
 )
@@ -19,7 +18,6 @@ execs=(
   "btop"
   "vlc"
   "github-desktop"
-  "krita"
   "libreoffice"
   "qbittorrent"
 )
@@ -31,7 +29,6 @@ icons=(
   "/usr/share/icons/hicolor/scalable/apps/btop.svg"
   "/usr/share/icons/hicolor/256x256/apps/vlc.png"
   "/usr/share/icons/hicolor/256x256/apps/github-desktop.png"
-  "/usr/share/icons/hicolor/256x256/apps/krita.png"
   "/usr/share/icons/hicolor/128x128/apps/libreoffice-writer.png"
   "/usr/share/icons/hicolor/128x128/apps/qbittorrent.png"
 )
