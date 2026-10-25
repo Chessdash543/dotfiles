@@ -26,7 +26,6 @@
                         (tray)
                         (volume)
                         (ram)
-                        (battery)
                         (eventbox :onhoverlost "bash -c '/usr/bin/eww update keyrev=false && /usr/bin/eww update keyhov=false && /usr/bin/eww update wifirev=false && /usr/bin/eww update wifihov=false'"
                                   (wifi)
                         )
@@ -82,19 +81,6 @@
              (label :class "bsht" 
                     :text "${round(EWW_RAM.used_mem_perc,0)}%")
         )
-    )
-)
-
-(defwidget battery []
-    (box :class "battery"
-        (box :orientation "h"
-                       :space-evenly false
-                       (box :class "batico-short"
-                            (literal :content batico)
-                       )
-                       (label :class "bsht" 
-                              :text "${EWW_BATTERY.BAT0.capacity}%")
-                  )
     )
 )
 
@@ -328,7 +314,7 @@
                    (menu_event)))
 )
 
-(defpoll apps :interval "60s"
+(defpoll apps :initial "[]" :interval "60s"
     "./scripts/menu.sh"
 )
 
@@ -573,24 +559,6 @@
                    (box :class "sysctl"
                         :orientation "v"
                         :space-evenly false
-                        (box :class "bats"
-                             :space-evenly false
-                             (box :class "batico-main"
-                                  (literal :content batico)
-                             )
-                             (box :class "bat-detail"
-                                  :orientation "v"
-                                  (box :class "bat-percent"
-                                       :space-evenly false
-                                       (label :text "Battery ${EWW_BATTERY.BAT0.capacity}%")
-                                  )
-                                  (box :class "bat-status"
-                                       :space-evenly false
-                                       (label :limit-width 26 :text "${batest}")
-                                  )
-                             )
-                        )
-                        (box :class "divider-h")
                         (box :class "sys"
                             (box :class "cpu-box" 
                                  :orientation "v" 
@@ -701,8 +669,6 @@
 )
 )
 
-(deflisten batico "./scripts/batico.sh")
-(deflisten batest "./scripts/batest.sh")
 (deflisten music :initial "{}" "./scripts/music.sh")
 (deflisten pmusic :initial "{}" "./scripts/pmusic.sh")
 
