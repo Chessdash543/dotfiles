@@ -172,24 +172,34 @@ hl.curve("easy", {
 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "easeOutQuint" })
-hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
+-- Transição de cor da borda ao trocar o foco (ex.: depois de fechar uma janela).
+-- Antes durava 5.39 (539ms) e parecia que a borda ficava "sobressaindo".
+hl.animation({ leaf = "border", enabled = false })
 hl.animation({ leaf = "windows", enabled = true, speed = 9, bezier = "easeOutQuint", })
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 10,
-    style = "popin 0%",
+    speed = 8,
+    style = "slide",
     bezier = "easeOutQuint",
 })
 hl.animation({
     leaf = "windowsOut",
     enabled = true,
-    speed = 10,
-    style = "popin 0%",
+    speed = 8,
+    style = "slide",
+    bezier = "easeOutQuint",
+})
+-- Movimento/reflow das outras janelas ao abrir/fechar (bordas subindo/descendo).
+-- Antes herdava de "windows" (900ms) e continuava ~0,5s depois do fade terminar.
+hl.animation({
+    leaf = "windowsMove",
+    enabled = true,
+    speed = 8,
     bezier = "easeOutQuint",
 })
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 8, bezier = "linear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers", enabled = true, speed = 5, bezier = "easeOutQuint" })
 hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
@@ -331,6 +341,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("grimblast save area"))
 hl.bind("PRINT", hl.dsp.exec_cmd("grimblast save screen"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("~/.config/eww/scripts/musicctl.sh"))
+-- Pausa/despausa a música (mesma função do botão play/pause do widget do eww)
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/eww/scripts/playpause.sh"))
 hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("~/.config/eww/scripts/usrctl.sh"))
 hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("~/.config/eww/scripts/menuctl.sh"))
 
