@@ -521,7 +521,7 @@
                                   )
                                   (eventbox :cursor "pointer"
                                             :class "logout"
-                                            :onclick "loginctl terminate-user $USER"
+                                            :onclick "pkill hyprland"
                                             :tooltip " Logout "
                                             (label :text "")
                                   )

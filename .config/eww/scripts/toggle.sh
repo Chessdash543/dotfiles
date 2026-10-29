@@ -27,21 +27,21 @@ flock -w 2 -x 9 || exit 0
 rev="$(timeout 5 "$eww" get "$var" 2>/dev/null || true)"
 
 if [ "$rev" = "true" ]; then
-    # Esconde com animação. O fechamento real acontece depois, mas só se
-    # nenhum outro clique tiver reaberto a janela nesse meio tempo.
+    # Esconde com animação. Fecha a janela após o tempo da animação,
+    # independente da condição (evita ficar presa caso eww não responda
+    # na verificação posterior).
     timeout 5 "$eww" update "${var}=false" >/dev/null 2>&1
     if [ -n "$extra" ]; then
         timeout 5 "$eww" update "${extra}=false" >/dev/null 2>&1
     fi
 
     (
-        # Solta o lock herdado antes de dormir; o próximo clique não espera.
+        # Solta o lock herdado antes de dormir
         exec 9>&-
         sleep 0.35
-        # Pega o lock de novo para checar + fechar de forma atômica.
+        # Fecha de forma direta e atômica com lock
         flock -w 2 -x "$lock" bash -c '
-            [ "$(timeout 5 "$3" get "$2" 2>/dev/null)" = "false" ] &&
-                timeout 5 "$3" close "$1" >/dev/null 2>&1
+            timeout 5 "$3" close "$1" >/dev/null 2>&1
             exit 0
         ' _ "$win" "$var" "$eww"
     ) >/dev/null 2>&1 &

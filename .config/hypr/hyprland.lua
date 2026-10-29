@@ -54,7 +54,7 @@ local window      = "rofi -show window"
 --
 hl.on("hyprland.start", function()
     hl.exec_cmd(
-    "hyprlock & awww-daemon & awww img /home/ryanv/.config/hyprlock/wallpapers/16.jpeg & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
+    "hyprlock & awww-daemon & vicinae server & awww img /home/ryanv/.config/hyprlock/wallpapers/16.jpeg & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
     hl.exec_cmd("~/.config/hypr/scripts/monitor_hotplug.sh")
 end)
@@ -162,6 +162,10 @@ hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36,
 hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 } } })
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
+-- Curva com "overshoot": passa do ponto e volta (easeOutBack).
+-- O y > 1 no segundo ponto é o que faz a animação ultrapassar o destino.
+-- 1.4646 = passa ~7% alem do destino e volta.
+hl.curve("easeOutBack", { type = "bezier", points = { { 0.34, 1.4646 }, { 0.64, 1 } } })
 
 -- Default springs
 hl.curve("easy", {
@@ -179,14 +183,14 @@ hl.animation({ leaf = "windows", enabled = true, speed = 9, bezier = "easeOutQui
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 8,
+    speed = 5,
     style = "slide",
-    bezier = "easeOutQuint",
+    bezier = "easeOutBack",
 })
 hl.animation({
     leaf = "windowsOut",
     enabled = true,
-    speed = 8,
+    speed = 5,
     style = "slide",
     bezier = "easeOutQuint",
 })
@@ -209,7 +213,7 @@ hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "a
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 6,
+    speed = 5,
     bezier = "easeOutQuint",
     style = "slide",
 })
@@ -217,14 +221,15 @@ hl.animation({
 hl.animation({
     leaf = "workspacesIn",
     enabled = true,
-    speed = 9,
-    bezier = "easeOutQuint",
+    speed = 5,
+    style = "slide",
+    bezier = "easeOutBack",
 })
 
 hl.animation({
     leaf = "workspacesOut",
     enabled = true,
-    speed = 9,
+    speed = 5,
     bezier = "easeOutQuint",
 })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
@@ -333,7 +338,7 @@ hl.bind(mainMod .. " + M",
     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+-- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + U", hl.dsp.exec_cmd(menu2))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only

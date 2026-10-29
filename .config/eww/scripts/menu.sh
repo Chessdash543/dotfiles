@@ -13,7 +13,7 @@ names=(
 execs=(
   "firefox-esr"
   "subl"
-  "btop"
+  "foot btop"
   "vlc"
   "github-desktop"
   "libreoffice"
