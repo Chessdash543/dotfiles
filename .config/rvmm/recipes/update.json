@@ -1,0 +1,10 @@
+{
+    "title": "Update",
+    "description": "",
+    "packages": [
+        "rvgl_assets",
+        "rvgl_dcpack"
+    ],
+    "writable": true,
+    "root": false
+}

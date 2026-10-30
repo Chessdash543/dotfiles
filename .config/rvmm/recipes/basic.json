@@ -1,0 +1,11 @@
+{
+    "title": "Basic",
+    "description": "Does not include the soundtrack.",
+    "packages": [
+        "game_files",
+        "rvgl_assets",
+        "rvgl_dcpack"
+    ],
+    "writable": true,
+    "root": false
+}

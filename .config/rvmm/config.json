@@ -1,0 +1,14 @@
+{
+    "install-type": "standard",
+    "data-dir": "/home/ryanv/.local/share/rvmm",
+    "launch-params": "",
+    "installed": true,
+    "uri-registered": true,
+    "lobby-registered": true,
+    "repos": [],
+    "disabled-repos": [],
+    "install-recipe": "custom",
+    "default-recipe": "default",
+    "show-console": false,
+    "fix-cases": true
+}

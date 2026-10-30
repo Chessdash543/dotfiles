@@ -1,0 +1,7 @@
+{
+    "repos": [
+        "https://re-volt.gitlab.io/rvio/repos/anm.json",
+        "https://re-volt.gitlab.io/rvio/repos/arm.json",
+        "https://re-volt.gitlab.io/rvio/repos/rva.json"
+    ]
+}

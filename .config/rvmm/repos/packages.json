@@ -1,0 +1,127 @@
+{
+    "game_files": {
+        "description": "Core assets needed to play the game.",
+        "version": "22.0909",
+        "checksum": "6ce4033dd436e37fdd37f02991ae5f5c4427a40f58e87a8ff0cb787ebb667f9f"
+    },
+    "soundtrack": {
+        "description": "Original soundtrack (based on Dreamcast version).",
+        "version": "20.1008",
+        "checksum": "472259107349e7af549ff859cc7ffcf347f56786e5e63ecf7e1ffa761a152bf8"
+    },
+    "io_cars": {
+        "description": "Additional cars created by the community. Used in regular I/O races.",
+        "version": "26.0310",
+        "checksum": "05b7447c41fc357df40fd407cae27986781e8b05b1aef2061b8c7eb6c78aa0b6"
+    },
+    "io_cars_bonus": {
+        "description": "Additional cars created by the community. Reserved for special and unofficial events.",
+        "version": "26.0306",
+        "checksum": "61066cd9ab343cf4601eaf6f81167be6d4075a3a1aa7d68a5760f6701134f82f"
+    },
+    "io_clockworks": {
+        "description": "The three original Acclaim Clockworks mixed together with thirteen Clockworks by RV_Passion.",
+        "version": "22.0514",
+        "checksum": "5220c0c674a2ddf0d3956cd7f442ff7b9a887fb544c249c6771c95741afc87bb"
+    },
+    "io_clockworks_modern": {
+        "description": "Twelve original Clockworks by RV_Pure.",
+        "version": "22.0514",
+        "checksum": "146ff24f6042050551dbe1dc74cd6965842e9372839481a698f92072b4f5d5c1"
+    },
+    "io_lms": {
+        "description": "Content for the unofficial Last Man Standing game mode created by the community.",
+        "version": "26.0306",
+        "checksum": "4752abf05915fb9158b0bdc3f899ab7e52824df64924f4e6b21df1a1d01b3145"
+    },
+    "io_loadlevel": {
+        "description": "Loading screens for custom tracks created by Balesz.",
+        "version": "23.0923",
+        "checksum": "0b84c1b12cb7b3e088b3c1c0feced5e90722c0a67f8de62131dafaf208e50e19"
+    },
+    "io_music": {
+        "description": "Extra music for the I/O track pack.",
+        "version": "26.0306",
+        "checksum": "18f3f35731516ec2dd19a1a409b047e1a7cfe1150da0e80ea57e4a73b6515594"
+    },
+    "io_skins": {
+        "description": "Additional skins for cars included in the io_cars package.",
+        "version": "26.0306",
+        "checksum": "f58bb638ff93cda10536a6e1daa7af6ba9337f3e81d209258399fd7dbc687770"
+    },
+    "io_skins_bonus": {
+        "description": "Additional skins for cars included in the io_cars_bonus package.",
+        "version": "26.0306",
+        "checksum": "f9da9126a2b989f71bcd4ad0ea349ffea08506fbf539104514f3660f47442aef"
+    },
+    "io_stunts": {
+        "description": "Additional Stunt Arena content created by the community.",
+        "version": "26.0306",
+        "checksum": "fcfba187499755ebe049d1f91f05e3cc5fe65cf8b299bc26a327d25086576969"
+    },
+    "io_tag": {
+        "description": "Additional Battle Tag content created by the community.",
+        "version": "26.0306",
+        "checksum": "687f4b7aaea4280149b53298319e40c2072674c1397b6667aa7cc4c55fa09790"
+    },
+    "io_tracks": {
+        "description": "Additional tracks created by the community. Used in regular I/O races.",
+        "version": "26.0306",
+        "checksum": "98b607f5e3647004f93d28017dfabd22d126fbbfaba401c3b89ec34cba2e0dc7"
+    },
+    "io_tracks_bonus": {
+        "description": "Additional tracks created by the community. Reserved for special and unofficial events.",
+        "version": "26.0306",
+        "checksum": "b8c44ba59a5cad42b6a48d74595b66e8909db45c40de54c1ff87338555e19208"
+    },
+    "io_tracks_circuit": {
+        "description": "Additional custom tracks used in drifting or other special events.",
+        "version": "25.0902",
+        "checksum": "25ef84a57329cf294e718956493d7aa97d361aaf59feb9057a71c1553eaa0fc3"
+    },
+    "io_soundtrack": {
+        "description": "Free soundtrack alternative made by the community.",
+        "version": "20.0302",
+        "checksum": "11702584e090a55f5f1126d8fa4e0c5d3e56078955dc537b63a5137d9717d7a9"
+    },
+    "rvgl_assets": {
+        "description": "Common data files for RVGL.",
+        "version": "23.1030a1",
+        "checksum": "58b7afc35f34c49c2b268f5788265f9698f0028c6643903c22654a10bad97bab"
+    },
+    "rvgl_win32": {
+        "description": "Windows binaries for RVGL (32-bit).",
+        "version": "23.1030a1",
+        "checksum": "62c966ea7cf3b46633f7b6d0636594b86b12ac88160ed5a7dffe4fa0d3380995"
+    },
+    "rvgl_win64": {
+        "description": "Windows binaries for RVGL (64-bit).",
+        "version": "23.1030a1",
+        "checksum": "5ad034ccbe0600524cec97c457001e304c0e740ff5dad5d72fd61cc34813052f"
+    },
+    "rvgl_linux": {
+        "description": "GNU/Linux binaries for RVGL (x86, x86_64, armhf, aarch64).",
+        "version": "23.1030a1",
+        "checksum": "ef3a23d5c85bcd7dd99ddbe017621d2e5ecdf1f396a14e2ae1765e7d83facb1c"
+    },
+    "rvgl_macos": {
+        "description": "macOS binaries for RVGL (x86_64 and arm64).",
+        "version": "23.1030a1",
+        "checksum": "1912c5e169917c6ec4650030f25ca725816a6cf3c58d8737eb3c569d3daa1290"
+    },
+    "rvgl_dcpack": {
+        "description": "Dreamcast content pack for RVGL (Rooftops and additional cars).",
+        "version": "23.0501a1",
+        "checksum": "db2414cd14c44adae24021beb3f00dfe8605833255291aa43062f68916544d36"
+    },
+    "cc_cars": {
+        "description": "Original car assets made for the Christmas Championship series.",
+        "version": "23.1225",
+        "checksum": "469e738f0598a4e44dd3ee0d6a5f777191c040580a14661227d09a9795ebdd22"
+    },
+    "cc_tracks": {
+        "description": "Track assets used in the Christmas Championship series.",
+        "version": "24.0105",
+        "checksum": "ba7528b9c50fcfed73634f879b7bc76bcb24ecd764c1fc9d5b8dccc68a1c0c24"
+    }
+}

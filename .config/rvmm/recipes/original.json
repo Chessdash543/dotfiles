@@ -1,0 +1,12 @@
+{
+    "title": "Original",
+    "description": "Includes the original soundtrack.",
+    "packages": [
+        "game_files",
+        "rvgl_assets",
+        "rvgl_dcpack",
+        "soundtrack"
+    ],
+    "writable": true,
+    "root": false
+}

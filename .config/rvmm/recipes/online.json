@@ -1,0 +1,16 @@
+{
+    "title": "Online",
+    "description": "Includes community soundtrack and additional content for playing online.",
+    "packages": [
+        "game_files",
+        "rvgl_assets",
+        "rvgl_dcpack",
+        "io_tracks",
+        "io_cars",
+        "io_music",
+        "io_skins",
+        "io_soundtrack"
+    ],
+    "writable": true,
+    "root": false
+}

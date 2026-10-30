@@ -1,0 +1,6 @@
+[Unit]
+Description=Reorder Vicinae favorites by usage
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/vicinae-reorder-favorites

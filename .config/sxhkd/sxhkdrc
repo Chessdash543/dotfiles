@@ -1,0 +1,11 @@
+# Abrir terminal com Super + Enter
+super + Return
+    kitty
+
+# Menu de aplicativos com Super + R
+super + r
+    rofi -show drun
+
+# Fechar janela focada com Super + Shift + Q
+super + shift + q
+    xdotool getactivewindow windowclose

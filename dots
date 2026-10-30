@@ -17,9 +17,27 @@ for app in "${CONFIG_APPS[@]}"; do
   DEST="$DOTFILES/.config/$app"
 
   if [ -d "$SRC" ]; then
+    EXCLUDES=()
+    if [ -n "${CONFIG_EXCLUDES[$app]:-}" ]; then
+      for pattern in ${CONFIG_EXCLUDES[$app]}; do
+        EXCLUDES+=(--exclude="$pattern")
+      done
+    fi
+
     mkdir -p "$DEST"
-    rsync -a --delete "$SRC/" "$DEST/"
+    rsync -a --delete --delete-excluded "${EXCLUDES[@]}" "$SRC/" "$DEST/"
     log "$app Synced"
+  fi
+done
+
+for file in "${CONFIG_FILES[@]}"; do
+  SRC="$HOME/.config/$file"
+  DEST="$DOTFILES/.config/$file"
+
+  if [ -f "$SRC" ]; then
+    mkdir -p "$(dirname "$DEST")"
+    cp -a "$SRC" "$DEST"
+    log "$file copied"
   fi
 done
 
@@ -47,6 +65,12 @@ if git diff --cached --quiet; then
 fi
 log "Creating commit"
 git commit -m "sync: $(date '+%Y-%m-%d %H:%M:%S')"
+
+if [ "${DOTFILES_NO_PUSH:-0}" = "1" ]; then
+  log "Push skipped (DOTFILES_NO_PUSH=1)"
+  exit 0
+fi
+
 log "Pushing"
 git push
 

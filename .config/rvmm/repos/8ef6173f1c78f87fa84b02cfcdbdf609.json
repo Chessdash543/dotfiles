@@ -1,0 +1,48 @@
+{
+    "name": "Alias Re-Volt Master Packs",
+    "version": "23.0330",
+    "packages": {
+        "arm_tracks": {
+            "description": "Pack containing custom tracks used by ARM in RRNs",
+            "version": "22.0404",
+            "checksum": "53f7b8e66de7bad13ce1a4691528ab1d951831a4c84702cd37eedc62e6f7a9b9",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/RRNCustomTracks2020.zip"
+        },
+        "arm_cars": {
+            "description": "Pack containing custom cars used by ARM in RRNs",
+            "version": "22.0119",
+            "checksum": "8608869ffa1c9ce0709de4cf7bd69555cf41b34e88f51971e19ee3fda892be1a",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/RRNCustomCars2021.zip"
+        },
+        "arm_skins": {
+            "description": "Pack containing additional skins commonly used by ARM in RRNs",
+            "version": "21.1225",
+            "checksum": "a5cd598d3cb6e26020db8d91a63a9a8a44e3f0a6b6d3cb35516eded6e1af66bd",
+            "url": "https://www.aliasrevoltmaster.com/downloads/ARMultimateskinpack.zip"
+        },
+        "arm_armbrm23": {
+            "description": "Pack containing custom tracks and cars used in the Serie Arm and Serie Brm tournaments",
+            "version": "23.0330",
+            "checksum": "18cf234c518c9b3bc590bd6d5d0c928f880b2fb860138641c07f75ef4656f65d",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/ARMBRM.zip"
+        },
+        "arm_corticircuiti": {
+            "description": "Pack containing the Corti Circuiti (Short Circuits) tracks made by Etneus95",
+            "version": "20.0518",
+            "checksum": "866d6ddd17a610c4bede5b88697c137380ca8920bcd7fc7638a4ef0d68e1450d",
+            "url": "https://www.aliasrevoltmaster.com/downloads/Corti%20Circuiti.zip"
+        },
+        "arm_devdemo": {
+            "description": "Pack containing Dev and Demo cars, repackaged for RVGL by Etneus95 and ciccio",
+            "version": "20.0518",
+            "checksum": "843b91015bb34bfd4c4387440d627c006873430e1cd079b977cdbd097bdab4a5",
+            "url": "https://www.aliasrevoltmaster.com/downloads/ARM%20DEV-Demo%20Pack.zip"
+        },
+        "arm_oldatef": {
+            "description": "Pack containing all tracks of old ATEF editions made by the ARM community",
+            "version": "23.0107",
+            "checksum": "35b7defab4f0801a80b9ea27349793b59c4ba06057b674f28d5f723160d95dec",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/arm_oldatef.zip"
+        }
+    }
+}

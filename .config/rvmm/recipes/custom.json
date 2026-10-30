@@ -1,0 +1,9 @@
+{
+    "title": "Custom",
+    "description": "Choose your own packs...",
+    "packages": [
+        "rvgl_assets"
+    ],
+    "writable": true,
+    "root": true
+}

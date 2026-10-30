@@ -11,7 +11,7 @@ if [ -d "$DOTFILES/.config" ]; then
     if [ -e "$target" ] || [ -L "$target" ]; then
       rm -rf "$target"
     fi
-    cp -r "$item" "$target"
+    cp -a "$item" "$target"
     echo "copy ~/.config/$name OK"
   done
 fi
@@ -24,7 +24,7 @@ if [ -d "$DOTFILES/home" ]; then
     if [ -e "$target" ] || [ -L "$target" ]; then
       rm -rf "$target"
     fi
-    cp -r "$item" "$target"
+    cp -a "$item" "$target"
     echo "copy ~/$name OK"
   done
 fi

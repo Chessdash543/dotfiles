@@ -1,0 +1,48 @@
+{
+    "name": "Adeon Network Mayhem's Packs",
+    "version": "23.1109",
+    "packages": {
+        "anm_base": {
+            "description": "The core of the ANM Mod. Disable all other RVGL packs before using this.",
+            "version": "21.0605",
+            "checksum": "c7cdf375e71c8aceab41ee72992e6907119e2ee2bb71dd6754e4720fe61428c8",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_base.zip"
+        },
+        "anm_dlc01starter": {
+            "description": "First DLC of the ANM (Starter Cars). Requires the ANM Base Pack to work.",
+            "version": "21.0605",
+            "checksum": "7a48dc8b02a0ed1a676794723755cccbf8a7e1016cea95f09378b6866f4a195e",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_dlc01starter.zip"
+        },
+        "anm_dlc02rally": {
+            "description": "Second DLC of the ANM (Rally Cars and Tracks). Requires the ANM Base Pack to work.",
+            "version": "21.0630",
+            "checksum": "3a2085b50223f7a586d9b25c5836b55461756f77d75a78552b302e66b0a7fd40",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_dlc02rally.zip"
+        },
+        "anm_dlc03tiny": {
+            "description": "Third DLC of the ANM (Tiny Cars and Tracks). Requires the ANM Base Pack to work.",
+            "version": "21.1215",
+            "checksum": "678c0038f81c1d27b82ba84bb71932bd38569f77751f9229d5f898e39d32db0e",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_dlc03tiny.zip"
+        },
+        "anm_dlc04huge": {
+            "description": "Forth DLC of the ANM (Huge Cars and Tracks). Requires the ANM Base Pack to work.",
+            "version": "23.1109",
+            "checksum": "bd7e71f7b8bf60af3212002ed12b4b8e266d804328279f6d31bc676483fad37f",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_dlc04huge.zip"
+        },
+        "anm_dlc05drag": {
+            "description": "Fifth DLC of the ANM (Drag Cars and Tracks). Requires the ANM Base Pack to work.",
+            "version": "23.1109",
+            "checksum": "f06f6a0bae6024926c1e5f7a454dabf6cb6d939fda80da43c93f499fadddc544",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_dlc05drag.zip"
+        },
+        "anm_strings": {
+            "description": "Strings used by the ANM Mod. NECESSARY to run the ANM correctly.",
+            "version": "23.1109",
+            "checksum": "193508fff660c57d44c8c15f3a25874c97296e26da52cba6327d5d8da08fdc13",
+            "url": "https://www.aliasrevoltmaster.com/downloads/launcher/anm_strings.zip"
+        }
+    }
+}

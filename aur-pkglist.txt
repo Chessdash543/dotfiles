@@ -11,3 +11,12 @@ sublime-text-4
 waypaper
 wlogout
 eww
+walker-bin
+vicinae-bin
+era-bin
+rvgl-launcher
+yay
+compiz
+wayfire-git
+wf-shell-git
+opencode-bin

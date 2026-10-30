@@ -1,0 +1,22 @@
+{
+    "title": "Default",
+    "description": "",
+    "packages": [
+        "game_files",
+        "soundtrack",
+        "io_cars",
+        "io_cars_bonus",
+        "io_clockworks",
+        "io_clockworks_modern",
+        "io_loadlevel",
+        "io_skins",
+        "io_skins_bonus",
+        "io_stunts",
+        "io_tag",
+        "io_tracks",
+        "io_tracks_circuit",
+        "rvgl_assets"
+    ],
+    "writable": true,
+    "root": true
+}

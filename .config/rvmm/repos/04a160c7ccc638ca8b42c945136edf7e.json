@@ -1,0 +1,24 @@
+{
+    "name": "Re-Volt America",
+    "version": "26.0310a-2",
+    "packages": {
+        "rva_cars": {
+            "description": "Re-Volt America's Cars Pack",
+            "version": "26.0310a-1",
+            "checksum": "242173e5dd561862fc620f707653170ee8dfdd8a3a99c3515fc99c1464d6b1d3",
+            "url": "https://distribute.rva.lat/rva/rva_cars.zip"
+        },
+        "rva_tracks": {
+            "description": "Re-Volt America's Tracks Pack",
+            "version": "26.0323a-1",
+            "checksum": "1399fe456c282f99ec7a66aa4c69e235a1e043c548867c85b021ef9db021d259",
+            "url": "https://distribute.rva.lat/rva/rva_tracks.zip"
+        },
+        "rva_lego_tracks": {
+            "description": "Re-Volt America's Lego Tracks Pack (OPTIONAL)",
+            "version": "26.0310a-1",
+            "checksum": "8bf7d6e22f2876d7a5ef7cb23340733697a93fba879a34e7efcd2e49ffd6e7ee",
+            "url": "https://distribute.rva.lat/rva/rva_lego_tracks.zip"
+        }
+    }
+}

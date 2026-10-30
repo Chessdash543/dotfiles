@@ -1,0 +1,12 @@
+{
+    "title": "rvgl_vanilla",
+    "description": "",
+    "packages": [
+        "game_files",
+        "rvgl_assets",
+        "rvgl_dcpack",
+        "soundtrack"
+    ],
+    "writable": true,
+    "root": false
+}
