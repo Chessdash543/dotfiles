@@ -5,6 +5,7 @@
 {
    "favorites": [
       "applications:firefox-esr",
+      "applications:org.gnome.clocks",
       "applications:com.system76.CosmicScreenshot",
       "applications:xfce4-about",
       "applications:nm-connection-editor",
@@ -28,7 +29,6 @@
       "applications:carla",
       "applications:carla-control",
       "applications:org.gnome.Characters",
-      "applications:org.gnome.clocks",
       "applications:clonehero",
       "applications:cmake-gui",
       "applications:org.gnome.ColorProfileViewer",
