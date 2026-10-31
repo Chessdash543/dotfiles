@@ -1,267 +1,15 @@
 #!/bin/bash
 set -e
 
-DOTFILES="${DOTFILES:-$HOME/dotfiles}"
+DOTFILES="$HOME/dotfiles"
 CONFIG="$DOTFILES/dotfiles.conf"
-THEMES_DIR="$DOTFILES/themes"
-ACTIVE_FILE="$THEMES_DIR/.active"
 
 [ -f "$CONFIG" ] && source "$CONFIG"
 
 log() { echo "$*"; }
 
-theme_description() {
-  local dir="$1"
-  (
-    local name desc
-    name="$(basename "$dir")"
-    desc=""
-    if [ -f "$dir/theme.conf" ]; then
-      # shellcheck disable=SC1090
-      source "$dir/theme.conf"
-      name="${THEME_NAME:-$name}"
-      desc="${THEME_DESCRIPTION:-}"
-    fi
-    if [ -n "$desc" ]; then
-      printf '%s - %s' "$name" "$desc"
-    else
-      printf '%s' "$name"
-    fi
-  )
-}
-
-list_themes() {
-  local dir found=0
-  for dir in "$THEMES_DIR"/*/; do
-    [ -f "$dir/theme.conf" ] || continue
-    printf '  %s\n' "$(theme_description "${dir%/}")"
-    found=1
-  done
-  [ "$found" -eq 1 ] || echo "  (nenhum tema encontrado em $THEMES_DIR)"
-}
-
-get_active_theme() {
-  local theme=""
-  if [ -f "$ACTIVE_FILE" ]; then
-    theme="$(tr -d '[:space:]' < "$ACTIVE_FILE")"
-  fi
-  if [ -z "$theme" ] && [ -d "$THEMES_DIR" ]; then
-    theme="$(basename "$(find "$THEMES_DIR" -mindepth 1 -maxdepth 1 -type d | sort | head -n1)")"
-  fi
-  printf '%s' "$theme"
-}
-
-select_theme() {
-  local -a dirs=()
-  local dir choice i
-
-  for dir in "$THEMES_DIR"/*/; do
-    [ -f "$dir/theme.conf" ] || continue
-    dirs+=("${dir%/}")
-  done
-
-  if [ "${#dirs[@]}" -eq 0 ]; then
-    echo "Nenhum tema encontrado em $THEMES_DIR" >&2
-    return 1
-  fi
-
-  echo "Temas disponíveis:" >&2
-  for i in "${!dirs[@]}"; do
-    printf '  %d) %s\n' "$((i + 1))" "$(theme_description "${dirs[$i]}")" >&2
-  done
-
-  while true; do
-    read -rp "Escolha o tema: " choice
-    if [[ "$choice" =~ ^[0-9]+$ ]] && [ "$choice" -ge 1 ] && [ "$choice" -le "${#dirs[@]}" ]; then
-      basename "${dirs[$((choice - 1))]}"
-      return 0
-    fi
-    echo "Opção inválida." >&2
-  done
-}
-
-theme_has_local_changes() {
-  local theme="$1"
-  local theme_dir="$THEMES_DIR/$theme/.config"
-  local theme_file rel live
-
-  [ -d "$theme_dir" ] || return 1
-
-  while IFS= read -r theme_file; do
-    rel="${theme_file#"$theme_dir"/}"
-    live="$HOME/.config/$rel"
-    [ -f "$live" ] || continue
-    cmp -s "$live" "$theme_file" || return 0
-  done < <(find "$theme_dir" -type f)
-
-  return 1
-}
-
-remove_old_theme_overrides() {
-  local old="$1"
-  local new="$2"
-  local old_dir="$THEMES_DIR/$old/.config"
-  local new_dir="$THEMES_DIR/$new/.config"
-  local file rel
-
-  [ -d "$old_dir" ] || return 0
-  [ "$old" = "$new" ] && return 0
-
-  while IFS= read -r file; do
-    rel="${file#"$old_dir"/}"
-    # Se o novo tema também sobrescreve o arquivo, ele será copiado depois.
-    [ -f "$new_dir/$rel" ] && continue
-
-    # Volta para a versão base, se existir; senão remove o override antigo.
-    if [ -f "$DOTFILES/.config/$rel" ]; then
-      mkdir -p "$(dirname "$HOME/.config/$rel")"
-      cp -a "$DOTFILES/.config/$rel" "$HOME/.config/$rel"
-    else
-      rm -f "$HOME/.config/$rel"
-    fi
-  done < <(find "$old_dir" -type f)
-}
-
-apply_theme() {
-  local theme="$1"
-  local force="$2"
-  local current rel
-
-  if [ ! -d "$THEMES_DIR/$theme" ]; then
-    echo "Tema '$theme' não encontrado." >&2
-    echo "Temas disponíveis:" >&2
-    list_themes >&2
-    return 1
-  fi
-
-  if [ ! -d "$THEMES_DIR/$theme/.config" ]; then
-    echo "Tema '$theme' não possui a pasta .config/." >&2
-    return 1
-  fi
-
-  for rel in hypr/theme.conf eww/eww.scss hyprlock/colors.conf waybar/style.css; do
-    if [ ! -f "$THEMES_DIR/$theme/.config/$rel" ]; then
-      echo "Tema '$theme' não possui o arquivo obrigatório: .config/$rel" >&2
-      return 1
-    fi
-  done
-
-  current="$(get_active_theme)"
-  if [ "$force" != "1" ] && [ -n "$current" ] && theme_has_local_changes "$current"; then
-    echo "Erro: o tema '$current' tem alterações em ~/.config que ainda não foram sincronizadas." >&2
-    echo "Rode './dots' para salvá-las antes de trocar de tema." >&2
-    echo "Para descartar essas alterações e trocar mesmo assim, use: ./dots theme $theme --force" >&2
-    return 1
-  fi
-
-  remove_old_theme_overrides "$current" "$theme"
-
-  mkdir -p "$HOME/.config"
-  cp -a "$THEMES_DIR/$theme/.config/." "$HOME/.config/"
-  printf '%s\n' "$theme" > "$ACTIVE_FILE"
-
-  echo "Tema ativo: $theme"
-  echo "Arquivos do tema aplicados em ~/.config"
-  echo "Edite os arquivos e rode './dots' para sincronizar de volta."
-  echo "Para recarregar: hyprctl reload; pkill -SIGUSR2 waybar; eww reload"
-}
-
-usage() {
-  cat <<EOF
-Uso: $(basename "$0") [comando]
-
-Sem argumentos:
-  Sincroniza ~/.config com o repositório usando o tema ativo.
-
-Comandos:
-  theme [nome] [--force]   Ativa um tema e aplica os arquivos dele em ~/.config
-  themes                   Lista os temas disponíveis
-  current                  Mostra o tema ativo
-  help                     Mostra esta ajuda
-
-Exemplos:
-  ./dots theme sunset
-  ./dots theme              # menu interativo
-  ./dots theme sunset --force
-  ./dots themes
-  ./dots current
-EOF
-}
-
-ACTION="sync"
-THEME=""
-FORCE=0
-
-while [ $# -gt 0 ]; do
-  case "$1" in
-    theme|-t|--theme)
-      ACTION="theme"
-      shift
-      ;;
-    themes|-l|--list-themes)
-      ACTION="list"
-      shift
-      ;;
-    current|--current)
-      ACTION="current"
-      shift
-      ;;
-    --force|-f)
-      FORCE=1
-      shift
-      ;;
-    help|-h|--help)
-      usage
-      exit 0
-      ;;
-    *)
-      if [ "$ACTION" = "theme" ] && [ -z "$THEME" ]; then
-        THEME="$1"
-        shift
-      else
-        echo "Comando desconhecido: $1" >&2
-        usage >&2
-        exit 1
-      fi
-      ;;
-  esac
-done
-
-case "$ACTION" in
-  list)
-    list_themes
-    exit 0
-    ;;
-  current)
-    get_active_theme
-    echo
-    exit 0
-    ;;
-  theme)
-    if [ -z "$THEME" ]; then
-      if [ -t 0 ]; then
-        THEME="$(select_theme)" || exit 1
-      else
-        echo "Informe o tema: ./dots theme <nome>" >&2
-        list_themes >&2
-        exit 1
-      fi
-    fi
-    apply_theme "$THEME" "$FORCE"
-    exit $?
-    ;;
-esac
-
-# Tema ativo (definido por './dots theme' ou pelo install-dotfiles.sh)
-ACTIVE_THEME="$(get_active_theme)"
-if [ -z "$ACTIVE_THEME" ]; then
-  echo "Nenhum tema encontrado em $THEMES_DIR" >&2
-  exit 1
-fi
-THEME_ACTIVE_DIR="$THEMES_DIR/$ACTIVE_THEME/.config"
-
 echo "
- [1/4] Sync ~/.config
+ [1/3] Sync ~/.config
 "
 
 for app in "${CONFIG_APPS[@]}"; do
@@ -276,39 +24,15 @@ for app in "${CONFIG_APPS[@]}"; do
       done
     fi
 
-    # Arquivos gerenciados por QUALQUER tema não vão para a config base.
-    for theme_cfg in "$THEMES_DIR"/*/.config/"$app"; do
-      [ -d "$theme_cfg" ] || continue
-      while IFS= read -r rel; do
-        # "/" ancora o padrão na raiz do app, evitando excluir
-        # arquivos de mesmo nome em subpastas (ex.: layouts/colors.conf).
-        EXCLUDES+=(--exclude="/$rel")
-      done < <(cd "$theme_cfg" && find . -type f -printf '%P\n')
-    done
-
     mkdir -p "$DEST"
     rsync -a --delete --delete-excluded "${EXCLUDES[@]}" "$SRC/" "$DEST/"
     log "$app Synced"
   fi
 done
 
-is_theme_managed() {
-  local rel="$1"
-  local theme_cfg
-  for theme_cfg in "$THEMES_DIR"/*/.config; do
-    [ -f "$theme_cfg/$rel" ] && return 0
-  done
-  return 1
-}
-
 for file in "${CONFIG_FILES[@]}"; do
   SRC="$HOME/.config/$file"
   DEST="$DOTFILES/.config/$file"
-
-  if is_theme_managed "$file"; then
-    log "$file is theme-managed (skipped)"
-    continue
-  fi
 
   if [ -f "$SRC" ]; then
     mkdir -p "$(dirname "$DEST")"
@@ -318,7 +42,7 @@ for file in "${CONFIG_FILES[@]}"; do
 done
 
 echo "
- [2/4] Sync HOME dotfiles
+ [2/3] Sync HOME dotfiles
  "
 
 mkdir -p "$DOTFILES/home"
@@ -329,26 +53,7 @@ for file in "${HOME_FILES[@]}"; do
     log "$file copied"
   fi
 done
-
-echo "
- [3/4] Sync active theme ($ACTIVE_THEME)
-"
-
-if [ -d "$THEME_ACTIVE_DIR" ]; then
-  while IFS= read -r theme_file; do
-    rel="${theme_file#"$THEME_ACTIVE_DIR"/}"
-    live="$HOME/.config/$rel"
-
-    if [ -f "$live" ]; then
-      cp -a "$live" "$theme_file"
-      log "theme: $rel"
-    fi
-  done < <(find "$THEME_ACTIVE_DIR" -type f)
-else
-  log "Theme directory not found: $THEME_ACTIVE_DIR"
-fi
-
-echo " [4/4] Git stage
+echo " [3/3] Git stage
 "
 
 cd "$DOTFILES"
