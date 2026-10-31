@@ -24,15 +24,20 @@ lock="/tmp/eww-${win}.lock"
 exec 9>"$lock"
 flock -w 2 -x 9 || exit 0
 
-rev="$(timeout 5 "$eww" get "$var" 2>/dev/null || true)"
+# IMPORTANTE: `9>&-` em todas as chamadas ao eww.
+# Se o daemon não estiver rodando, `eww open` vira o próprio daemon e herda
+# os descritores do processo pai. Sem fechar o fd 9, o daemon herdava o lock
+# e nunca o liberava, fazendo todos os cliques seguintes (inclusive o de
+# fechar) travarem no flock e serem descartados.
+rev="$(timeout 5 "$eww" get "$var" 9>&- 2>/dev/null || true)"
 
 if [ "$rev" = "true" ]; then
     # Esconde com animação. Fecha a janela após o tempo da animação,
     # independente da condição (evita ficar presa caso eww não responda
     # na verificação posterior).
-    timeout 5 "$eww" update "${var}=false" >/dev/null 2>&1
+    timeout 5 "$eww" update "${var}=false" 9>&- >/dev/null 2>&1
     if [ -n "$extra" ]; then
-        timeout 5 "$eww" update "${extra}=false" >/dev/null 2>&1
+        timeout 5 "$eww" update "${extra}=false" 9>&- >/dev/null 2>&1
     fi
 
     (
@@ -41,6 +46,12 @@ if [ "$rev" = "true" ]; then
         sleep 0.35
         # Fecha de forma direta e atômica com lock
         flock -w 2 -x "$lock" bash -c '
+            # Reconfere o estado: se o usuário reabriu a janela enquanto
+            # este fechamento atrasado dormia, não fecha mais.
+            rev="$("$3" get "$2" 2>/dev/null || true)"
+            if [ "$rev" = "true" ]; then
+                exit 0
+            fi
             timeout 5 "$3" close "$1" >/dev/null 2>&1
             exit 0
         ' _ "$win" "$var" "$eww"
@@ -52,5 +63,5 @@ fi
 # Daqui pra baixo a janela está escondida (rev=false).
 # Se já estiver aberta, `eww open` recria a surface; como var está false,
 # ela nasce escondida e a animação de entrada roda do zero.
-timeout 5 "$eww" open "$win" >/dev/null 2>&1
-timeout 5 "$eww" update "${var}=true" >/dev/null 2>&1
+timeout 5 "$eww" open "$win" 9>&- >/dev/null 2>&1
+timeout 5 "$eww" update "${var}=true" 9>&- >/dev/null 2>&1

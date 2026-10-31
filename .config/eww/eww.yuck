@@ -116,7 +116,7 @@
     )
 )
 
-(defpoll network :interval "3s" 
+(defpoll network :interval "3s" :initial "[]"
         "./scripts/getnet.sh"
 )
 
@@ -669,14 +669,14 @@
 )
 )
 
-(deflisten music :initial "{}" "./scripts/music.sh")
-(deflisten pmusic :initial "{}" "./scripts/pmusic.sh")
+(deflisten music :initial "{\"name\":\"\",\"title\":\"\",\"artist\":\"\",\"thumbnail\":\"\",\"status\":\"\",\"length\":0,\"lengthStr\":\"\"}" "./scripts/music.sh")
+(deflisten pmusic :initial "{\"position\":0,\"positionStr\":\"0:00\"}" "./scripts/pmusic.sh")
 
 (defpoll cmusic :interval "1s"
     "playerctl -l"
 )
 
-(defpoll get_light :interval "1s"
+(defpoll get_light :interval "1s" :initial "1"
   "brightnessctl -m | awk -F, '{gsub(/%/, \"\", \$4); print \$4}'"
 )
 

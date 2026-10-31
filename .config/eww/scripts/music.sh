@@ -13,7 +13,7 @@ playerctl metadata -F -f '{{playerName}}|{{title}}|{{artist}}|{{mpris:artUrl}}|{
         secs=$((len_sec % 60))
         lengthStr=$(printf "%d:%02d" "$mins" "$secs")
     else
-        len_sec=""
+        len_sec=0
         lengthStr=""
     fi
     set_art=false

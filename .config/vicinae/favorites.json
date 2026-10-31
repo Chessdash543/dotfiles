@@ -5,6 +5,7 @@
 {
    "favorites": [
       "applications:firefox-esr",
+      "applications:waypaper",
       "applications:org.mozilla.Thunderbird",
       "applications:org.gnome.clocks",
       "applications:com.system76.CosmicScreenshot",
@@ -144,7 +145,6 @@
       "applications:org.pulseaudio.pavucontrol",
       "applications:Waydroid",
       "applications:wcm",
-      "applications:waypaper",
       "applications:org.gnome.Weather",
       "applications:org.gnome.Epiphany",
       "applications:wf-locker-pin",
