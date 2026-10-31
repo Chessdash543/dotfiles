@@ -22,6 +22,6 @@ esac
 
 ./install-pkgs.sh
 ./install-services.sh
-./install-dotfiles.sh
+./install-dotfiles.sh "$@"
 
 echo "Setup completed"

@@ -5,6 +5,7 @@
 {
    "favorites": [
       "applications:firefox-esr",
+      "applications:org.mozilla.Thunderbird",
       "applications:org.gnome.clocks",
       "applications:com.system76.CosmicScreenshot",
       "applications:xfce4-about",
@@ -132,7 +133,6 @@
       "applications:org.gnome.TextEditor",
       "applications:thunar",
       "applications:thunar-settings",
-      "applications:org.mozilla.Thunderbird",
       "applications:tint2",
       "applications:tint2conf",
       "applications:org.gnome.Tour",
