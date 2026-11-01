@@ -10,15 +10,15 @@
 
 {
    "$schema": "https://vicinae.com/schemas/config.json",
+   "imports": [
+      "./favorites.json"
+   ],
    "global_shortcuts": {
       "toggle": "super+R"
    },
    "theme": {
       "dark": {
-         "name": "vicinae-dark"
+         "name": "ayu-dark"
       }
-   },
-   "imports": [
-      "./favorites.json"
-   ]
+   }
 }
