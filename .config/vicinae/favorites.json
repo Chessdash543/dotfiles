@@ -5,8 +5,8 @@
 {
    "favorites": [
       "applications:firefox-esr",
-      "applications:waypaper",
       "applications:org.gnome.Nautilus",
+      "applications:waypaper",
       "applications:org.gnome.clocks",
       "applications:org.mozilla.Thunderbird",
       "applications:com.system76.CosmicScreenshot",
