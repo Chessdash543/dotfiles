@@ -132,16 +132,17 @@ hl.config({
 
         shadow           = {
             enabled      = true,
-            range        = 18,
+            range        = 25,
             render_power = 3,
             color        = 0xaa000000,
         },
 
         blur             = {
-            enabled  = true,
-            size     = 3,
-            passes   = 3,
-            vibrancy = 0.2,
+            enabled       = true,
+            size          = 3,
+            passes        = 3,
+            vibrancy      = 0.2,
+            ignore_opacity = true,
         },
     },
 
@@ -252,6 +253,10 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 --     rounding    = 0,
 -- })
 
+hl.window_rule({
+    match = { class = "^foot$" },
+    opacity = 0.78,
+})
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {

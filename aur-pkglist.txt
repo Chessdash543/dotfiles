@@ -20,3 +20,4 @@ compiz
 wayfire-git
 wf-shell-git
 opencode-bin
+whitesur-icon-theme

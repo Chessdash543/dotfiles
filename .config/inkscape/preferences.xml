@@ -1120,8 +1120,8 @@
   <group
      id="theme"
      defaultPreferDarkTheme="1"
-     defaultIconTheme="breeze-dark"
-     defaultGtkTheme="adw-gtk3-dark"
+     defaultIconTheme="Adwaita"
+     defaultGtkTheme="gtk-dark-keyitdev"
      narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"

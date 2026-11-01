@@ -21,13 +21,13 @@ execs=(
 )
 
 icons=(
-  "/usr/share/icons/hicolor/128x128/apps/firefox.png"
-  "/usr/share/icons/hicolor/128x128/apps/sublime-text.png"
-  "/usr/share/icons/hicolor/scalable/apps/btop.svg"
-  "/usr/share/icons/hicolor/256x256/apps/vlc.png"
-  "/usr/share/icons/hicolor/256x256/apps/github-desktop.png"
-  "/usr/share/icons/hicolor/128x128/apps/libreoffice-writer.png"
-  "/usr/share/icons/hicolor/128x128/apps/qbittorrent.png"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/firefox-esr.svg"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/sublime-text.svg"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/btop.svg"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/vlc.svg"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/github-desktop.svg"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/libreoffice-writer.svg"
+  "/usr/share/icons/WhiteSur-dark/apps/scalable/qbittorrent.svg"
 )
 
 terminal=(
