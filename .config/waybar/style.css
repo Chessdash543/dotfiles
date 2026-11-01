@@ -15,7 +15,7 @@ window#waybar > box {
     rgba(1, 162, 254, 0.5)
   );
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 0 6px;
 }
 

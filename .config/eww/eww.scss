@@ -62,7 +62,7 @@
 .time-label{
   background-color:rgba(0,0,0,0.38);
   color:rgb(78,200,200);
-  border-radius:20px;
+  border-radius:8px;
   transition: color 0.3s;
   transition: background-color 0.3s;
   &:hover{
@@ -116,7 +116,7 @@
   margin-top:3px;
   margin-bottom:3px;
   padding:0px 8px;
-  border-radius:20px;
+  border-radius:8px;
 }
 
 image{
@@ -124,12 +124,12 @@ image{
 }
 
 menu {
-  border-radius:15px;
+  border-radius:8px;
   padding: 10px;
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
   color:#cdd6f4;
   menuitem {
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 8px 12px;
     background-color: rgba(0,0,0,0.55);
   }
@@ -147,7 +147,7 @@ menu {
   padding-left: 13px;
   padding-right: 13px;
   color:rgb(245,162,96);
-  border-radius:20px;
+  border-radius:8px;
   font-size:11px;
   margin:3px 0px;
 }
@@ -158,13 +158,13 @@ menu {
 
 .wifictl-container-outer, .menuctl-container-outer, .usrctl-container-outer {
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 3px;
   margin: 5.5px;
 }
 
 .wifictl-container, .menuctl-container{
-  border-radius: 14px;
+  border-radius: 8px;
   min-width:385px;
   background: transparent;
   padding: 5px;
@@ -195,7 +195,7 @@ menu {
   min-height:15rem;
   margin:7px;
   margin-top:17px;
-  border-radius:15px;
+  border-radius:8px;
   border: none;
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
 }
@@ -207,7 +207,7 @@ menu {
 .wifi-option-box, .app-option-box{
   font-size:16px;
   margin:5px 5px;
-  border-radius:15px;
+  border-radius:8px;
   padding:10px;
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
@@ -239,7 +239,7 @@ menu {
 
 .wifi-buttons{
   color: #cdd6f4;
-  border-radius:10px;
+  border-radius:8px;
   background-color: rgba(0,0,0,0.52);
 }
 
@@ -262,21 +262,21 @@ menu {
 
 .calendar-container-outer {
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
-  border-radius: 20px;
+  border-radius: 8px;
   margin: 5.5px;
   margin-bottom: 10px;
   padding: 3px;
 }
 
 .calendar-container{
-  border-radius: 14px;
+  border-radius: 8px;
   background: transparent;
   padding: 5px;
 }
 
 .time-box{
   border: none;
-  border-radius:15px;
+  border-radius:8px;
   margin-top:8px;
   padding-left:25px;
   padding-right:25px;
@@ -299,7 +299,7 @@ menu {
 
 .calendar-box{
   border: none;
-  border-radius:15px;
+  border-radius:8px;
   padding-top:10px;
   padding-left:10px;
   padding-right:10px;
@@ -330,14 +330,14 @@ menu {
 .music-container{
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
   border: none;
-  border-radius: 20px;
+  border-radius: 8px;
   min-width:385px;
   padding: 3px;
 }
 
 .main-container{
   margin:5.5px;
-  border-radius: 20px;
+  border-radius: 8px;
   min-width:385px;
   background: linear-gradient(to right, rgba(212, 0, 240, 0.6), rgba(1, 162, 254, 0.6));
   border: none;
@@ -349,7 +349,7 @@ menu {
   margin:0px 7px;
   margin-top:5px;
   padding:10px;
-  border-radius:15px;
+  border-radius:8px;
   border: none;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -387,7 +387,7 @@ menu {
 .ctlpanel{
   min-width:230px;
   margin-top:10px;
-  border-radius:20px;
+  border-radius:8px;
   padding:5px;
   background: rgba(0, 0, 0, 0.3);
   font-family: "JetBrainsMono Nerd Font";
@@ -444,7 +444,7 @@ menu {
 
 tooltip{
   padding:10px;
-  border-radius:20px;
+  border-radius:8px;
   background-color: rgba(24,24,37,0.75);
 }
 
@@ -455,7 +455,7 @@ tooltip{
   border: none;
   background: rgba(0, 0, 0, 0.3);
   min-width:370px;
-  border-radius:15px;
+  border-radius:8px;
 }
 
 .BAT1, .BAT2, .BAT3{
@@ -509,7 +509,7 @@ tooltip{
 
 .cpu-box, .ram-box, .disk-box{
   margin:0px 10px;
-  border-radius:15px;
+  border-radius:8px;
   border: none;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -551,7 +551,7 @@ tooltip{
 }
 
 .sliderctl{
-  border-radius:15px;
+  border-radius:8px;
   border: none;
   background: rgba(0, 0, 0, 0.3);
   margin-left:20px;
@@ -587,7 +587,7 @@ tooltip{
 .vol trough highlight {
   all: unset;
   background-color:rgb(144, 104, 190);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .vol slider {
@@ -616,7 +616,7 @@ tooltip{
 .lig trough highlight {
   all: unset;
   background-color:rgb(219,193,117);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .lig slider {
@@ -704,7 +704,7 @@ tooltip{
 .music-slider trough highlight {
   all: unset;
   background-color:rgb(48,100,170);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .music-slider slider {
@@ -753,6 +753,6 @@ tooltip{
 .vol-mini trough highlight {
   all: unset;
   background-color:rgb(144, 104, 220);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
