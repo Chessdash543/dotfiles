@@ -54,7 +54,7 @@ local window      = "rofi -show window"
 --
 hl.on("hyprland.start", function()
     hl.exec_cmd(
-    "hyprlock & awww-daemon & eww daemon & vicinae server & awww img /home/ryanv/.config/hyprlock/wallpapers/16.jpeg & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
+    "& awww-daemon & eww daemon & vicinae server & awww img /home/ryanv/.config/hyprlock/wallpapers/16.jpeg & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
     hl.exec_cmd("~/.config/hypr/scripts/monitor_hotplug.sh")
 end)
@@ -110,7 +110,7 @@ hl.config({
 
         col              = {
             active_border   = { colors = { "rgba(255,0,255,1.000)", "rgba(0, 175, 255, 1)" }, angle = 0 },
-            inactive_border = { colors = { "rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0)" }, angle = 0 },
+            inactive_border = { colors = { "rgba(12, 120, 120, 1)", "rgba(120, 120, 120, 1)" }, angle = 0 },
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -132,8 +132,8 @@ hl.config({
 
         shadow           = {
             enabled      = false,
-            range        = 10,
-            render_power = 2,
+            range        = 1,
+            render_power = 1,
             color        = 0xaa000000,
         },
 
