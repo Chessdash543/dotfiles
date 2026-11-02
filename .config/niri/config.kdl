@@ -164,10 +164,9 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
-
+        
         // Color of the ring on inactive monitors.
-        inactive-color "#505050"
+        inactive-color "rgba(0, 120, 255)"
 
         // Additionally, there's a legacy RGBA syntax:
         // active-color 127 200 255 255
@@ -178,13 +177,13 @@ layout {
         // defaulting to 180 (top-to-bottom gradient).
         // You can use any CSS linear-gradient tool on the web to set these up.
         //
-        // active-gradient from="#80c8ff" to="#bbddff" angle=45
+        active-gradient from="#ff00d9" to="#006eff" angle=45
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
         // To do that, set relative-to="workspace-view".
         //
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#000000" to="#000000" angle=45 relative-to="workspace-view"
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
@@ -194,15 +193,16 @@ layout {
         // off
 
         width 2
-        active-color "#29A855"
-        inactive-color "#505050"
+        active-color "#d400f0"
+        inactive-color "#2d2952"
 
-        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
+        active-gradient from="#d400f0" to="#01a2fe" angle=135
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
+        // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
@@ -295,11 +295,10 @@ spawn-at-startup "waybar"
 spawn-at-startup "anyrun"
 spawn-at-startup "mako"
 spawn-at-startup "nm-applet"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "syshud"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "vicinae" "server" "--replace"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "~/.config/niri/scripts/suspend.sh"
-spawn-at-startup "~/.config/niri/scripts/rotate-wallpaper.sh"
 spawn-at-startup "~/.config/niri/scripts/battery.sh"
 spawn-at-startup "flatpak" "run" "app.zen_browser.zen"
 
@@ -548,8 +547,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T { spawn "kitty"; }
-    Mod+D { spawn "anyrun"; }
+    Mod+Return { spawn "foot"; }
+    Mod+D { spawn "vicinae" "open"; }
     Mod+Alt+L hotkey-overlay-title="Lock screen" { spawn "swaylock" "--screenshots" "--key-hl-color" "FF8941" "--indicator" "--indicator-radius" "150" "--clock" "--fade-in" "0.2" "--effect-vignette" "0.7:0.7" "--ring-color" "FFC041" "--effect-blur" "10x6"; }
     Ctrl+Alt+T hotkey-overlay-title="Open terminal" { spawn "kitty"; }
     Ctrl+Alt+F hotkey-overlay-title="Open dolphin" { spawn "nautilus"; }
@@ -770,6 +769,7 @@ debug {
 
     // Emulate zero (unknown) presentation time returned from DRM.
     // This is a thing on NVIDIA proprietary drivers, so this flag can be
+    // used to test that we don't break too hard on those systems.
     // used to test that we don't break too hard on those systems.
     // emulate-zero-presentation-time
 }

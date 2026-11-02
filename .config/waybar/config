@@ -8,6 +8,7 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
+    "niri/workspaces",
     "custom/hostname",
     "custom/musicctl"
   ],
@@ -50,6 +51,19 @@
     },
     "persistent-workspaces": {
       "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+  },
+
+  "niri/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "disable-click": false,
+    "format": "{icon}",
+    "format-icons": {
+      "focused": "●",
+      "active": "●",
+      "default": "●",
+      "empty": "○"
     }
   },
 

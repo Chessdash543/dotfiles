@@ -15,8 +15,8 @@ window#waybar > box {
     rgba(1, 162, 254, 0.5)
   );
   border: none;
-  border-radius: 8px;
-  padding: 0 6px;
+  border-radius: 6px;
+  padding: 0 5px;
 }
 
 /* ---- LEFT ---- */
@@ -35,7 +35,7 @@ window#waybar > box {
   padding: 0 4px;
   border: none;
   margin: 6px 2px;
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -67,7 +67,7 @@ window#waybar > box {
 
 #custom-hostname {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 10px;
   margin: 6px 0;
   color: #ffffff;
@@ -77,7 +77,7 @@ window#waybar > box {
 
 #pulseaudio {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 10px;
   margin: 6px 0;
   color: #ffffff;
@@ -111,7 +111,7 @@ window#waybar > box {
   background: rgba(0, 0, 0, 0.2);
   margin: 6px 2px;
   padding-left: 4px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
 }
 
@@ -121,7 +121,7 @@ window#waybar > box {
 
 #custom-system-info {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 12px;
   margin: 6px 0;
   color: #ffffff;
@@ -136,7 +136,7 @@ window#waybar > box {
 
 #custom-system-block {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 12px;
   margin: 6px 0;
   color: #ffffff;
@@ -161,7 +161,7 @@ window#waybar > box {
 
 #network {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 10px;
   margin: 6px 0;
   color: #ffffff;
@@ -176,7 +176,7 @@ window#waybar > box {
 
 #custom-musicctl {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 10px;
   margin: 6px 0;
   color: #ffffff;
@@ -191,7 +191,7 @@ window#waybar > box {
 
 #custom-usrctl {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 10px;
   margin: 6px 0;
   color: #ffffff;
@@ -206,7 +206,7 @@ window#waybar > box {
 
 #custom-swaync {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0 10px;
   margin: 6px 0;
   color: #ffffff;
@@ -224,7 +224,7 @@ window#waybar > box {
 tooltip {
   background: rgba(18, 18, 22, 0.95);
   border: 1px solid rgba(81, 175, 239, 0.3);
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 tooltip label {

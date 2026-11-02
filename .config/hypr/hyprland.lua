@@ -105,7 +105,7 @@ hl.env("HYPRCURSOR_THEME", "aosp-cursors")
 hl.config({
     general = {
         gaps_in          = 3,
-        gaps_out         = 10,
+        gaps_out         = 9,
 
         border_size      = 2,
 
@@ -125,7 +125,7 @@ hl.config({
 
     decoration = {
         rounding         = 5,
-        rounding_power   = 3,
+        rounding_power   = 10,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1,
