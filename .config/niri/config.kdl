@@ -773,3 +773,5 @@ debug {
     // used to test that we don't break too hard on those systems.
     // emulate-zero-presentation-time
 }
+
+export XDG_CURRENT_DESKTOP=niri

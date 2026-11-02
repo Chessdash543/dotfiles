@@ -42,7 +42,9 @@ window#waybar > box {
 #workspaces button {
   color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
-  padding: 0 3px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0 2px;
   margin: 0 1px;
   background: transparent;
   border-radius: 0;
