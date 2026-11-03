@@ -774,4 +774,3 @@ debug {
     // emulate-zero-presentation-time
 }
 
-export XDG_CURRENT_DESKTOP=niri

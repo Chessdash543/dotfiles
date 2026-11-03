@@ -22,12 +22,16 @@ hl.monitor({
     output   = "HDMI-A-1",
     mode     = "preferred",
     position = "auto",
-    scale    = 1,
+    scale    = 1.5,
 })
 hl.config({
     misc = {
-        vrr = 0
-    }
+        -- VSync: o Hyprland ja sincroniza com o monitor por padrao.
+        -- Basta allow_tearing = false (general) para garantir que o tearing fique desligado.
+        -- Obs.: a partir da 0.55 o antigo misc:vfr virou debug:vfr e deve ficar no padrao (true).
+        -- 0 = off | 1 = sempre | 2 = so fullscreen (FreeSync/Adaptive Sync)
+        vrr = 0,
+    },
 })
 
 ---------------------
@@ -55,7 +59,7 @@ local window      = "rofi -show window"
 hl.on("hyprland.start", function()
     hl.exec_cmd(
         
-    "awww-daemon & vicinae server & awww img /home/ryanv/.config/hyprlock/wallpapers/16.jpeg & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
+    "swaybg -i .config/wallpapers/wall2.png & vicinae server & batsignal -w 50 -c 30 -d 10 & eww daemon & waybar & nm-applet & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11")
     hl.exec_cmd("~/.config/hypr/scripts/monitor_hotplug.sh")
 end)
