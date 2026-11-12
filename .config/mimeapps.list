@@ -30,6 +30,9 @@ x-scheme-handler/net.thunderbird=userapp-Thunderbird-9NOHW3.desktop;
 x-scheme-handler/webcal=userapp-Thunderbird-1O91V3.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-1O91V3.desktop;
 application/x-xz-compressed-tar=org.kde.ark.desktop;
+inode/directory=org.kde.ark.desktop;
+application/zip=org.kde.ark.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -63,3 +66,4 @@ x-scheme-handler/rvmm=rvmm-scheme.desktop
 x-scheme-handler/discord-472158403830218762=discord-472158403830218762.desktop
 x-scheme-handler/terminal=kitty.desktop
 x-scheme-handler/rootapp=rootapp.desktop
+image/jpeg=org.gnome.Loupe.desktop
