@@ -161,6 +161,12 @@ hl.layer_rule({
     blur = true,
 })
 
+-- O painel do swaync abre pelo botão no waybar: anima a layer inteira.
+hl.layer_rule({
+    match = { namespace = "swaync-control-center" },
+    animation = "slide bottom",
+})
+
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
@@ -213,7 +219,7 @@ hl.animation({ leaf = "fadeOut", enabled = true, speed = 8, bezier = "linear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers", enabled = true, speed = 5, bezier = "easeOutQuint" })
 hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 2.5, bezier = "easeOutQuint", style = "slide bottom" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
 hl.animation({

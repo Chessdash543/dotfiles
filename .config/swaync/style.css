@@ -1,6 +1,10 @@
 @define-color noti-purple rgba(168, 85, 247, 0.30);
 @define-color noti-blue rgba(59, 130, 246, 0.30);
 @define-color noti-border rgba(168, 85, 247, 0.45);
+@define-color ui-fg rgba(255, 255, 255, 0.95);
+@define-color ui-bg rgba(16, 16, 24, 0.92);
+@define-color accent-purple rgba(212, 0, 240, 1);
+@define-color accent-blue rgba(1, 162, 254, 1);
 
 :root {
 	--cc-bg: transparent;
@@ -9,11 +13,22 @@
 }
 
 * {
-	color: @foreground;
+	color: @ui-fg;
 }
 
 .blank-window {
 	background: transparent;
+}
+
+/* ---- Animação de entrada do painel de notificações ---- */
+@keyframes cc-appear {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.control-center {
+	border-radius: 12px;
+	animation: cc-appear 220ms ease-out;
 }
 
 .notification-row .notification-background .notification,
@@ -22,6 +37,7 @@
 	border: 1px solid @noti-border;
 	background: linear-gradient(135deg, @noti-purple, @noti-blue);
 	box-shadow: none;
+	animation: cc-appear 280ms ease-out;
 }
 
 .notification-action,
@@ -31,7 +47,6 @@
 	border: 1px solid @noti-border;
 	background: linear-gradient(135deg, @noti-purple, @noti-blue);
 }
-
 
 .notification-content {
 	margin: 5px;
@@ -51,39 +66,70 @@
 	margin: 1em;
 }
 
-.widget-dnd>switch {
-	border: 1px solid alpha(@color11, 0.3);
-	border-radius: 0.75em;
-	background: alpha(black, 0.5);
-	padding: 1px;
+/* ---- Novo tema do botão toggle (Do Not Disturb) ---- */
+.widget-dnd > switch {
+	min-width: 54px;
+	min-height: 28px;
+	border: 1px solid alpha(@accent-purple, 0.55);
+	border-radius: 99px;
+	background: rgba(10, 10, 18, 0.85);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.7);
+	padding: 3px;
+	transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-.widget-dnd> switch slider {
-	border: 1px solid alpha(@color11, 0.3);
-	border-radius: 0.75em;
-	background: rgb(15, 15, 15);
-	box-shadow: none;
+.widget-dnd > switch:hover {
+	border-color: @accent-blue;
+}
+
+.widget-dnd > switch slider {
+	min-width: 22px;
+	min-height: 22px;
+	border: none;
+	border-radius: 99px;
+	background: linear-gradient(135deg, #ffffff, #cbd5e1);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+	transition: background 220ms ease;
+}
+
+.widget-dnd > switch:checked {
+	border-color: alpha(@accent-blue, 0.7);
+	background: linear-gradient(135deg, @accent-purple, @accent-blue);
+	box-shadow: 0 0 12px alpha(@accent-blue, 0.35);
+}
+
+.widget-dnd > switch:checked slider {
+	background: #ffffff;
 }
 
 .widget-mpris {
 	border-radius: 0.75em;
-	background: alpha(black, 0.5);
+	background: alpha(@ui-bg, 0.7);
 	margin: 1em;
 }
 
 .widget-buttons-grid {
 	margin: 1em;
-	background: alpha(black, 0.5);
+	background: alpha(@ui-bg, 0.7);
 }
 
-.widget-buttons-grid>flowbox>flowboxchild>button {
+.widget-buttons-grid > flowbox > flowboxchild > button {
 	box-shadow: none;
-	color: @foreground;
+	color: @ui-fg;
 	font-style: normal;
-	border: 1px solid alpha(@color11, 0.3);
-	background: @background;
+	border: 1px solid alpha(@accent-purple, 0.35);
+	border-radius: 8px;
+	background: @ui-bg;
+	transition: background 180ms ease, border-color 180ms ease;
 }
 
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-	background: black;
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+	background: rgba(0, 0, 0, 0.65);
+	border-color: @accent-blue;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+	border-color: alpha(@accent-blue, 0.7);
+	background: linear-gradient(135deg, @accent-purple, @accent-blue);
+	color: #ffffff;
 }
