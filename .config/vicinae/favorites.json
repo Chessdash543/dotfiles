@@ -81,6 +81,7 @@
       "applications:com.sparklost.endcord",
       "applications:enlightenment_filemanager",
       "applications:com.mattjakeman.ExtensionManager",
+      "applications:org.gnome.FileRoller",
       "applications:enlightenment_fprint",
       "applications:firefox",
       "applications:firefox-esr-safe",

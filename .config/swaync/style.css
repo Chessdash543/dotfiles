@@ -1,4 +1,13 @@
-@import url("/home/user/.cache/wal/colors-css");
+@define-color noti-purple rgba(168, 85, 247, 0.30);
+@define-color noti-blue rgba(59, 130, 246, 0.30);
+@define-color noti-border rgba(168, 85, 247, 0.45);
+
+:root {
+	--cc-bg: transparent;
+	--noti-bg-focus: transparent;
+	--noti-bg-hover: transparent;
+}
+
 * {
 	color: @foreground;
 }
@@ -7,16 +16,20 @@
 	background: transparent;
 }
 
+.notification-row .notification-background .notification,
+.control-center .control-center-list .notification {
+	border-radius: 10px;
+	border: 1px solid @noti-border;
+	background: linear-gradient(135deg, @noti-purple, @noti-blue);
+	box-shadow: none;
+}
+
 .notification-action,
 .notification-default-action,
 .control-center {
-	border-radius: 0.75em;
-	border: 2px solid alpha(@color11, 0.3);
-	background: alpha(black, 0.5);
-}
-
-.notification {
-	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	border: 1px solid @noti-border;
+	background: linear-gradient(135deg, @noti-purple, @noti-blue);
 }
 
 
@@ -24,8 +37,13 @@
 	margin: 5px;
 }
 
-.control-center .notification-row {
-	background: alpha(black, 0.2);
+.control-center .notification-row,
+.notification-row:focus,
+.control-center .notification-row:focus,
+.notification-row .notification-background .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-action:hover {
+	background: transparent;
 }
 
 .widget-dnd {
