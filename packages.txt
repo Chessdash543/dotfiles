@@ -48,6 +48,7 @@ inkscape
 geogebra
 clang
 mako
+pavucontrol
 starship
 nwg-look
 nwg-bar
